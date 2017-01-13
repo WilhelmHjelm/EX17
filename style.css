@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/*!
+/*
 Theme Name: EX17
 Theme URI: http://underscores.me/
 Author: Wilhelm Hjelm & Patrik Grändevall
@@ -12,16 +11,37 @@ Text Domain: ex17
 Tags: cool
 
 */
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 1, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 7, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 body {
   margin: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 22, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 article,
 aside,
 details,
@@ -37,6 +57,13 @@ summary {
   display: block;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 29, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 audio,
 canvas,
 progress,
@@ -45,52 +72,129 @@ video {
   vertical-align: baseline;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 34, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 40, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 [hidden],
 template {
   display: none;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 44, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 a {
   background-color: transparent;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 49, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 a:active,
 a:hover {
   outline: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 53, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 58, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 b,
 strong {
   font-weight: bold;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 62, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 dfn {
   font-style: italic;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 66, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 71, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 mark {
   background: #ff0;
   color: #000;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 76, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 small {
   font-size: 80%;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 81, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 sub,
 sup {
   font-size: 75%;
@@ -99,35 +203,91 @@ sup {
   vertical-align: baseline;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 88, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 sup {
   top: -0.5em;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 92, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 sub {
   bottom: -0.25em;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 96, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 img {
   border: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 100, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 svg:not(:root) {
   overflow: hidden;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 104, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 figure {
   margin: 1em 40px;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 108, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 hr {
   box-sizing: content-box;
   height: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 113, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 pre {
   overflow: auto;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 120, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 code,
 kbd,
 pre,
@@ -136,6 +296,13 @@ samp {
   font-size: 1em;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 129, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 button,
 input,
 optgroup,
@@ -146,15 +313,36 @@ textarea {
   margin: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 135, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 button {
   overflow: visible;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 140, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 button,
 select {
   text-transform: none;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 147, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 button,
 html input[type="button"],
 input[type="reset"],
@@ -163,61 +351,145 @@ input[type="submit"] {
   cursor: pointer;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 153, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 button[disabled],
 html input[disabled] {
   cursor: default;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 158, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 163, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 input {
   line-height: normal;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 168, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 174, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 179, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 183, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 189, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 legend {
   border: 0;
   padding: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 194, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 textarea {
   overflow: auto;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 198, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 optgroup {
   font-weight: bold;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 202, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+=======
+/* line 208, sass/_normalize.scss */
+>>>>>>> origin/master
+>>>>>>> Stashed changes
 td,
 th {
   padding: 0;
