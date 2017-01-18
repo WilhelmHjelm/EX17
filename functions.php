@@ -59,6 +59,60 @@ function ex17_setup() {
 		'caption',
 	) );
 
+	/*
+	 * Enable support for Post Formats.
+	 * See https://developer.wordpress.org/themes/functionality/post-formats/
+	 */
+	add_theme_support( 'post-formats', array(
+		'aside',
+		'image',
+		'video',
+		'quote',
+		'link',
+	) );
+
+	/**
+	 * Avoid WordPress' JPEG quality reduction
+	 */
+
+	function gpp_jpeg_quality_callback()
+	{
+	return (int)100;
+	}
+	add_filter('jpeg_quality', 'gpp_jpeg_quality_callback');
+
+	/**
+	 * Remove emojis
+	 */
+
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+	/**
+	 * Remove comment support (+ "post" link in admin menu)
+	 */
+
+	 // Removes from admin menu
+	 add_action( 'admin_menu', 'my_remove_admin_menus' );
+	 function my_remove_admin_menus() {
+	     remove_menu_page( 'edit-comments.php' );
+			  remove_menu_page( 'edit.php' );
+	 }
+	 // Removes from post and pages
+	 add_action('init', 'remove_comment_support', 100);
+
+	 function remove_comment_support() {
+	     remove_post_type_support( 'post', 'comments' );
+	     remove_post_type_support( 'page', 'comments' );
+	 }
+	 // Removes from admin bar
+	 function mytheme_admin_bar_render() {
+	     global $wp_admin_bar;
+	     $wp_admin_bar->remove_menu('comments');
+	 }
+	 add_action( 'wp_before_admin_bar_render', 'mytheme_admin_bar_render' );
+
+
 	// Set up the WordPress core custom background feature.
 	add_theme_support( 'custom-background', apply_filters( 'ex17_custom_background_args', array(
 		'default-color' => 'ffffff',
@@ -106,6 +160,14 @@ add_action( 'widgets_init', 'ex17_widgets_init' );
  */
 function ex17_scripts() {
 	wp_enqueue_style( 'ex17-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'google-fonts', '', array() );
+
+	/* Jquery */
+	if( !is_admin()){
+		wp_deregister_script('jquery');
+		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"), false, '2.1.4', false);
+		wp_enqueue_script('jquery');
+	}
 
 	wp_enqueue_script( 'ex17-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -116,6 +178,54 @@ function ex17_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'ex17_scripts' );
+
+/**
+*CUSTOM TYPE POSTS
+**/
+
+function custom_post_type() {
+	register_post_type( 'sponsorer', array(
+		'labels'        => array('name' => __( 'Sponsors', 'ex17' ), 'singular_name' => __( 'Sponsor', 'ex17' ) ),
+		'description'   => 'Holds the information about EX17s sponors.',
+		'public'        => true,
+		'menu_position' => 4,
+		'supports'      => array( 'title' ),
+		'has_archive'   => false
+	)
+	);
+
+	register_post_type( 'examensklassen', array(
+		'labels'        => array('name' => __( 'Graduates', 'ex17'  ), 'singular_name' => __( 'Graduates', 'ex17'  ) ),
+		'description'   => 'Holds the information about EX17s graduate students.',
+		'public'        => true,
+		'menu_position' => 5,
+		'supports'      => array( 'title', 'editor', 'custom-fields' ),
+		'has_archive'   => false
+	)
+	);
+
+	register_post_type( 'projektgruppen', array(
+		'labels'        => array('name' => __( 'Projectgroups', 'ex17'  ), 'singular_name' => __( 'Projectgroup', 'ex17'  ) ),
+		'description'   => 'Holds the information about EX17 project groups.',
+		'public'        => true,
+		'menu_position' => 6,
+		'supports'      => array( 'title', 'thumbnail', 'custom-fields' ),
+		'has_archive'   => false,
+		'taxonomies' 		=> array('category')
+	)
+	);
+
+	register_post_type( 'forelasare', array(
+		'labels'        => array('name' => __( 'Lecturers', 'ex17'  ), 'singular_name' => __( 'Lecturer', 'ex17'  ) ),
+		'description'   => 'Holds the information about EX17 lectures.',
+		'public'        => true,
+		'menu_position' => 7,
+		'supports'      => array( 'title', 'editor', 'thumbnail', 'custom-fields' ),
+		'has_archive'   => false
+	)
+	);
+}
+add_action( 'init', 'custom_post_type');
 
 /**
  * Implement the Custom Header feature.
