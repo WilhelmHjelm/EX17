@@ -188,7 +188,7 @@ function custom_post_type() {
 		'labels'        => array('name' => __( 'Sponsors', 'ex17' ), 'singular_name' => __( 'Sponsor', 'ex17' ) ),
 		'description'   => 'Holds the information about EX17s sponors.',
 		'public'        => true,
-		'menu_position' => 4,
+		'menu_position' => 6,
 		'supports'      => array( 'title' ),
 		'has_archive'   => false
 	)
@@ -198,7 +198,7 @@ function custom_post_type() {
 		'labels'        => array('name' => __( 'Graduates', 'ex17'  ), 'singular_name' => __( 'Graduates', 'ex17'  ) ),
 		'description'   => 'Holds the information about EX17s graduate students.',
 		'public'        => true,
-		'menu_position' => 5,
+		'menu_position' => 4,
 		'supports'      => array( 'title', 'editor', 'custom-fields' ),
 		'has_archive'   => false
 	)
@@ -208,7 +208,7 @@ function custom_post_type() {
 		'labels'        => array('name' => __( 'Projectgroups', 'ex17'  ), 'singular_name' => __( 'Projectgroup', 'ex17'  ) ),
 		'description'   => 'Holds the information about EX17 project groups.',
 		'public'        => true,
-		'menu_position' => 6,
+		'menu_position' => 5,
 		'supports'      => array( 'title', 'thumbnail', 'custom-fields' ),
 		'has_archive'   => false,
 		'taxonomies' 		=> array('category')
