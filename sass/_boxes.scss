@@ -6,19 +6,24 @@
 .header-box{
   /* that big box on the front-page */
   height: 400px;
-  border: red 1px solid;
+  background-color: red;
   margin-bottom: 20px;
 }
 .header-box-small{
   /* like that big box on the front-page but on other pages and smaller */
   height:200px;
 }
+.site-title{
+  position: absolute;
+  left:20px;
+  bottom:20px;
+}
 
 #box-1{
-  border: green 1px solid;
+  background-color: green;
   height: 250px;
 }
 #box-2{
-  border: blue 1px solid;
+  background-color: blue;
   height: 250px;
 }

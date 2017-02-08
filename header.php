@@ -41,7 +41,10 @@
 						<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?>
 					</nav>
 					<div class="twelve columns box header-box">
-						FIRST BOX
+						<div class="site-title">
+							<h1><?php bloginfo('title'); ?></h1>
+							<h3><?php bloginfo('description'); ?></h3>
+						</div>
 					</div>
 				<?php else : ?>
 					<img src="logo">
