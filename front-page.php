@@ -8,11 +8,11 @@
  */ get_header(); ?>
 
 <div class="container">
-  <div class="four columns">
+  <div class="four columns box" id="box-1">
     <h2>11-13 maj</h2>
     <h3>Färgeriet</h3>
   </div>
-  <div class="eight columns">
+  <div class="eight columns box" id="box-2">
     FÖRELÄSARE
   </div>
 </div>

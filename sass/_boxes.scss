@@ -1,0 +1,24 @@
+.box{
+  /*general style for ALL BOXES*/
+  position: relative;
+}
+
+.header-box{
+  /* that big box on the front-page */
+  height: 400px;
+  border: red 1px solid;
+  margin-bottom: 20px;
+}
+.header-box-small{
+  /* like that big box on the front-page but on other pages and smaller */
+  height:200px;
+}
+
+#box-1{
+  border: green 1px solid;
+  height: 250px;
+}
+#box-2{
+  border: blue 1px solid;
+  height: 250px;
+}

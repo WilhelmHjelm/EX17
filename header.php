@@ -40,14 +40,14 @@
 						<img src="logo">
 						<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?>
 					</nav>
-					<div class="twelve columns">
+					<div class="twelve columns box header-box">
 						FIRST BOX
 					</div>
 				<?php else : ?>
 					<img src="logo">
 					<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?>
 				</nav>
-				<div class="twelve columns">
+				<div class="twelve columns box header-box-small">
 					FIRST BOX
 				</div>
 				<?php
