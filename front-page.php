@@ -51,6 +51,20 @@
 
 <div class="container">
   <div class="five columns" id="box1">
+    <button class="c-button c-button--blue" type="button">
+      <div class="c-ripple js-ripple">
+        <span class="c-ripple__circle"></span>
+      </div>
+      Short Button
+    </button>
+    <button class="c-button c-button--purple" type="button">
+  <div class="c-ripple js-ripple">
+    <span class="c-ripple__circle"></span>
+  </div>
+  Material Design Ripple Effect
+</button>
+<script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>
+
   </div>
   <div class="seven columns" id="box2">
   </div>
