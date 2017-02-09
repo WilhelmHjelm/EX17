@@ -50,9 +50,9 @@
 </div>
 
 <div class="container">
-  <div class="three columns" id="box1">
+  <div class="five columns" id="box1">
   </div>
-  <div class="nine columns" id="box2">
+  <div class="seven columns" id="box2">
   </div>
   <div class="eight columns" id="box3">
   </div>

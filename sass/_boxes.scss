@@ -5,7 +5,7 @@
 
 .header-box{
   /* that big box on the front-page */
-  height: 400px;
+  height: 400px !important;
   background-color: red;
   margin-bottom: 20px;
 }
@@ -95,6 +95,7 @@
   margin-bottom: 20px;
 }
 
+
 #box3{
   margin-left: 0;
 }
@@ -109,4 +110,8 @@
 }
 #box5, #box6, #box7, #box8 {
   transform: translateY(-320px);
+}
+.main-nav{
+  border:none;
+  height: 0;
 }
