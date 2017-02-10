@@ -16,16 +16,24 @@
 .header-box{
   /* that big box on the front-page */
   height: 400px !important;
-  background-color: red;
   margin-top: 50px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+
+  background: rgba(242,246,248,1);
+background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(100%, rgba(224,239,249,1)));
+background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
 }
 .header-box-small{
   /* like that big box on the front-page but on other pages and smaller */
   height:200px;
   position: relative;
   margin-bottom: 40px;
-
+  margin-top: 50px;
 }
 .page-title{
   position: absolute;
@@ -40,6 +48,19 @@
     position: absolute;
     left:20px;
     bottom:20px;
+}
+.site-info{
+  position: absolute;
+  left:30px;
+  top:70px;
+  h1{
+    font-size: 60px;
+    font-weight: lighter;
+    line-height: 0;
+  }
+  h2{
+    padding-left: 10px;
+  }
 }
 
 .flexbox-grid{
@@ -113,32 +134,64 @@
 }
 
 #box1{
-  background: rgba(147,206,222,1);
-background: -moz-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(147,206,222,1)), color-stop(41%, rgba(117,189,209,1)), color-stop(100%, rgba(73,165,191,1)));
-background: -webkit-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-background: -o-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-background: -ms-linear-gradient(-45deg, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-background: linear-gradient(135deg, rgba(147,206,222,1) 0%, rgba(117,189,209,1) 41%, rgba(73,165,191,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#93cede', endColorstr='#49a5bf', GradientType=1 );
+  background: rgb(222,239,255);
+  background: -moz-linear-gradient(45deg, rgba(222,239,255,1) 0%, rgba(152,190,222,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%);
+  background: linear-gradient(45deg, rgba(222,239,255,1) 0%,rgba(152,190,222,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#deefff', endColorstr='#98bede',GradientType=1 );
 }
 
 #box3{
   margin-left: 0;
+  background: rgb(104,212,242);
+  background: -moz-linear-gradient(45deg, rgba(104,212,242,1) 0%, rgba(133,219,139,1) 100%);
+  background: -webkit-linear-gradient(45deg, rgba(104,212,242,1) 0%,rgba(133,219,139,1) 100%);
+  background: linear-gradient(45deg, rgba(104,212,242,1) 0%,rgba(133,219,139,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68d4f2', endColorstr='#85db8b',GradientType=1 );
 }
 #box4{
   height:620px;
 }
 #box5{
   margin-left: 0;
+
+  background: rgba(169,3,41,1);
+background: -moz-linear-gradient(-45deg, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -webkit-gradient(left top, right bottom, color-stop(0%, rgba(169,3,41,1)), color-stop(44%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+background: -webkit-linear-gradient(-45deg, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -o-linear-gradient(-45deg, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: -ms-linear-gradient(-45deg, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+background: linear-gradient(135deg, rgba(169,3,41,1) 0%, rgba(143,2,34,1) 44%, rgba(109,0,25,1) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', endColorstr='#6d0019', GradientType=1 );
 }
 #box7{
   margin-left: 0;
+
+  
 }
-#box5, #box6, #box7, #box8 {
+#box5, #box6, #box7, #box8, footer {
   transform: translateY(-340px);
 }
 .main-nav{
   border:none;
   height: 0;
 }
+footer{
+  position: relative;
+}
+footer, .footer, .real-footer{
+  padding-top: 10px;
+  border-top:#343333 1px solid;
+  margin-top: 20px;
+}
+.sponsors .tow:first-child{
+  margin-left: 0;
+}
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf {
+  content: "";
+  display: table;
+  clear: both; }

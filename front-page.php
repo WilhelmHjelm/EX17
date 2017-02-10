@@ -37,12 +37,14 @@
 </div> -->
 
 <div class="container">
-  <div class="five columns box" id="box1">
-    <h1>11-13 maj</h1>
-    <h3>FÄRGERIET</h3>
+  <div class="four columns box" id="box1">
+    <div class="site-info">
+      <h1>11-13 maj</h1>
+      <h2>Färgeriet, Kåkenhus</h2>
+    </div>
   </div>
 
-  <div class="seven columns box lecturer-content forelasare-color1" id="box2">
+  <div class="eight columns box lecturer-content forelasare-color4" id="box2">
 
     <?php
     //Random post
@@ -53,8 +55,8 @@
 
         <img class="lecturer-img" src="<? the_field('image')?> ">
         <div class="lecturer-info-front">
-          <h1>FÖRELÄSARE</h1>
-          <h3><?php the_title(); ?></h3>
+          <h3>Föreläsare</h3>
+          <h2><?php the_title(); ?></h2>
           <p><?php the_excerpt(); // or the_content(); ?></p>
           <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
 
@@ -77,19 +79,29 @@
 
   </div>
   <div class="eight columns box" id="box3">
+    <div class="site-info">
+      <h3>Nästa event</h3>
+      <?php while ( have_posts() ) : the_post(); { ?>
+
+          <?php // the_content(); ?>
+
+      <?php } endwhile; // end of the loop. ?>
+
+    </div>
   </div>
   <div class="four columns box" id="box4">
   </div>
   <div class="four columns box" id="box5">
+    <h1>OM GDK EX</h1>
   </div>
   <div class="four columns box" id="box6">
+    <h1>Läs katalogen</h1>
   </div>
   <div class="six columns box" id="box7">
   </div>
   <div class="six columns box" id="box8">
   </div>
 </div>
+
 <script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>
-<script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}
-</script>
-<?php// get_footer(); ?>
+<?php get_footer(); ?>

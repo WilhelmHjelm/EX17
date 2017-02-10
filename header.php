@@ -26,6 +26,8 @@
 <meta property="og:description" content="Examensdagarna för Grafisk design och kommunikation, 11-13 maj i Kåkenhus på Campus Norrköping.">
 <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_social_1200x630.png">
 
+<script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}</script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -38,7 +40,7 @@
 				<?php
 				if ( is_front_page() ) : ?>
 						<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
-						<div class="six columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
+						<div class="five columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 					</nav>
 					<div class="twelve columns box header-box">
 						<div class="site-title">
@@ -48,7 +50,7 @@
 					</div>
 				<?php else : ?>
 					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
-					<div class="six columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
+					<div class="five columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 				</nav>
 				<div class="twelve columns header-box-small <?php echo get_the_title( $ID ); ?> ">
 					<h1 class="page-title"><?php the_title(); ?></h1>
