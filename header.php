@@ -36,9 +36,9 @@
 		<div class="container">
 			<nav class="main-nav twelve columns">
 				<?php
-				if ( is_front_page() && is_home() ) : ?>
-						<div class="one columns"><img src="logo"></div>
-						<div class="five columns offset-by-one"><?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?> </div>
+				if ( is_front_page() ) : ?>
+						<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
+						<div class="six columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 					</nav>
 					<div class="twelve columns box header-box">
 						<div class="site-title">
@@ -48,7 +48,7 @@
 					</div>
 				<?php else : ?>
 					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
-					<div class="five columns offset-by-one"><?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?> </div>
+					<div class="six columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 				</nav>
 				<div class="twelve columns header-box-small <?php echo get_the_title( $ID ); ?> ">
 					<h1 class="page-title"><?php the_title(); ?></h1>

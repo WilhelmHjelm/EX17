@@ -38,20 +38,8 @@
 
 <div class="container">
   <div class="five columns box" id="box1">
-    <button class="c-button c-button--blue" type="button">
-      <div class="c-ripple js-ripple">
-        <span class="c-ripple__circle"></span>
-      </div>
-      Short Button
-    </button>
-    <button class="c-button c-button--purple" type="button">
-  <div class="c-ripple js-ripple">
-    <span class="c-ripple__circle"></span>
-  </div>
-  Material Design Ripple Effect
-</button>
-
-
+    <h1>11-13 maj</h1>
+    <h3>FÄRGERIET</h3>
   </div>
 
   <div class="seven columns box lecturer-content forelasare-color1" id="box2">
@@ -83,6 +71,7 @@
 
 
         <?php }
+
         endwhile;
         wp_reset_postdata(); ?>
 
@@ -101,5 +90,6 @@
   </div>
 </div>
 <script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>
-<script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}</script>
+<script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}
+</script>
 <?php// get_footer(); ?>
