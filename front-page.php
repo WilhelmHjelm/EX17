@@ -50,10 +50,42 @@
   </div>
   Material Design Ripple Effect
 </button>
-<script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>
+
 
   </div>
-  <div class="seven columns box" id="box2">
+
+  <div class="seven columns box lecturer-content forelasare-color1" id="box2">
+
+    <?php
+    //Random post
+
+    $args=array('post_type'=>'forelasare', 'orderby'=>'rand', 'posts_per_page'=>'1');
+    $forelasare=new WP_Query($args);
+      while ($forelasare->have_posts()) : $forelasare->the_post(); { ?>
+
+        <img class="lecturer-img" src="<? the_field('image')?> ">
+        <div class="lecturer-info-front">
+          <h1>FÖRELÄSARE</h1>
+          <h3><?php the_title(); ?></h3>
+          <p><?php the_excerpt(); // or the_content(); ?></p>
+          <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
+
+        <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
+          <button class="c-button c-button--blue" type="button">
+            <div class="c-ripple js-ripple">
+              <span class="c-ripple__circle"></span>
+            </div>
+            Fler föreläsare
+          </button>
+        </a>
+
+        </div>
+
+
+        <?php }
+        endwhile;
+        wp_reset_postdata(); ?>
+
   </div>
   <div class="eight columns box" id="box3">
   </div>
@@ -68,6 +100,6 @@
   <div class="six columns box" id="box8">
   </div>
 </div>
-
-
+<script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>
+<script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}</script>
 <?php// get_footer(); ?>
