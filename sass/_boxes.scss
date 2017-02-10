@@ -1,17 +1,38 @@
 .box{
-  /*general style for ALL BOXES*/
+  /*general style for ALL BOXES, not headers*/
   position: relative;
+  height: 300px;
+  border: red 1px solid;
+  margin-bottom: 40px;
+}
+
+.main-nav{
+  position: relative;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .header-box{
   /* that big box on the front-page */
   height: 400px !important;
   background-color: red;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 .header-box-small{
   /* like that big box on the front-page but on other pages and smaller */
   height:200px;
+  position: relative;
+
+}
+.page-title{
+  position: absolute;
+  top: calc(50% - 18px );
+  left: calc(50% - 110px);
+  line-height: 0;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .site-title{
@@ -89,12 +110,6 @@
   left:20px;
   bottom:20px;
 }
-.columns{
-  height: 300px;
-  border: red 1px solid;
-  margin-bottom: 40px;
-}
-
 
 #box3{
   margin-left: 0;

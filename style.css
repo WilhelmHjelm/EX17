@@ -379,20 +379,41 @@ body {
 }
 
 .box {
-  /*general style for ALL BOXES*/
+  /*general style for ALL BOXES, not headers*/
   position: relative;
+  height: 300px;
+  border: red 1px solid;
+  margin-bottom: 40px;
+}
+
+.main-nav {
+  position: relative;
+  height: 200px;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .header-box {
   /* that big box on the front-page */
   height: 400px !important;
   background-color: red;
+  margin-top: 50px;
   margin-bottom: 20px;
 }
 
 .header-box-small {
   /* like that big box on the front-page but on other pages and smaller */
   height: 200px;
+  position: relative;
+}
+
+.page-title {
+  position: absolute;
+  top: calc(50% - 18px);
+  left: calc(50% - 110px);
+  line-height: 0;
+  font-style: italic;
+  text-transform: uppercase;
 }
 
 .site-title {
@@ -470,12 +491,6 @@ body {
   position: absolute;
   left: 20px;
   bottom: 20px;
-}
-
-.columns {
-  height: 300px;
-  border: red 1px solid;
-  margin-bottom: 40px;
 }
 
 #box3 {
@@ -630,4 +645,47 @@ body {
     padding-bottom: 200%;
     opacity: 0;
   }
+}
+
+.Föreläsare {
+  background: #d4e4ef;
+  background: -moz-linear-gradient(-45deg, #d4e4ef 0%, #86aecc 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #d4e4ef), color-stop(100%, #86aecc));
+  background: -webkit-linear-gradient(-45deg, #d4e4ef 0%, #86aecc 100%);
+  background: -o-linear-gradient(-45deg, #d4e4ef 0%, #86aecc 100%);
+  background: -ms-linear-gradient(-45deg, #d4e4ef 0%, #86aecc 100%);
+  background: linear-gradient(135deg, #d4e4ef 0%, #86aecc 100%);
+}
+
+.lecturer-box {
+  margin-top: 50px;
+  position: relative;
+}
+
+.lecturer-content {
+  position: relative;
+  height: 300px;
+}
+
+.lecturer-img {
+  height: 280px;
+  width: auto;
+  position: absolute;
+  bottom: 0px;
+}
+
+.lecturer-info {
+  position: absolute;
+  top: 20%;
+}
+
+.forelasare-color1 {
+  background: #e9db16;
+  background: -moz-linear-gradient(-45deg, #e9db16 0%, #ef9401 100%);
+  background: -webkit-gradient(left top, right bottom, color-stop(0%, #e9db16), color-stop(100%, #ef9401));
+  background: -webkit-linear-gradient(-45deg, #e9db16 0%, #ef9401 100%);
+  background: -o-linear-gradient(-45deg, #e9db16 0%, #ef9401 100%);
+  background: -ms-linear-gradient(-45deg, #e9db16 0%, #ef9401 100%);
+  background: linear-gradient(135deg, #e9db16 0%, #ef9401 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9db16', endColorstr='#ef9401', GradientType=1 );
 }

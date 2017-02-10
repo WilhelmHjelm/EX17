@@ -161,7 +161,7 @@ add_action( 'widgets_init', 'ex17_widgets_init' );
 function ex17_scripts() {
 	wp_enqueue_style( 'ex17-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'google-fonts', '', array() );
-	
+
 	wp_enqueue_script( 'ex17-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'ex17-jquery', get_template_directory_uri() . '/js/jquery.js', array(), '20170208', true );
@@ -175,11 +175,6 @@ function ex17_scripts() {
 		wp_enqueue_script('jquery');
 	}
 
-
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
 }
 add_action( 'wp_enqueue_scripts', 'ex17_scripts' );
 
@@ -193,7 +188,7 @@ function custom_post_type() {
 		'description'   => 'Holds the information about EX17s sponors.',
 		'public'        => true,
 		'menu_position' => 6,
-		'supports'      => array( 'title' ),
+		'supports'      => array( 'title', 'thumbnail' ),
 		'has_archive'   => false
 	)
 	);
@@ -203,7 +198,7 @@ function custom_post_type() {
 		'description'   => 'Holds the information about EX17s graduate students.',
 		'public'        => true,
 		'menu_position' => 4,
-		'supports'      => array( 'title', 'editor', 'custom-fields' ),
+		'supports'      => array( 'title', 'editor' ),
 		'has_archive'   => false
 	)
 	);
@@ -213,7 +208,7 @@ function custom_post_type() {
 		'description'   => 'Holds the information about EX17 project groups.',
 		'public'        => true,
 		'menu_position' => 5,
-		'supports'      => array( 'title', 'thumbnail', 'custom-fields' ),
+		'supports'      => array( 'title', 'thumbnail' ),
 		'has_archive'   => false,
 		'taxonomies' 		=> array('category')
 	)

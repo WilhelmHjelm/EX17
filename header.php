@@ -37,8 +37,8 @@
 			<nav class="main-nav twelve columns">
 				<?php
 				if ( is_front_page() && is_home() ) : ?>
-						<img src="logo">
-						<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?>
+						<div class="one columns"><img src="logo"></div>
+						<div class="five columns offset-by-one"><?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?> </div>
 					</nav>
 					<div class="twelve columns box header-box">
 						<div class="site-title">
@@ -47,11 +47,11 @@
 						</div>
 					</div>
 				<?php else : ?>
-					<img src="logo">
-					<?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?>
+					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
+					<div class="five columns offset-by-one"><?php wp_nav_menu( array( 'theme_location' => 'main-nav', 'menu_id' => 'main-nav' ) ); ?> </div>
 				</nav>
-				<div class="twelve columns box header-box-small">
-					FIRST BOX
+				<div class="twelve columns header-box-small <?php echo get_the_title( $ID ); ?> ">
+					<h1 class="page-title"><?php the_title(); ?></h1>
 				</div>
 				<?php
 

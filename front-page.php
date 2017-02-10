@@ -7,20 +7,7 @@
  * @package EX17
  */ get_header(); ?>
 
-<!--<div class="container">
-  <div class="four columns box" id="box-1">
-    <h2>11-13 maj</h2>
-    <h3>Färgeriet</h3>
-  </div>
-  <div class="eight columns box" id="box-2">
-    FÖRELÄSARE
-  </div>
-</div>
-<div class="container">
-
-</div> -->
-
-<div class="container">
+<!-- <div class="container">
   <div class="flexbox-grid">
       <div class="flexbox-box" id="box-1">
         <div class="flexbox-content" id="box-1-content">
@@ -47,10 +34,10 @@
         HEJ 4
       </div>
   </div>
-</div>
+</div> -->
 
 <div class="container">
-  <div class="five columns" id="box1">
+  <div class="five columns box" id="box1">
     <button class="c-button c-button--blue" type="button">
       <div class="c-ripple js-ripple">
         <span class="c-ripple__circle"></span>
@@ -66,19 +53,19 @@
 <script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>
 
   </div>
-  <div class="seven columns" id="box2">
+  <div class="seven columns box" id="box2">
   </div>
-  <div class="eight columns" id="box3">
+  <div class="eight columns box" id="box3">
   </div>
-  <div class="four columns" id="box4">
+  <div class="four columns box" id="box4">
   </div>
-  <div class="four columns" id="box5">
+  <div class="four columns box" id="box5">
   </div>
-  <div class="four columns" id="box6">
+  <div class="four columns box" id="box6">
   </div>
-  <div class="six columns" id="box7">
+  <div class="six columns box" id="box7">
   </div>
-  <div class="six columns" id="box8">
+  <div class="six columns box" id="box8">
   </div>
 </div>
 
