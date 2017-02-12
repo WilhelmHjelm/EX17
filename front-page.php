@@ -61,7 +61,7 @@
           <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
 
         <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
-          <button class="c-button c-button--blue" type="button">
+          <button class="c-button c-button--custom" type="button">
             <div class="c-ripple js-ripple">
               <span class="c-ripple__circle"></span>
             </div>
@@ -83,16 +83,64 @@
       <h3>Nästa event</h3>
       <?php while ( have_posts() ) : the_post(); { ?>
 
-          <?php // the_content(); ?>
+          <?php the_content(); ?>
 
       <?php } endwhile; // end of the loop. ?>
+
+      <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
+        <button class="c-button c-button--custom" type="button">
+          <div class="c-ripple js-ripple">
+            <span class="c-ripple__circle"></span>
+          </div>
+          Se hela schemat
+        </button>
+      </a>
 
     </div>
   </div>
   <div class="four columns box" id="box4">
+
+    <?php
+    //Random post
+
+    $args=array('post_type'=>'examensklassen', 'orderby'=>'rand', 'posts_per_page'=>'1');
+    $examensklassen=new WP_Query($args);
+      while ($examensklassen->have_posts()) : $examensklassen->the_post(); { ?>
+
+        <img width="200px" class="graduate-img" src="<? the_field('image')?> ">
+        <div class="graduate-info-front">
+          <h2><?php the_title(); ?></h2>
+          <p><?php the_excerpt(); // or the_content(); ?></p>
+
+        <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
+          <button class="c-button c-button--custom" type="button">
+            <div class="c-ripple js-ripple">
+              <span class="c-ripple__circle"></span>
+            </div>
+            Se Examensklassen
+          </button>
+        </a>
+
+        </div>
+
+
+        <?php }
+
+        endwhile;
+        wp_reset_postdata(); ?>
+
+
   </div>
   <div class="four columns box" id="box5">
     <h1>OM GDK EX</h1>
+    <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
+      <button class="c-button c-button--custom" type="button">
+        <div class="c-ripple js-ripple">
+          <span class="c-ripple__circle"></span>
+        </div>
+        Läs mer
+      </button>
+    </a>
   </div>
   <div class="four columns box" id="box6">
     <h1>Läs katalogen</h1>

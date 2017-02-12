@@ -19,10 +19,18 @@
 }
 
 .lecturer-img{
-height: 280px;
+height: 230px;
 width: auto;
 position: absolute;
-bottom:0px;
+bottom:30px;
+left:25px;
+border-radius: 50%;
+border: 1px solid white;
+}
+.lecturer-content{
+  .lecturer-img{
+    left:15px;
+  }
 }
 .lecturer-info{
   position:absolute;

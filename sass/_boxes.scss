@@ -20,13 +20,29 @@
   margin-bottom: 40px;
 
   background: rgba(242,246,248,1);
-background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(100%, rgba(224,239,249,1)));
-background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+  background: -moz-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(242,246,248,1)), color-stop(100%, rgba(224,239,249,1)));
+  background: -webkit-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+  background: -o-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+  background: -ms-linear-gradient(top, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+  background: linear-gradient(to bottom, rgba(242,246,248,1) 0%, rgba(224,239,249,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=0 );
+
+.site-title{
+  margin-bottom: 25px;
+  margin-left: 20px;
+  h1{
+  font-size: 100px;
+  line-height: 1;
+  margin: 0;
+  }
+  h3{
+    text-transform: uppercase;
+    margin: 0;
+    padding-left: 4px;
+  }
+}
+
 }
 .header-box-small{
   /* like that big box on the front-page but on other pages and smaller */
@@ -148,6 +164,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', end
   background: -webkit-linear-gradient(45deg, rgba(104,212,242,1) 0%,rgba(133,219,139,1) 100%);
   background: linear-gradient(45deg, rgba(104,212,242,1) 0%,rgba(133,219,139,1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68d4f2', endColorstr='#85db8b',GradientType=1 );
+
+  a button{
+
+  }
 }
 #box4{
   height:620px;
@@ -167,7 +187,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a90329', end
 #box7{
   margin-left: 0;
 
-  
+
 }
 #box5, #box6, #box7, #box8, footer {
   transform: translateY(-340px);
@@ -188,6 +208,37 @@ footer, .footer, .real-footer{
   margin-left: 0;
 }
 
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-column-title{
+  display:none;
+}
+#box3 #startpage .mptt-shortcode-list .mptt-column{
+  width:100%;
+  margin-left: 0;
+}
+
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list{
+  height:60px;
+  -webkit-margin-before:0;
+  -webkit-padding-start: 0px;
+}
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event{
+  display: table;
+  border-left: none;
+  padding-left: 0;
+}
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a, #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event p{
+  padding-left: 0;
+}
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a{
+  font-size: 45px;
+  line-height: 0.5;
+  font-weight: bolder;
+}
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event p{
+  opacity: 0.8;
+  -webkit-margin-before: 0.5em;
+  padding-left: 3px;
+}
 /* Self Clearing Goodness */
 .container:after,
 .row:after,

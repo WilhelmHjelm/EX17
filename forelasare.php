@@ -13,6 +13,8 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
+<div class="container">
+
 <?php
 // Custom post type "Föreläsare" list
 
@@ -31,13 +33,13 @@ get_header(); ?>
         $i++;
         ?>
 
-        <div class="container " id="<?php echo $post->post_name;?>">
 
-        <div class="twelve columns box lecturer-box <?php echo $graduateColor;?>">
-          <div class="four columns lecturer-content offset-by-two">
+
+        <div class="six columns box lecturer-box <?php echo $graduateColor;?>" id="<?php echo $post->post_name;?>">
+          <div class="four columns lecturer-content">
             <img class="lecturer-img" src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>">
           </div>
-          <div class="six columns lecturer-content">
+          <div class="six columns offset-by-two lecturer-content">
             <div class="lecturer-info">
               <h1><?php the_title(); ?></h1>
               <p><?php the_content(); ?></p>
@@ -45,7 +47,7 @@ get_header(); ?>
             </div>
           </div>
         </div>
-      </div>
+
 
         <?php
       }
@@ -58,7 +60,7 @@ get_header(); ?>
       </div>
     <?php }
   ?>
-
+</div>
 <?php
  get_footer();
 ?>

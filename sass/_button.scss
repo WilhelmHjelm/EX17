@@ -16,11 +16,10 @@
   font: inherit;
   font-size: 14px;
   line-height: 20px;
-  font-weight: 400;
+  font-weight: 700;
   text-align: center;
   letter-spacing: 1px;
   background: transparent;
-  border: 0;
   user-select: none;
   transition: all 0.2s ease;
   &:hover,
@@ -47,29 +46,21 @@
   }
 };
 
-/**
- * Component: Button
- * Modifier: Purple
- * --------------------------------------------------
- */
 
 @include button-modifier(#967ADC, purple);
 
-/**
- * Component: Button
- * Modifier: Blue
- * --------------------------------------------------
- */
-
 @include button-modifier(#4A89DC, blue);
 
-/**
- * Component: Button
- * Modifier: Red
- * --------------------------------------------------
- */
-
 @include button-modifier(#E9573F, red);
+
+.c-button--custom{
+  background: transparent;
+  border:white 2px solid;
+  &:hover{
+    border-color: darken(#fff, 10%);
+    color: darken(#fff, 10%)
+  }
+}
 
 /**
  * Utility: Ripple
