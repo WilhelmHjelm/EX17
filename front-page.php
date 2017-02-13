@@ -146,9 +146,14 @@
     <h1>Läs katalogen</h1>
   </div>
   <div class="six columns box" id="box7">
+    <h1>Examensklassen</h1>
   </div>
-  <div class="six columns box" id="box8">
-  </div>
+
+    <div class="six columns box" id="box8">
+      <a href="<?php echo get_page_link(64); ?>">
+        <h1>Om GDK</h1>  </a>
+    </div>
+
 </div>
 
 <script src="<?php echo get_template_directory_uri();?>/js/button.js"></script>

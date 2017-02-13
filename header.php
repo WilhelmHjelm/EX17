@@ -31,7 +31,7 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="<?php echo get_the_ID(); ?>">
 <div id="page" class="site">
 
 	<header id="masthead" class="site-header" role="banner">
