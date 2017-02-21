@@ -8,6 +8,19 @@ body{
 .yellow{
   background-color: $yellow;
 }
-.pink{
+.pink, .Schema{
   background-color: $pink;
+}
+
+.blue-text{
+  color: $blue;
+}
+.yellow-text{
+  color: $yellow;
+}
+.pink-text{
+  color: $pink;
+}
+.white-text{
+  color: $white;
 }

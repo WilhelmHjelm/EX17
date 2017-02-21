@@ -5,7 +5,11 @@
 
 .lecturer-box {
   margin-bottom: 20px;
+  height: 300px;
   position: relative;
+  background-position: right center;
+  background-repeat: no-repeat;
+  background-size: cover !important;
 }
 
 .lecturer-content{
@@ -16,20 +20,7 @@
   background-size: cover;
 }
 
-.lecturer-img{
-height: 230px;
-width: auto;
-position: absolute;
-bottom:30px;
-left:25px;
-border-radius: 50%;
-border: 1px solid white;
-}
-.lecturer-content{
-  .lecturer-img{
-    left:15px;
-  }
-}
+
 .lecturer-info{
   position:absolute;
   top:20%;
@@ -62,6 +53,6 @@ border: 1px solid white;
 
 }
 .forelasare-color4{
-  background: $blue;
+  background: $black;
 
 }

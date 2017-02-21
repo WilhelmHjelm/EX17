@@ -53,12 +53,30 @@
 
 @include button-modifier(#E9573F, red);
 
-.c-button--custom{
+.c-button--white{
   background: transparent;
   border:white 2px solid;
   &:hover{
     border-color: darken(#fff, 10%);
-    color: darken(#fff, 10%)
+    color: darken(#fff, 10%);
+  }
+}
+.c-button--black{
+  background: transparent;
+  border: #1e1e1e 2px solid;
+  color:#1e1e1e !important;
+  &:hover{
+    border-color: darken(#1e1e1e, 10%) !important;
+    color: darken(#1e1e1e, 10%) !important;
+  }
+}
+.c-button--yellow{
+  background: transparent;
+  border: $yellow 2px solid;
+  color: $yellow !important;
+  &:hover{
+    border-color: darken($yellow, 10%) !important;
+    color: darken($yellow, 10%) !important;
   }
 }
 

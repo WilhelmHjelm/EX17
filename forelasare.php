@@ -36,14 +36,12 @@ get_header(); ?>
 
 
         <div class="six columns box lecturer-box <?php echo $graduateColor;?>" id="<?php echo $post->post_name;?>">
-          <div class="four columns lecturer-content">
-            <img class="lecturer-img" src="<?php the_field('image'); ?>" alt="<?php the_title(); ?>">
-          </div>
-          <div class="six columns offset-by-two lecturer-content">
+          <div class="eight columns offset-by-two lecturer-content">
             <div class="lecturer-info">
               <h1><?php the_title(); ?></h1>
               <p><?php the_content(); ?></p>
               <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
+              <style> #<?php echo $post->post_name;?>{background-image: url(<?php echo the_post_thumbnail_url();?>);} </style>
             </div>
           </div>
         </div>
