@@ -44,7 +44,7 @@
     </div>
   </div>
 
-  <div class="eight columns box lecturer-content forelasare-color4" id="box2">
+  <div class="eight columns box lecturer-content" id="box2">
 
     <?php
     //Random post
@@ -52,12 +52,10 @@
     $args=array('post_type'=>'forelasare', 'orderby'=>'rand', 'posts_per_page'=>'1');
     $forelasare=new WP_Query($args);
       while ($forelasare->have_posts()) : $forelasare->the_post(); { ?>
-
-        <img class="lecturer-img" src="<? the_field('image')?> ">
+        <style> .lecturer-content{background-image: url(<?php the_field('image')?>);} </style>
         <div class="lecturer-info-front">
-          <h3>Föreläsare</h3>
-          <h2><?php the_title(); ?></h2>
-          <p><?php the_excerpt(); // or the_content(); ?></p>
+          <h3>FÖRELÄSARE</h3>
+          <h1><?php the_title(); ?></h1>
           <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
 
         <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
@@ -133,7 +131,7 @@
   </div>
   <div class="four columns box" id="box5">
     <h1>OM GDK EX</h1>
-    <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
+    <a href="javascript:delay('<?php echo get_page_link(63); ?>')">
       <button class="c-button c-button--custom" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
@@ -144,6 +142,14 @@
   </div>
   <div class="four columns box" id="box6">
     <h1>Läs katalogen</h1>
+    <a href="javascript:delay('<?php echo get_page_link(69); ?>')">
+      <button class="c-button c-button--custom" type="button">
+        <div class="c-ripple js-ripple">
+          <span class="c-ripple__circle"></span>
+        </div>
+        Läs mer
+      </button>
+    </a>
   </div>
   <div class="six columns box" id="box7">
     <h1>Examensklassen</h1>

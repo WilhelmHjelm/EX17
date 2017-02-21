@@ -26,6 +26,9 @@
 <meta property="og:description" content="Examensdagarna för Grafisk design och kommunikation, 11-13 maj i Kåkenhus på Campus Norrköping.">
 <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_social_1200x630.png">
 
+<script src="https://use.typekit.net/ywc5eyw.js"></script>
+<script>try{Typekit.load({ async: false });}catch(e){}</script>
+
 <script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}</script>
 
 <?php wp_head(); ?>
@@ -48,6 +51,7 @@
 							<h3><?php bloginfo('description'); ?></h3>
 						</div>
 					</div>
+
 				<?php else : ?>
 					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
 					<div class="five columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>

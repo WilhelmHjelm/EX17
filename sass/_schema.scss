@@ -1,9 +1,5 @@
 .Schema{
   background: rgb(104,212,242);
-  background: -moz-linear-gradient(45deg, rgba(104,212,242,1) 0%, rgba(133,219,139,1) 100%);
-  background: -webkit-linear-gradient(45deg, rgba(104,212,242,1) 0%,rgba(133,219,139,1) 100%);
-  background: linear-gradient(45deg, rgba(104,212,242,1) 0%,rgba(133,219,139,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#68d4f2', endColorstr='#85db8b',GradientType=1 );
 }
 .mptt-column{
   width:30%;
@@ -33,7 +29,7 @@
   text-decoration: none;
 }
 .timeslot{
-  
+
 }
 
 .event-description{
