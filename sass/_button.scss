@@ -60,6 +60,9 @@
     border-color: darken(#fff, 10%);
     color: darken(#fff, 10%);
   }
+  .c-ripple__circle{
+    background: darken(#fff, 10%) !important;
+  }
 }
 .c-button--black{
   background: transparent;
@@ -69,6 +72,9 @@
     border-color: darken(#1e1e1e, 10%) !important;
     color: darken(#1e1e1e, 10%) !important;
   }
+  .c-ripple__circle{
+    background: darken(#1e1e1e, 10%) !important;
+  }
 }
 .c-button--yellow{
   background: transparent;
@@ -77,6 +83,45 @@
   &:hover{
     border-color: darken($yellow, 10%) !important;
     color: darken($yellow, 10%) !important;
+  }
+  .c-ripple__circle{
+    background: darken($yellow, 10%) !important;
+  }
+}
+.c-button--pink{
+  background: transparent;
+  border: $pink 2px solid;
+  color: $pink !important;
+  &:hover{
+    border-color: darken($pink, 10%) !important;
+    color: darken($pink, 10%) !important;
+  }
+  .c-ripple__circle{
+    background: darken($pink, 10%) !important;
+  }
+}
+.c-button--magenta{
+  background: transparent;
+  border: $magenta 2px solid;
+  color: $magenta !important;
+  &:hover{
+    border-color: darken($magenta, 10%) !important;
+    color: darken($magenta, 10%) !important;
+  }
+  .c-ripple__circle{
+    background: darken($magenta, 10%) !important;
+  }
+}
+.c-button--blue{
+  background: transparent;
+  border: $blue 2px solid;
+  color: $blue !important;
+  &:hover{
+    border-color: darken($blue, 10%) !important;
+    color: darken($blue, 10%) !important;
+  }
+  .c-ripple__circle{
+    background: darken($blue, 10%) !important;
   }
 }
 

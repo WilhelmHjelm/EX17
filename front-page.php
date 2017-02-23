@@ -82,7 +82,7 @@
           <?php the_excerpt(); // or the_content(); ?>
 
         <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
-          <button class="c-button c-button--white" type="button">
+          <button class="c-button c-button--yellow" type="button">
             <div class="c-ripple js-ripple">
               <span class="c-ripple__circle"></span>
             </div>
@@ -101,7 +101,7 @@
 
   </div>
   <div class="four columns box pink" id="box5">
-    <div class="box-content blue-text">
+    <div class="box-content">
     <h1>OM GDK EX</h1>
     <a href="javascript:delay('<?php echo get_page_link(63); ?>')">
       <button class="c-button c-button--black" type="button">
@@ -145,8 +145,15 @@
 
     <div class="six columns box pink" id="box8">
       <div class="box-content">
-      <a href="<?php echo get_page_link(64); ?>">
-        <h1>Om GDK</h1>  </a>
+      <a href="javascript:delay('<?php echo get_page_link(64); ?>')'">
+        <h1>Om GDK</h1>
+        <button class="c-button c-button--black" type="button">
+          <div class="c-ripple js-ripple">
+            <span class="c-ripple__circle"></span>
+          </div>
+          Läs mer
+        </button>
+      </a>
       </div>
     </div>
 

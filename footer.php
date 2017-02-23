@@ -42,7 +42,7 @@
 		</div>
 
 		<div class="twelve columns real-footer">
-			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
+			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" width="100%"></div></a>
 			<div class="six columns">
 				<h5><?php bloginfo('title'); ?></h5>
 				<h6><?php bloginfo('description');?> </h6>
