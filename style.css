@@ -236,7 +236,7 @@ p {
 }
 
 .long-text {
-  font-family: "adobe-caslon-pro", Times, serif;
+  font-family: "adobe-caslon-pro", Times, serif !important;
 }
 
 /* Grid
@@ -507,6 +507,7 @@ body {
 
 #box5 {
   margin-left: 0;
+  background-color: #ed0f68;
 }
 
 #box5 .box-content {
@@ -543,6 +544,7 @@ body {
 }
 
 #box8 {
+  background-color: #fcd1c2;
   position: relative;
 }
 

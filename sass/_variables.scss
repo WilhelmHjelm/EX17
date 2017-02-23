@@ -4,6 +4,7 @@ $body-background: #f7f7f7;
 $blue: #282973 ;
 $yellow: #ffec00 ;
 $pink: #fcd1c2 ;
+$magenta: #ed0f68 ;
 $black: #000000 ;
 $white: #ffffff ;
 
@@ -17,7 +18,7 @@ p{
   line-height: 1.2;
 }
 .long-text{
-  font-family: "adobe-caslon-pro", Times, serif;
+  font-family: "adobe-caslon-pro", Times, serif !important;
 }
 
 
