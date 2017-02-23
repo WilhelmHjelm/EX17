@@ -17,6 +17,7 @@
   height: 400px !important;
   margin-top: 50px;
   margin-bottom: 40px;
+  box-shadow: inset 0 0 0 10px black;
 
 .site-title{
   margin-bottom: 25px;
@@ -42,9 +43,8 @@
   margin-top: 50px;
 }
 .page-title{
-  position: absolute;
-  top: calc(50% - 18px );
-  left: calc(50% - 110px);
+  text-align: center;
+  padding-top:70px;
   line-height: 0;
   font-style: italic;
   text-transform: uppercase;
@@ -78,6 +78,11 @@
   a button{
 
   }
+}
+.next-event{
+  position:absolute;
+  left:30px;
+  top:45px;
 }
 #box4{
   height:640px;
@@ -146,6 +151,12 @@ footer, .footer, .real-footer{
   padding-top: 10px;
   border-top:#343333 1px solid;
   margin-top: 20px;
+}
+.real-footer h4, .real-footer h6{
+  margin:0;
+}
+.real-footer h4{
+  padding-top: 12px;
 }
 .sponsors .tow:first-child{
   margin-left: 0;

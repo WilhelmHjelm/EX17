@@ -42,9 +42,9 @@
 		</div>
 
 		<div class="twelve columns real-footer">
-			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" width="100%"></div></a>
+			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" height="70px"></div></a>
 			<div class="six columns">
-				<h5><?php bloginfo('title'); ?></h5>
+				<h4><?php bloginfo('title'); ?></h4>
 				<h6><?php bloginfo('description');?> </h6>
 			</div>
 		</div><!-- .site-info -->
@@ -81,10 +81,10 @@
 				wp_reset_postdata(); ?>
 			</div>
 
-		<div class="twelve columns">
-			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="logo"></div></a>
+		<div class="twelve columns real-footer">
+			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" height="70px"></div></a>
 			<div class="six columns">
-				<h5><?php bloginfo('title'); ?></h5>
+				<h4><?php bloginfo('title'); ?></h4>
 				<h6><?php bloginfo('description');?> </h6>
 			</div>
 		</div><!-- .site-info -->

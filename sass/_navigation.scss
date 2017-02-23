@@ -7,10 +7,10 @@
     color:#4f4c4c;
   }
   a:hover{
-    color:#605b5b;
+    color: lighten(#4f4c4c, 10%);
   }
 
 }
 .current_page_item a{
-  color:#605b5b !important;
+  color: lighten(#4f4c4c, 15%) !important;
 }

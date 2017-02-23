@@ -48,7 +48,7 @@
 
   </div>
   <div class="eight columns box pink" id="box3">
-    <div class="site-info">
+    <div class="next-event">
       <h3>Nästa event</h3>
       <?php while ( have_posts() ) : the_post(); { ?>
 

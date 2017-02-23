@@ -5,8 +5,16 @@
 	left:15px;
 	}
 	h1, p{
-	padding-left: 15px;
+	padding-left: 30px;
+	margin:0;
 	}
+	h1{
+		padding-top: 30px;
+	}
+}
+
+.Examensklassen{
+	background-color: $magenta;
 }
 
 .grid {
