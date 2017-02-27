@@ -5,57 +5,14 @@
  * Licensed under the MIT license.
  * http://www.opensource.org/licenses/mit-license.php
  * 
- * Copyright 2015, Codrops
+ * Copyright 2016, Codrops
  * http://www.codrops.com
  */
 ;(function(window) {
 
 	'use strict';
 
-	var support = { transitions: Modernizr.csstransitions },
-		// transition end event name
-		transEndEventNames = { 'WebkitTransition': 'webkitTransitionEnd', 'MozTransition': 'transitionend', 'OTransition': 'oTransitionEnd', 'msTransition': 'MSTransitionEnd', 'transition': 'transitionend' },
-		transEndEventName = transEndEventNames[ Modernizr.prefixed( 'transition' ) ],
-		onEndTransition = function( el, callback ) {
-			var onEndCallbackFn = function( ev ) {
-				if( support.transitions ) {
-					if( ev.target != this ) return;
-					this.removeEventListener( transEndEventName, onEndCallbackFn );
-				}
-				if( callback && typeof callback === 'function' ) { callback.call(this); }
-			};
-			if( support.transitions ) {
-				el.addEventListener( transEndEventName, onEndCallbackFn );
-			}
-			else {
-				onEndCallbackFn();
-			}
-		};
-
-	/**
-	 * some helper functions
-	 */
-	
-	function throttle(fn, delay) {
-		var allowSample = true;
-
-		return function(e) {
-			if (allowSample) {
-				allowSample = false;
-				setTimeout(function() { allowSample = true; }, delay);
-				fn(e);
-			}
-		};
-	}
-
-	function nextSibling(el) {
-		var nextSibling = el.nextSibling;
-		while(nextSibling && nextSibling.nodeType != 1) {
-			nextSibling = nextSibling.nextSibling
-		}
-		return nextSibling;
-	}
-
+	// Helper vars and functions.
 	function extend( a, b ) {
 		for( var key in b ) { 
 			if( b.hasOwnProperty( key ) ) {
@@ -65,293 +22,184 @@
 		return a;
 	}
 
-	/**
-	 * GridFx obj
-	 */
-	function GridFx(el, options) {
-		this.gridEl = el;
-		this.options = extend( {}, this.options );
-		extend( this.options, options );
-		
-		this.items = [].slice.call(this.gridEl.querySelectorAll('.grid__item'));
-		this.previewEl = nextSibling(this.gridEl);
-		this.isExpanded = false;
-		this.isAnimating = false;
-		this.closeCtrl = this.previewEl.querySelector('button.action--close');
-		this.previewDescriptionEl = this.previewEl.querySelector('.description--preview');
+	// from http://www.quirksmode.org/js/events_properties.html#position
+	function getMousePos(e) {
+		var posx = 0, posy = 0;
+		if (!e) var e = window.event;
+		if (e.pageX || e.pageY) 	{
+			posx = e.pageX;
+			posy = e.pageY;
+		}
+		else if (e.clientX || e.clientY) 	{
+			posx = e.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
+			posy = e.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+		}
+		return { x : posx, y : posy }
+	}
 
+	/**
+	 * TiltFx obj.
+	 */
+	function TiltFx(el, options) {
+		this.DOM = {};
+		this.DOM.el = el;
+		this.options = extend({}, this.options);
+		extend(this.options, options);
 		this._init();
 	}
 
-	/**
-	 * options
-	 */
-	GridFx.prototype.options = {
-		pagemargin : 0,
-		// x and y can have values from 0 to 1 (percentage). If negative then it means the alignment is left and/or top rather than right and/or bottom
-		// so, as an example, if we want our large image to be positioned vertically on 25% of the screen and centered horizontally the values would be x:1,y:-0.25
-		imgPosition : { x : 1, y : 1 },
-		onInit : function(instance) { return false; },
-		onResize : function(instance) { return false; },
-		onOpenItem : function(instance, item) { return false; },
-		onCloseItem : function(instance, item) { return false; },
-		onExpand : function() { return false; }
-	}
-
-	GridFx.prototype._init = function() {
-		// callback
-		this.options.onInit(this);
-
-		var self = this;
-		// init masonry after all images are loaded
-		imagesLoaded( this.gridEl, function() {
-			// initialize masonry
-			new Masonry(self.gridEl, {
-				itemSelector: '.grid__item',
-				isFitWidth : true
-			});
-			// show grid after all images (thumbs) are loaded
-			classie.add(self.gridEl, 'grid--loaded');
-			// init/bind events
-			self._initEvents();
-			// create the large image and append it to the DOM
-			self._setOriginal();
-			// create the clone image and append it to the DOM
-			self._setClone();
-		});
+	TiltFx.prototype.options = {
+		movement: {
+			imgWrapper : {
+				translation : {x: 0, y: 0, z: 0},
+				rotation : {x: -5, y: 5, z: 0},
+				reverseAnimation : {
+					duration : 1200,
+					easing : 'easeOutElastic',
+					elasticity : 600
+				}
+			},
+			lines : {
+				translation : {x: 10, y: 10, z: [0,10]},
+				reverseAnimation : {
+					duration : 1000,
+					easing : 'easeOutExpo',
+					elasticity : 600
+				}
+			},
+			caption : {
+				translation : {x: 20, y: 20, z: 0},
+				rotation : {x: 0, y: 0, z: 0},
+				reverseAnimation : {
+					duration : 1500,
+					easing : 'easeOutElastic',
+					elasticity : 600
+				}
+			},
+			/*
+			overlay : {
+				translation : {x: 10, y: 10, z: [0,50]},
+				reverseAnimation : {
+					duration : 500,
+					easing : 'easeOutExpo'
+				}
+			},
+			*/
+			shine : {
+				translation : {x: 50, y: 50, z: 0},
+				reverseAnimation : {
+					duration : 1200,
+					easing : 'easeOutElastic',
+					elasticity: 600
+				}
+			}
+		}
 	};
 
 	/**
-	 * initialize/bind events
+	 * Init.
 	 */
-	GridFx.prototype._initEvents = function () {
-		var self = this,
-			clickEvent = (document.ontouchstart!==null ? 'click' : 'touchstart');
+	TiltFx.prototype._init = function() {
+		this.DOM.animatable = {};
+		this.DOM.animatable.imgWrapper = this.DOM.el.querySelector('.tilter__figure');
+		this.DOM.animatable.lines = this.DOM.el.querySelector('.tilter__deco--lines');
+		this.DOM.animatable.caption = this.DOM.el.querySelector('.tilter__caption');
+		this.DOM.animatable.overlay = this.DOM.el.querySelector('.tilter__deco--overlay');
+		this.DOM.animatable.shine = this.DOM.el.querySelector('.tilter__deco--shine > div');
+		this._initEvents();
+	};
 
-		this.items.forEach(function(item) {
-			var touchend = function(ev) {
-					ev.preventDefault();
-					self._openItem(ev, item);
-					item.removeEventListener('touchend', touchend);	
-				},
-				touchmove = function(ev) {
-					item.removeEventListener('touchend', touchend);	
-				},
-				manageTouch = function() {
-					item.addEventListener('touchend', touchend);
-					item.addEventListener('touchmove', touchmove);
+	/**
+	 * Init/Bind events.
+	 */
+	TiltFx.prototype._initEvents = function() {
+		var self = this;
+		
+		this.mouseenterFn = function() {
+			for(var key in self.DOM.animatable) {
+				anime.remove(self.DOM.animatable[key]);
+			}
+		};
+		
+		this.mousemoveFn = function(ev) {
+			requestAnimationFrame(function() { self._layout(ev); });
+		};
+		
+		this.mouseleaveFn = function(ev) {
+			requestAnimationFrame(function() {
+				for(var key in self.DOM.animatable) {
+					if( self.options.movement[key] == undefined ) {continue;}
+					anime({
+						targets: self.DOM.animatable[key],
+						duration: self.options.movement[key].reverseAnimation != undefined ? self.options.movement[key].reverseAnimation.duration || 0 : 1,
+						easing: self.options.movement[key].reverseAnimation != undefined ? self.options.movement[key].reverseAnimation.easing || 'linear' : 'linear',
+						elasticity: self.options.movement[key].reverseAnimation != undefined ? self.options.movement[key].reverseAnimation.elasticity || null : null,
+						scaleX: 1,
+						scaleY: 1,
+						scaleZ: 1,
+						translateX: 0,
+						translateY: 0,
+						translateZ: 0,
+						rotateX: 0,
+						rotateY: 0,
+						rotateZ: 0
+					});
+				}
+			});
+		};
+
+		this.DOM.el.addEventListener('mousemove', this.mousemoveFn);
+		this.DOM.el.addEventListener('mouseleave', this.mouseleaveFn);
+		this.DOM.el.addEventListener('mouseenter', this.mouseenterFn);
+	};
+
+	TiltFx.prototype._layout = function(ev) {
+		// Mouse position relative to the document.
+		var mousepos = getMousePos(ev),
+			// Document scrolls.
+			docScrolls = {left : document.body.scrollLeft + document.documentElement.scrollLeft, top : document.body.scrollTop + document.documentElement.scrollTop},
+			bounds = this.DOM.el.getBoundingClientRect(),
+			// Mouse position relative to the main element (this.DOM.el).
+			relmousepos = { x : mousepos.x - bounds.left - docScrolls.left, y : mousepos.y - bounds.top - docScrolls.top };
+
+		// Movement settings for the animatable elements.
+		for(var key in this.DOM.animatable) {
+			if( this.DOM.animatable[key] == undefined || this.options.movement[key] == undefined ) {
+				continue;
+			}
+			var t = this.options.movement[key] != undefined ? this.options.movement[key].translation || {x:0,y:0,z:0} : {x:0,y:0,z:0},
+				r = this.options.movement[key] != undefined ? this.options.movement[key].rotation || {x:0,y:0,z:0} : {x:0,y:0,z:0},
+				setRange = function (obj) {
+					for(var k in obj) {
+						if( obj[k] == undefined ) {
+							obj[k] = [0,0];
+						}
+						else if( typeof obj[k] === 'number' ) {
+							obj[k] = [-1*obj[k],obj[k]];
+						}
+					}
 				};
 
-			item.addEventListener(clickEvent, function(ev) {
-				if(clickEvent === 'click') {
-					ev.preventDefault();
-					self._openItem(ev, item);
+			setRange(t);
+			setRange(r);
+			
+			var transforms = {
+				translation : {
+					x: (t.x[1]-t.x[0])/bounds.width*relmousepos.x + t.x[0],
+					y: (t.y[1]-t.y[0])/bounds.height*relmousepos.y + t.y[0],
+					z: (t.z[1]-t.z[0])/bounds.height*relmousepos.y + t.z[0],
+				},
+				rotation : {
+					x: (r.x[1]-r.x[0])/bounds.height*relmousepos.y + r.x[0],
+					y: (r.y[1]-r.y[0])/bounds.width*relmousepos.x + r.y[0],
+					z: (r.z[1]-r.z[0])/bounds.width*relmousepos.x + r.z[0]
 				}
-				else {
-					manageTouch();
-				}
-			});
-		});
+			};
 
-		// close expanded image
-		this.closeCtrl.addEventListener('click', function() {
-			self._closeItem(); 
-		});
-
-		window.addEventListener('resize', throttle(function(ev) {
-			// callback
-			self.options.onResize(self);
-		}, 10));
-	}
-
-	/**
-	 * open a grid item
-	 */
-	GridFx.prototype._openItem = function(ev, item) {
-		if( this.isAnimating || this.isExpanded ) return;
-		this.isAnimating = true;
-		this.isExpanded = true;
-
-		// item's image
-		var gridImg = item.querySelector('img'),
-			gridImgOffset = gridImg.getBoundingClientRect();
-
-		// index of current item
-		this.current = this.items.indexOf(item);
-
-		// set the src of the original image element (large image)
-		this._setOriginal(item.querySelector('a').getAttribute('href'));
-		
-		// callback
-		this.options.onOpenItem(this, item);
-
-		// set the clone image
-		this._setClone(gridImg.src, {
-			width : gridImg.offsetWidth,
-			height : gridImg.offsetHeight,
-			left : gridImgOffset.left,
-			top : gridImgOffset.top
-		});
-
-		// hide original grid item
-		classie.add(item, 'grid__item--current');
-
-		// calculate the transform value for the clone to animate to the full image view
-		var win = this._getWinSize(),
-			originalSizeArr = item.getAttribute('data-size').split('x'),
-			originalSize = {width: originalSizeArr[0], height: originalSizeArr[1]},
-			dx = ((this.options.imgPosition.x > 0 ? 1-Math.abs(this.options.imgPosition.x) : Math.abs(this.options.imgPosition.x)) * win.width + this.options.imgPosition.x * win.width/2) - gridImgOffset.left - 0.5 * gridImg.offsetWidth,
-			dy = ((this.options.imgPosition.y > 0 ? 1-Math.abs(this.options.imgPosition.y) : Math.abs(this.options.imgPosition.y)) * win.height + this.options.imgPosition.y * win.height/2) - gridImgOffset.top - 0.5 * gridImg.offsetHeight,
-			z = Math.min( Math.min(win.width*Math.abs(this.options.imgPosition.x) - this.options.pagemargin, originalSize.width - this.options.pagemargin)/gridImg.offsetWidth, Math.min(win.height*Math.abs(this.options.imgPosition.y) - this.options.pagemargin, originalSize.height - this.options.pagemargin)/gridImg.offsetHeight );
-
-		// apply transform to the clone
-		this.cloneImg.style.WebkitTransform = 'translate3d(' + dx + 'px, ' + dy + 'px, 0) scale3d(' + z + ', ' + z + ', 1)';
-		this.cloneImg.style.transform = 'translate3d(' + dx + 'px, ' + dy + 'px, 0) scale3d(' + z + ', ' + z + ', 1)';
-
-		// add the description if any
-		var descriptionEl = item.querySelector('.description');
-		if( descriptionEl ) {
-			this.previewDescriptionEl.innerHTML = descriptionEl.innerHTML;
+			this.DOM.animatable[key].style.WebkitTransform = this.DOM.animatable[key].style.transform = 'translateX(' + transforms.translation.x + 'px) translateY(' + transforms.translation.y + 'px) translateZ(' + transforms.translation.z + 'px) rotateX(' + transforms.rotation.x + 'deg) rotateY(' + transforms.rotation.y + 'deg) rotateZ(' + transforms.rotation.z + 'deg)';
 		}
-
-		var self = this;
-		setTimeout(function() { 
-			// controls the elements inside the expanded view
-			classie.add(self.previewEl, 'preview--open');
-			// callback
-			self.options.onExpand();
-		}, 0);
-
-		// after the clone animates..
-		onEndTransition(this.cloneImg, function() {
-			// when the original/large image is loaded..
-			imagesLoaded(self.originalImg, function() {
-				// close button just gets shown after the large image gets loaded
-				classie.add(self.previewEl, 'preview--image-loaded');
-				// animate the opacity to 1
-				self.originalImg.style.opacity = 1;
-				// and once that's done..
-				onEndTransition(self.originalImg, function() {
-					// reset cloneImg
-					self.cloneImg.style.opacity = 0;
-					self.cloneImg.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
-					self.cloneImg.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
-
-					self.isAnimating = false;
-				});
-				
-			});	
-		});
 	};
 
-	/**
-	 * create/set the original/large image element
-	 */
-	GridFx.prototype._setOriginal = function(src) {
-		if( !src ) {
-			this.originalImg = document.createElement('img');
-			this.originalImg.className = 'original';
-			this.originalImg.style.opacity = 0;
-			this.originalImg.style.maxWidth = 'calc(' + parseInt(Math.abs(this.options.imgPosition.x)*100) + 'vw - ' + this.options.pagemargin + 'px)';
-			this.originalImg.style.maxHeight = 'calc(' + parseInt(Math.abs(this.options.imgPosition.y)*100) + 'vh - ' + this.options.pagemargin + 'px)';
-			// need it because of firefox
-			this.originalImg.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
-			this.originalImg.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
-			src = '';
-			this.previewEl.appendChild(this.originalImg);
-		}
-
-		this.originalImg.setAttribute('src', src);
-	};
-
-	/**
-	 * create/set the clone image element
-	 */
-	GridFx.prototype._setClone = function(src, settings) {
-		if( !src ) {
-			this.cloneImg = document.createElement('img');
-			this.cloneImg.className = 'clone';
-			src = '';
-			this.cloneImg.style.opacity = 0;
-			this.previewEl.appendChild(this.cloneImg);
-		}
-		else {
-			this.cloneImg.style.opacity = 1;
-			// set top/left/width/height of grid item's image to the clone
-			this.cloneImg.style.width = settings.width  + 'px';
-			this.cloneImg.style.height = settings.height  + 'px';
-			this.cloneImg.style.top = settings.top  + 'px';
-			this.cloneImg.style.left = settings.left  + 'px';
-		}
-
-		this.cloneImg.setAttribute('src', src);
-	};
-
-	/**
-	 * closes the original/large image view
-	 */
-	GridFx.prototype._closeItem = function() {
-		if( !this.isExpanded || this.isAnimating ) return;
-		this.isExpanded = false;
-		this.isAnimating = true;
-
-		// the grid item's image and its offset
-		var gridItem = this.items[this.current],
-			gridImg = gridItem.querySelector('img'),
-			gridImgOffset = gridImg.getBoundingClientRect(),
-			self = this;
-
-		classie.remove(this.previewEl, 'preview--open');
-		classie.remove(this.previewEl, 'preview--image-loaded');
-		
-		// callback
-		this.options.onCloseItem(this, gridItem);
-
-		// large image will animate back to the position of its grid's item
-		classie.add(this.originalImg, 'animate');
-
-		// set the transform to the original/large image
-		var win = this._getWinSize(),
-			dx = gridImgOffset.left + gridImg.offsetWidth/2 - ((this.options.imgPosition.x > 0 ? 1-Math.abs(this.options.imgPosition.x) : Math.abs(this.options.imgPosition.x)) * win.width + this.options.imgPosition.x * win.width/2),
-			dy = gridImgOffset.top + gridImg.offsetHeight/2 - ((this.options.imgPosition.y > 0 ? 1-Math.abs(this.options.imgPosition.y) : Math.abs(this.options.imgPosition.y)) * win.height + this.options.imgPosition.y * win.height/2),
-			z = gridImg.offsetWidth/this.originalImg.offsetWidth;
-
-		this.originalImg.style.WebkitTransform = 'translate3d(' + dx + 'px, ' + dy + 'px, 0) scale3d(' + z + ', ' + z + ', 1)';
-		this.originalImg.style.transform = 'translate3d(' + dx + 'px, ' + dy + 'px, 0) scale3d(' + z + ', ' + z + ', 1)';	
-		
-		// once that's done..
-		onEndTransition(this.originalImg, function() {
-			// clear description
-			self.previewDescriptionEl.innerHTML = '';
-
-			// show original grid item
-			classie.remove(gridItem, 'grid__item--current');
-
-			// fade out the original image
-			setTimeout(function() { self.originalImg.style.opacity = 0;	}, 60);
-
-			// and after that
-			onEndTransition(self.originalImg, function() {
-				// reset original/large image
-				classie.remove(self.originalImg, 'animate');
-				self.originalImg.style.WebkitTransform = 'translate3d(0,0,0) scale3d(1,1,1)';
-				self.originalImg.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
-
-				self.isAnimating = false;
-			});
-		});
-	};
-
-	/**
-	 * gets the window sizes
-	 */
-	GridFx.prototype._getWinSize = function() {
-		return {
-			width: document.documentElement.clientWidth,
-			height: window.innerHeight
-		};
-	};
-
-	window.GridFx = GridFx;
+	window.TiltFx = TiltFx;
 
 })(window);
