@@ -42,11 +42,7 @@
 		</div>
 
 		<div class="twelve columns real-footer">
-			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" height="70px"></div></a>
-			<div class="six columns">
-				<h4><?php bloginfo('title'); ?></h4>
-				<h6><?php bloginfo('description');?> </h6>
-			</div>
+			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/logo-text.svg" alt="Logo" height="70px"></div></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	</div><!-- container -->
@@ -82,11 +78,7 @@
 			</div>
 
 		<div class="twelve columns real-footer">
-			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" height="70px"></div></a>
-			<div class="six columns">
-				<h4><?php bloginfo('title'); ?></h4>
-				<h6><?php bloginfo('description');?> </h6>
-			</div>
+			<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/logo-text.svg" alt="Logo" height="70px"></div></a>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->
 	</div><!-- container -->

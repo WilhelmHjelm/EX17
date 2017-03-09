@@ -42,18 +42,17 @@
 			<nav class="main-nav twelve columns">
 				<?php
 				if ( is_front_page() ) : ?>
-						<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" height="70px"></div></a>
+						<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
 						<div class="five columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 					</nav>
 					<div class="twelve columns box header-box">
 						<div class="site-title">
 							<h1><?php bloginfo('title'); ?></h1>
-							<h3><?php bloginfo('description'); ?></h3>
 						</div>
 					</div>
 
 				<?php else : ?>
-					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/frilagd.png" alt="Logo" height="70px"></div></a>
+					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
 					<div class="five columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 				</nav>
 				<div class="twelve columns header-box-small <?php echo get_the_title( $ID ); ?> ">

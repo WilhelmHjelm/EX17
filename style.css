@@ -436,16 +436,23 @@ body {
   margin-top: 50px;
   margin-bottom: 40px;
   box-shadow: inset 0 0 0 10px black;
+  background-image: url(img/header.jpg);
+  background-size: cover;
+  background-position: center center;
 }
 
 .header-box .site-title {
-  margin-bottom: 25px;
-  margin-left: 20px;
+  position: absolute;
+  right: 45px;
+  bottom: 35px;
+  text-align: right;
+  text-decoration: underline;
+  color: #ffec00;
 }
 
 .header-box .site-title h1 {
-  font-size: 100px;
-  line-height: 1;
+  font-size: 120px;
+  line-height: 1.1;
   margin: 0;
 }
 
