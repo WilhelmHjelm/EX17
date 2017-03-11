@@ -1,0 +1,21 @@
+.info-box{
+  background-color: $blue;
+  height: 240px;
+  .info-box-content{
+    margin:45px 15px 40px 30px;
+  h2{
+    font-size: 60px;
+    color:$yellow;
+    margin:5px;
+  }
+  h4{
+    text-transform: uppercase;
+    color:$yellow;
+    font-size: 30px;
+    margin:5px;
+  }
+}
+}
+.about-p p:first-child{
+  margin-top:0;
+}
