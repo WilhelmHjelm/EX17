@@ -13,269 +13,64 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
-
-<script>
-			document.documentElement.className = 'js';
-</script>
-
-  <script src="<?php echo get_template_directory_uri();?>/js/jquery.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/graduates/anime.min.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/graduates/imagesloaded.pkgd.min.js"></script>
-	<script src="<?php echo get_template_directory_uri();?>/js/graduates/main.js"></script>
-
-  		<script>
-  		(function() {
-  			var tiltSettings = [
-  			{},
-  			{
-  				movement: {
-  					imgWrapper : {
-  						translation : {x: 10, y: 10, z: 30},
-  						rotation : {x: 0, y: -10, z: 0},
-  						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-  					},
-  					lines : {
-  						translation : {x: 10, y: 10, z: [0,70]},
-  						rotation : {x: 0, y: 0, z: -2},
-  						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
-  					},
-  					caption : {
-  						rotation : {x: 0, y: 0, z: 2},
-  						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-  					},
-  					overlay : {
-  						translation : {x: 10, y: -10, z: 0},
-  						rotation : {x: 0, y: 0, z: 2},
-  						reverseAnimation : {duration : 2000, easing : 'easeOutExpo'}
-  					},
-  					shine : {
-  						translation : {x: 100, y: 100, z: 0},
-  						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-  					}
-  				}
-  			},
-  			{
-  				movement: {
-  					imgWrapper : {
-  						rotation : {x: -5, y: 10, z: 0},
-  						reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
-  					},
-  					caption : {
-  						translation : {x: 30, y: 30, z: [0,40]},
-  						rotation : {x: [0,15], y: 0, z: 0},
-  						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
-  					},
-  					overlay : {
-  						translation : {x: 10, y: 10, z: [0,20]},
-  						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
-  					},
-  					shine : {
-  						translation : {x: 100, y: 100, z: 0},
-  						reverseAnimation : {duration : 900, easing : 'easeOutCubic'}
-  					}
-  				}
-  			},
-  			{
-  				movement: {
-  					imgWrapper : {
-  						rotation : {x: -5, y: 10, z: 0},
-  						reverseAnimation : {duration : 50, easing : 'easeOutQuad'}
-  					},
-  					caption : {
-  						translation : {x: 20, y: 20, z: 0},
-  						reverseAnimation : {duration : 200, easing : 'easeOutQuad'}
-  					},
-  					overlay : {
-  						translation : {x: 5, y: -5, z: 0},
-  						rotation : {x: 0, y: 0, z: 6},
-  						reverseAnimation : {duration : 1000, easing : 'easeOutQuad'}
-  					},
-  					shine : {
-  						translation : {x: 50, y: 50, z: 0},
-  						reverseAnimation : {duration : 50, easing : 'easeOutQuad'}
-  					}
-  				}
-  			},
-  			{
-  				movement: {
-  					imgWrapper : {
-  						translation : {x: 0, y: -8, z: 0},
-  						rotation : {x: 3, y: 3, z: 0},
-  						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
-  					},
-  					lines : {
-  						translation : {x: 15, y: 15, z: [0,15]},
-  						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
-  					},
-  					overlay : {
-  						translation : {x: 0, y: 8, z: 0},
-  						reverseAnimation : {duration : 600, easing : 'easeOutExpo'}
-  					},
-  					caption : {
-  						translation : {x: 10, y: -15, z: 0},
-  						reverseAnimation : {duration : 900, easing : 'easeOutExpo'}
-  					},
-  					shine : {
-  						translation : {x: 50, y: 50, z: 0},
-  						reverseAnimation : {duration : 1200, easing : 'easeOutExpo'}
-  					}
-  				}
-  			},
-  			{
-  				movement: {
-  					lines : {
-  						translation : {x: -5, y: 5, z: 0},
-  						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
-  					},
-  					caption : {
-  						translation : {x: 15, y: 15, z: 0},
-  						rotation : {x: 0, y: 0, z: 3},
-  						reverseAnimation : {duration : 1500, easing : 'easeOutElastic', elasticity : 700}
-  					},
-  					overlay : {
-  						translation : {x: 15, y: -15, z: 0},
-  						reverseAnimation : {duration : 500,easing : 'easeOutExpo'}
-  					},
-  					shine : {
-  						translation : {x: 50, y: 50, z: 0},
-  						reverseAnimation : {duration : 500, easing : 'easeOutExpo'}
-  					}
-  				}
-  			},
-  			{
-  				movement: {
-  					imgWrapper : {
-  						translation : {x: 5, y: 5, z: 0},
-  						reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
-  					},
-  					caption : {
-  						translation : {x: 10, y: 10, z: [0,50]},
-  						reverseAnimation : {duration : 1000, easing : 'easeOutQuart'}
-  					},
-  					shine : {
-  						translation : {x: 50, y: 50, z: 0},
-  						reverseAnimation : {duration : 800, easing : 'easeOutQuart'}
-  					}
-  				}
-  			},
-  			{
-  				movement: {
-  					lines : {
-  						translation : {x: 40, y: 40, z: 0},
-  						reverseAnimation : {duration : 1500, easing : 'easeOutElastic'}
-  					},
-  					caption : {
-  						translation : {x: 20, y: 20, z: 0},
-  						rotation : {x: 0, y: 0, z: -5},
-  						reverseAnimation : {duration : 1000, easing : 'easeOutExpo'}
-  					},
-  					overlay : {
-  						translation : {x: -30, y: -30, z: 0},
-  						rotation : {x: 0, y: 0, z: 3},
-  						reverseAnimation : {duration : 750, easing : 'easeOutExpo'}
-  					},
-  					shine : {
-  						translation : {x: 100, y: 100, z: 0},
-  						reverseAnimation : {duration : 750, easing : 'easeOutExpo'}
-  					}
-  				}
-  			}];
-
-  			function init() {
-  				var idx = 0;
-  				[].slice.call(document.querySelectorAll('a.tilter')).forEach(function(el, pos) {
-  					idx = pos%2 === 0 ? idx+1 : idx;
-  					new TiltFx(el, tiltSettings[idx-1]);
-  				});
-  			}
-
-  			// Preload all images.
-  			imagesLoaded(document.querySelector('main'), function() {
-  				document.body.classList.remove('loading');
-  				init();
-  			});
-
-  			// REMOVE THIS!
-  			// For Demo purposes only. Prevent the click event.
-  			[].slice.call(document.querySelectorAll('a[href="#"]')).forEach(function(el) {
-  				el.addEventListener('click', function(ev) { ev.preventDefault(); });
-  			});
-
-  			var pater = document.querySelector('.pater'),
-  				paterSVG = pater.querySelector('.pater__svg'),
-  				pathEl = paterSVG.querySelector('path'),
-  				paths = {default: pathEl.getAttribute('d'), active: paterSVG.getAttribute('data-path-hover')};
-
-  			pater.addEventListener('mouseenter', function() {
-  				anime.remove(pathEl);
-  				anime({
-  					targets: pathEl,
-  					d: paths.active,
-  					duration: 400,
-  					easing: 'easeOutQuad'
-  				});
-  			});
-
-  			pater.addEventListener('mouseleave', function() {
-  				anime.remove(pathEl);
-  				anime({
-  					targets: pathEl,
-  					d: paths.default,
-  					duration: 400,
-  					easing: 'easeOutExpo'
-  				});
-  			});
-  		})();
-  		</script>
 <div class="container">
+<?php
+// Custom post type "Examensklassen" list
 
+      $args = array(
+        'post_type' => 'examensklassen',
+        'orderby' => 'title',
+	      'order'   => 'ASC'
+      );
+      $examensklassen = new WP_Query( $args );
+      if( $examensklassen->have_posts() ) {
+        echo '<ul id="og-grid" class="og-grid twelve columns">';
+        $i = 1;
+        while( $examensklassen->have_posts() ) {
+          $examensklassen->the_post();
+          if($i == 1) {$graduateColor = "blue";}
+          if($i == 2) {$graduateColor = "turquoise";}
+          if($i == 3) {$graduateColor = "green";}
+          if($i == 4) {$graduateColor = "orange"; $i = 0;}
+          $i++;
 
+          $attachment_id = get_field('image');
+          $thumb = "medium"; // (thumbnail, medium, large, full or custom size)
+          $thumb_image = wp_get_attachment_image_src( $attachment_id, $thumb );
+          $fullsize = "full"; // (thumbnail, medium, large, full or custom size)
+          $full_image = wp_get_attachment_image_src( $attachment_id, $fullsize );
+
+          $hover_attachment_id = get_field('hoverimage');
+          $hover_thumb = "medium";
+          $hover_thumb_image = wp_get_attachment_image_src( $hover_attachment_id, $hover_thumb );
+          ?>
+          <li>
+            <a href="" data-largesrc="<?php echo $full_image[0]; ?>" data-title="<?php the_title() ?>" data-description='<?php the_content() ?>'>
+              <img src="<?php echo $thumb_image[0]; ?>" class="static" alt="<?php the_title() ?>">
+              <img src="<?php echo $hover_thumb_image[0]; ?>" class="hover" alt="<?php the_title() ?>">
+              <div class="graduate-name <?php echo $graduateColor; ?>-bg"><span><?php the_title() ?></span></div>
+            </a>
+          </li>
         <?php
-        // Custom post type "grauates" list
-
-            $args = array(
-              'post_type' => 'examensklassen',
-              'orderby' => 'title',
-	            'order'   => 'ASC',
-
-            );
-            $examensklassen = new WP_Query( $args );
-            if( $examensklassen->have_posts() ) {
-              $i = 1;
-              while( $examensklassen->have_posts() ) {
-                $examensklassen->the_post();
-                if($i == 1) {$graduateColor = "forelasare-color1";}
-                if($i == 2) {$graduateColor = "forelasare-color2";}
-                if($i == 3) {$graduateColor = "forelasare-color3";}
-                if($i == 4) {$graduateColor = "forelasare-color4"; $i = 0;}
-                $i++;
-                ?>
-
-                <a href="#" class="tilter tilter--7">
-					<figure class="tilter__figure">
-						<img class="tilter__image" src="img/13.jpg" alt="img13" />
-						<div class="tilter__deco tilter__deco--shine"><div></div></div>
-						<div class="tilter__deco tilter__deco--overlay"></div>
-						<figcaption class="tilter__caption">
-							<h3 class="tilter__title">Wilma Rex</h3>
-							<p class="tilter__description">Amsterdam</p>
-						</figcaption>
-						<svg class="tilter__deco tilter__deco--lines" viewBox="0 0 300 415">
-							<path d="M20.5,20.5h260v375h-260V20.5z" />
-						</svg>
-					</figure>
-				</a>
-
-        <?php
-      }
+        }
+        echo '</ul>';
     }
-    else { ?>
-
-          <p>nooooo</p>
-
-    <?php }
+    else {
+      echo 'Det finns inga från examensklassen att visa!';
+    }
   ?>
+</div> <!-- .container -->
+<?php
+get_footer();
+ ?>
 
-</div>
+<script src="<?php echo get_template_directory_uri()?>/js/graduates/expanding.js"></script>
+
+ <script>
+ 	$(function() {
+ 		Grid.init();
+ 	});
+ </script>
+
 
 <?php get_footer(); ?>

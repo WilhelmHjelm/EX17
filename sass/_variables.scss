@@ -27,3 +27,14 @@ p{
 $break-grid:		960px;
 $break-mobile:		480px;
 $grid-max-width: 	1170px;
+
+// ### Mixins ###
+
+@mixin vertical-align($position, $top, $left) {
+  position: $position;
+  top: $top;
+  left: $left;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}

@@ -18,7 +18,7 @@
 
 <meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta description="Examensdagarna för Grafisk design och kommunikation, 12-14 maj i Kåkenhus på Campus Norrköping.">
+<meta description="Examensdagarna för Grafisk design och kommunikation, 11-13 maj i Kåkenhus på Campus Norrköping.">
 <meta property="og:site_name" content="EX16">
 <?php $current_url="http://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']; ?>
 <meta property="og:url" content="<?php echo $current_url; ?>">
