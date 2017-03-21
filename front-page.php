@@ -105,6 +105,7 @@
 
   </div>
   <div class="four columns box pink" id="box5">
+
     <div class="box-content">
     <h1>OM GDK EX</h1>
     <a href="javascript:delay('<?php echo get_page_link(63); ?>')">
