@@ -3446,7 +3446,7 @@ body {
   background-color: #ffec00;
 }
 
-.pink, .Schema {
+.pink {
   background-color: #fcd1c2;
 }
 
@@ -3908,7 +3908,7 @@ footer, .footer, .real-footer {
 }
 
 .Föreläsare h1 {
-  color: #ffec00;
+  color: #fcd1c2;
 }
 
 .lecturer-box {
@@ -3979,6 +3979,14 @@ footer, .footer, .real-footer {
 
 .current_page_item a {
   color: #767272 !important;
+}
+
+.Schema {
+  background-color: #fcd1c2;
+}
+
+.Schema h1 {
+  color: black;
 }
 
 .mptt-column {
@@ -4310,6 +4318,26 @@ footer, .footer, .real-footer {
     float: none;
     width: 100%;
   }
+}
+
+.Om.GDK.EX {
+  background-color: #ffec00;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.Om.GDK.EX h1 {
+  color: #282973;
+  display: none;
+}
+
+.Om.GDK {
+  background-color: #282973;
+}
+
+.Om.GDK h1 {
+  color: #ed0f68;
 }
 
 .info-box {

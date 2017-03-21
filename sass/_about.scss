@@ -1,3 +1,21 @@
+.Om.GDK.EX {
+  background-color: $yellow;
+  background-position: bottom center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  h1 {
+    color: $blue;
+    display: none;
+  }
+}
+
+.Om.GDK {
+  background-color: $blue;
+  h1 {
+    color: $magenta;
+  }
+}
+
 .info-box{
   background-color: $blue;
   height: 240px;
