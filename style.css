@@ -4394,6 +4394,14 @@ footer, .footer, .real-footer {
   margin-top: 0;
 }
 
+.Katalog {
+  background-color: #fcd1c2;
+}
+
+.Katalog h1 {
+  color: #282973;
+}
+
 @media (max-width: 960px) {
   .main-nav .one {
     width: 20%;
@@ -4426,12 +4434,4 @@ footer, .footer, .real-footer {
   #box5, #box6, #box7, #box8, footer {
     transform: translateY(0px);
   }
-}
-
-.Katalog {
-  background-color: #fcd1c2;
-}
-
-.Katalog h1 {
-  color: #282973;
 }
