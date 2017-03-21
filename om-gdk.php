@@ -21,19 +21,15 @@ get_header(); ?>
 
 </div>
 
-<div class="five columns info-box">
-  <div class="info-box-content yellow-text">
-    <h2>11 - 13 maj</h2>
-    <h4><i class="fa fa-map-marker" aria-hidden="true"></i>  Färgeriet</h4>
+<div class="five columns info-box blue">
+  <div class="info-box-content magenta-text">
+    <h2>GDK 180hp</h2>
+    <h4>Campus Norrköping</h4>
   </div>
 </div>
 </div>
 
-<div class="row">
-  <div class="twelve columns">
-    GOOGLE MAP
-  </div>
-</div>
+
 
 <div class="row">
   <div class="seven columns about-p">
@@ -45,3 +41,5 @@ get_header(); ?>
 </div>
 
 </div>
+
+<?php get_footer(); ?>

@@ -26,7 +26,7 @@ get_header(); ?>
 
 </div>
 
-<div class="five columns info-box">
+<div class="five columns info-box blue">
   <div class="info-box-content yellow-text">
     <h2>11 - 13 maj</h2>
     <h4><i class="fa fa-map-marker" aria-hidden="true"></i>  Färgeriet</h4>

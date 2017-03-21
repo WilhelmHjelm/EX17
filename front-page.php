@@ -108,7 +108,7 @@
     <div class="box-content">
     <h1>OM GDK EX</h1>
     <a href="javascript:delay('<?php echo get_page_link(63); ?>')">
-      <button class="c-button c-button--black" type="button">
+      <button class="c-button c-button--white" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
         </div>

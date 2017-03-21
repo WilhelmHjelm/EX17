@@ -3450,6 +3450,10 @@ body {
   background-color: #fcd1c2;
 }
 
+.magenta {
+  background-color: #ed0f68;
+}
+
 .blue-text {
   color: #282973;
 }
@@ -3460,6 +3464,10 @@ body {
 
 .pink-text {
   color: #fcd1c2;
+}
+
+.magenta-text {
+  color: #ed0f68;
 }
 
 .white-text {
@@ -3583,6 +3591,10 @@ body {
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
+}
+
+#box5 h1 {
+  color: white;
 }
 
 #box6 {
@@ -4360,7 +4372,6 @@ footer, .footer, .real-footer {
 }
 
 .info-box {
-  background-color: #282973;
   height: 240px;
 }
 
@@ -4370,13 +4381,11 @@ footer, .footer, .real-footer {
 
 .info-box .info-box-content h2 {
   font-size: 60px;
-  color: #ffec00;
   margin: 5px;
 }
 
 .info-box .info-box-content h4 {
   text-transform: uppercase;
-  color: #ffec00;
   font-size: 30px;
   margin: 5px;
 }
