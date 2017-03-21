@@ -4427,3 +4427,11 @@ footer, .footer, .real-footer {
     transform: translateY(0px);
   }
 }
+
+.Katalog {
+  background-color: #fcd1c2;
+}
+
+.Katalog h1 {
+  color: #282973;
+}
