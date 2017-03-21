@@ -1,0 +1,38 @@
+
+@media (max-width: $break-mobile) {
+
+}
+
+@media (max-width: $break-grid) {
+  .main-nav .one{
+    width: 20%;
+  }
+  .main-nav .five{
+    width: 70%;
+    ul{
+      margin-left: 0;
+      -webkit-margin-before:4px;
+    }
+  }
+  .main-nav{
+    margin-top: 30px;
+  }
+  .header-box .site-title{
+    text-align: center;
+    bottom: inherit;
+    top:35px;
+  }
+  .lecturer-info-front h4, .lecturer-info-front h1, .lecturer-info-front h5{
+    -webkit-margin-before:0;
+  }
+  .lecturer-info-front h1{
+    -webkit-margin-after:0;
+  }
+  #box4{
+    height:325px;
+    background-position: center center;
+  }
+  #box5, #box6, #box7, #box8, footer{
+    transform: translateY(0px);
+  }
+}

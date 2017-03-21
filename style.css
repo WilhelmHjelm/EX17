@@ -3276,6 +3276,8 @@ a {
 h1, h2, h3, h4, h5, h6, a {
   font-family: "effra", Helvetica, sans-serif;
   font-weight: 700;
+  -webkit-margin-before: 3px;
+  -webkit-margin-after: 7px;
 }
 
 p {
@@ -3668,6 +3670,10 @@ footer, .footer, .real-footer {
   -webkit-padding-start: 0px;
 }
 
+.next-event h4 {
+  -webkit-margin-before: 0px;
+}
+
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event {
   display: table;
   border-left: none;
@@ -3680,7 +3686,7 @@ footer, .footer, .real-footer {
 
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a {
   font-size: 45px;
-  line-height: 0.5;
+  line-height: 1;
   font-weight: bolder;
 }
 
@@ -3901,6 +3907,10 @@ footer, .footer, .real-footer {
   background: #282973;
 }
 
+.Föreläsare h1 {
+  color: #ffec00;
+}
+
 .lecturer-box {
   margin-bottom: 20px;
   height: 300px;
@@ -3932,8 +3942,8 @@ footer, .footer, .real-footer {
 .lecturer-info-front h1 {
   font-size: 50px;
   letter-spacing: 2px;
-  line-height: 0;
-  font-weight: lighter;
+  line-height: 1;
+  font-weight: bolder;
 }
 
 .forelasare-color1 {
@@ -4017,13 +4027,14 @@ footer, .footer, .real-footer {
   left: 15px;
 }
 
-.graduate-info-front h1, .graduate-info-front p {
+.graduate-info-front h1, .graduate-info-front h4, .graduate-info-front p {
   padding-left: 30px;
   margin: 0;
 }
 
-.graduate-info-front h1 {
+.graduate-info-front h4 {
   padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .Examensklassen {
@@ -4090,7 +4101,6 @@ footer, .footer, .real-footer {
   left: 0;
   max-width: 100%;
   max-height: 100%;
-  border: 1px solid #282973;
 }
 
 .og-grid li img.static {
@@ -4326,4 +4336,38 @@ footer, .footer, .real-footer {
 
 .about-p p:first-child {
   margin-top: 0;
+}
+
+@media (max-width: 960px) {
+  .main-nav .one {
+    width: 20%;
+  }
+  .main-nav .five {
+    width: 70%;
+  }
+  .main-nav .five ul {
+    margin-left: 0;
+    -webkit-margin-before: 4px;
+  }
+  .main-nav {
+    margin-top: 30px;
+  }
+  .header-box .site-title {
+    text-align: center;
+    bottom: inherit;
+    top: 35px;
+  }
+  .lecturer-info-front h4, .lecturer-info-front h1, .lecturer-info-front h5 {
+    -webkit-margin-before: 0;
+  }
+  .lecturer-info-front h1 {
+    -webkit-margin-after: 0;
+  }
+  #box4 {
+    height: 325px;
+    background-position: center center;
+  }
+  #box5, #box6, #box7, #box8, footer {
+    transform: translateY(0px);
+  }
 }

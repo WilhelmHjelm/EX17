@@ -186,6 +186,9 @@ footer, .footer, .real-footer{
   -webkit-margin-before:0;
   -webkit-padding-start: 0px;
 }
+.next-event h4{
+  -webkit-margin-before:0px;
+}
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event{
   display: table;
   border-left: none;
@@ -196,7 +199,7 @@ footer, .footer, .real-footer{
 }
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a{
   font-size: 45px;
-  line-height: 0.5;
+  line-height: 1;
   font-weight: bolder;
 }
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event p{

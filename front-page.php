@@ -23,9 +23,10 @@
     $args=array('post_type'=>'forelasare', 'orderby'=>'rand', 'posts_per_page'=>'1');
     $forelasare=new WP_Query($args);
       while ($forelasare->have_posts()) : $forelasare->the_post(); { ?>
+
         <style> .lecturer-content{background-image: url(<?php the_field('image')?>);} </style>
         <div class="lecturer-info-front">
-          <h3>FÖRELÄSARE</h3>
+          <h4>FÖRELÄSARE</h4>
           <h1><?php the_title(); ?></h1>
           <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
 
@@ -49,7 +50,7 @@
   </div>
   <div class="eight columns box pink" id="box3">
     <div class="next-event">
-      <h3>Nästa event</h3>
+      <h4>NÄSTA EVENT</h4>
       <?php while ( have_posts() ) : the_post(); { ?>
 
           <?php the_content(); ?>
@@ -74,19 +75,24 @@
 
     $args=array('post_type'=>'examensklassen', 'orderby'=>'rand', 'posts_per_page'=>'1');
     $examensklassen=new WP_Query($args);
-      while ($examensklassen->have_posts()) : $examensklassen->the_post(); { ?>
+      while ($examensklassen->have_posts()) : $examensklassen->the_post(); {
+        $attachment_id = get_field('image');
+        $fullsize = "full"; // (thumbnail, medium, large, full or custom size)
+        $full_image = wp_get_attachment_image_src( $attachment_id, $fullsize );
+        ?>
 
-        <style> #box4{background-image: url(<?php the_field('image')?>);} </style>
+        <style> #box4{background-image: url(<?php echo $full_image[0]; ?>);} </style>
         <div class="graduate-info-front">
+          <h4>EN AV 60 EXAMINERADE</h4>
           <h1><?php the_title(); ?></h1>
           <?php the_excerpt(); // or the_content(); ?>
 
-        <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
+        <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
           <button class="c-button c-button--yellow" type="button">
             <div class="c-ripple js-ripple">
               <span class="c-ripple__circle"></span>
             </div>
-            Se Examensklassen
+            Se hela examensklassen
           </button>
         </a>
 

@@ -1,7 +1,10 @@
 .Föreläsare{
   background: $blue;
-
+  h1{
+    color:$yellow;
+  }
 }
+
 
 .lecturer-box {
   margin-bottom: 20px;
@@ -32,8 +35,8 @@
   h1{
     font-size: 50px;
     letter-spacing: 2px;
-    line-height: 0;
-    font-weight: lighter;
+    line-height: 1;
+    font-weight: bolder;
   }
 }
 
