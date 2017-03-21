@@ -3560,9 +3560,8 @@ body {
 }
 
 .next-event {
-  position: absolute;
-  left: 30px;
-  top: 45px;
+  padding: 10%;
+  padding-left: 40px;
 }
 
 #box4 {
@@ -3885,6 +3884,12 @@ footer, .footer, .real-footer {
   animation: a-ripple .4s ease-in;
 }
 
+.absolute {
+  position: absolute;
+  bottom: 30px;
+  left: 40px;
+}
+
 /**
  * Animation: Ripple
  * --------------------------------------------------
@@ -3904,7 +3909,7 @@ footer, .footer, .real-footer {
 }
 
 .Föreläsare {
-  background: #282973;
+  background-color: #282973;
 }
 
 .Föreläsare h1 {
@@ -3924,7 +3929,7 @@ footer, .footer, .real-footer {
   position: relative;
   height: 300px;
   background-repeat: no-repeat;
-  background-position: right center;
+  background-position: bottom center;
   background-size: cover;
 }
 
@@ -3934,9 +3939,8 @@ footer, .footer, .real-footer {
 }
 
 .lecturer-info-front {
-  position: absolute;
-  top: 45px;
-  left: 30px;
+  padding: 10%;
+  padding-left: 40px;
 }
 
 .lecturer-info-front h1 {
@@ -3944,6 +3948,13 @@ footer, .footer, .real-footer {
   letter-spacing: 2px;
   line-height: 1;
   font-weight: bolder;
+}
+
+.lecturer-info-front h5 {
+  padding: 3px 5px 3px 5px;
+  background-color: #000000;
+  color: #ffffff;
+  display: table;
 }
 
 .forelasare-color1 {
@@ -4021,6 +4032,14 @@ footer, .footer, .real-footer {
   text-decoration: none;
 }
 
+#startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event .timeslot {
+  padding: 3px 5px 3px 5px;
+  background-color: #000000;
+  color: #ffffff;
+  display: table;
+  font-weight: bold;
+}
+
 .event-description {
   font-size: 12px;
 }
@@ -4036,7 +4055,7 @@ footer, .footer, .real-footer {
 }
 
 .graduate-info-front h1, .graduate-info-front h4, .graduate-info-front p {
-  padding-left: 30px;
+  padding-left: 40px;
   margin: 0;
 }
 
@@ -4139,19 +4158,19 @@ footer, .footer, .real-footer {
 }
 
 .og-grid .graduate-name.blue-bg {
-  background: rgba(40, 41, 115, 0.7);
+  background: #282973;
 }
 
 .og-grid .graduate-name.yellow-bg {
-  background-color: rgba(255, 236, 0, 0.7);
+  background-color: #ffec00;
 }
 
 .og-grid .graduate-name.pink-bg {
-  background-color: rgba(252, 209, 194, 0.7);
+  background-color: #fcd1c2;
 }
 
 .og-grid .graduate-name.magenta-bg {
-  background-color: rgba(237, 15, 104, 0.7);
+  background-color: #ed0f68;
 }
 
 .og-grid .graduate-name span {

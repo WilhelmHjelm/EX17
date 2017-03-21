@@ -33,8 +33,12 @@ h1 {
   font-size: 17px;
   text-decoration: none;
 }
-.timeslot{
-
+#startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event .timeslot{
+  padding:3px 5px 3px 5px;
+  background-color: $black;
+  color: $white;
+  display: table;
+  font-weight: bold;
 }
 
 .event-description{

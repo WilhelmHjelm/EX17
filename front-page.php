@@ -26,18 +26,9 @@
 
         <style> .lecturer-content{background-image: url(<?php the_field('image')?>);} </style>
         <div class="lecturer-info-front">
-          <h4>FÖRELÄSARE</h4>
+          <h4>EN AV ALLA FÖRELÄSARE</h4>
           <h1><?php the_title(); ?></h1>
           <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
-
-        <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
-          <button class="c-button c-button--black" type="button">
-            <div class="c-ripple js-ripple">
-              <span class="c-ripple__circle"></span>
-            </div>
-            Fler föreläsare
-          </button>
-        </a>
 
         </div>
 
@@ -46,6 +37,15 @@
 
         endwhile;
         wp_reset_postdata(); ?>
+
+        <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
+          <button class="c-button c-button--black absolute" type="button">
+            <div class="c-ripple js-ripple">
+              <span class="c-ripple__circle"></span>
+            </div>
+            Fler föreläsare
+          </button>
+        </a>
 
   </div>
   <div class="eight columns box pink" id="box3">
@@ -57,16 +57,17 @@
 
       <?php } endwhile; // end of the loop. ?>
 
-      <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
-        <button class="c-button c-button--black" type="button">
-          <div class="c-ripple js-ripple">
-            <span class="c-ripple__circle"></span>
-          </div>
-          Se hela schemat
-        </button>
-      </a>
+
 
     </div>
+    <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
+      <button class="c-button c-button--black absolute" type="button">
+        <div class="c-ripple js-ripple">
+          <span class="c-ripple__circle"></span>
+        </div>
+        Se hela schemat
+      </button>
+    </a>
   </div>
   <div class="four columns box" id="box4">
 
@@ -85,17 +86,6 @@
         <div class="graduate-info-front">
           <h4>EN AV 60 EXAMINERADE</h4>
           <h1><?php the_title(); ?></h1>
-          <?php the_excerpt(); // or the_content(); ?>
-
-        <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
-          <button class="c-button c-button--yellow" type="button">
-            <div class="c-ripple js-ripple">
-              <span class="c-ripple__circle"></span>
-            </div>
-            Se hela examensklassen
-          </button>
-        </a>
-
         </div>
 
 
@@ -104,6 +94,14 @@
         endwhile;
         wp_reset_postdata(); ?>
 
+        <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
+          <button class="c-button c-button--yellow absolute" type="button">
+            <div class="c-ripple js-ripple">
+              <span class="c-ripple__circle"></span>
+            </div>
+            Se hela examensklassen
+          </button>
+        </a>
 
   </div>
   <div class="four columns box pink" id="box5">

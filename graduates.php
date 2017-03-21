@@ -29,9 +29,9 @@ get_header(); ?>
         while( $examensklassen->have_posts() ) {
           $examensklassen->the_post();
           if($i == 1) {$graduateColor = "blue";}
-          if($i == 2) {$graduateColor = "turquoise";}
-          if($i == 3) {$graduateColor = "green";}
-          if($i == 4) {$graduateColor = "orange"; $i = 0;}
+          if($i == 2) {$graduateColor = "magenta";}
+          if($i == 3) {$graduateColor = "pink";}
+          if($i == 4) {$graduateColor = "yellow"; $i = 0;}
           $i++;
 
           $attachment_id = get_field('image');

@@ -5,7 +5,7 @@
 	left:15px;
 	}
 	h1, h4, p{
-	padding-left: 30px;
+	padding-left: 40px;
 	margin:0;
 	}
 	h4{
@@ -99,10 +99,10 @@
   right: 10px;
   height: 50px;
 
-	&.blue-bg { background: rgba($blue, 7/10); }
-	&.yellow-bg { background-color: rgba($yellow, 7/10); }
-	&.pink-bg { background-color: rgba($pink, 7/10); }
-	&.magenta-bg { background-color: rgba($magenta, 7/10); }
+	&.blue-bg { background: $blue; }
+	&.yellow-bg { background-color: $yellow; }
+	&.pink-bg { background-color: $pink; }
+	&.magenta-bg { background-color: $magenta; }
 
   span {
     @include vertical-align(absolute, 50%, 50%);

@@ -35,7 +35,7 @@ get_header(); ?>
 
 
 
-        <div class="six columns box lecturer-box <?php echo $graduateColor;?>" id="<?php echo $post->post_name;?>">
+        <div class="twelve columns box lecturer-box <?php echo $graduateColor;?>" id="<?php echo $post->post_name;?>">
           <div class="eight columns offset-by-two lecturer-content">
             <div class="lecturer-info">
               <h1><?php the_title(); ?></h1>
