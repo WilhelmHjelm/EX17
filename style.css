@@ -4272,6 +4272,28 @@ footer, .footer, .real-footer {
   margin: 0;
 }
 
+.og-details h2 {
+  font-size: 50px;
+}
+
+.og-details p p {
+  line-height: 1.4;
+}
+
+.og-details p p a i {
+  padding: 7px 10px 7px 10px;
+  margin-right: 5px;
+  border: #ed0f68 2px solid;
+  color: #ed0f68;
+  transition: all 0.3s;
+}
+
+.og-details p p a i:hover {
+  background-color: #ed0f68;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
 .og-fullimg {
   text-align: center;
   padding-top: 150%;

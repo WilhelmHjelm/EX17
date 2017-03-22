@@ -185,6 +185,25 @@
   width: 64%;
 	padding: 20px 0 0 0;
   margin: 0;
+	h2{
+		font-size: 50px;
+	}
+	p p{
+		line-height: 1.4;
+	}
+	p p a i{
+		padding: 7px 10px 7px 10px;
+		margin-right: 5px;
+		border: $magenta 2px solid;
+		color: $magenta;
+		transition: all 0.3s;
+	}
+	p p a i:hover{
+		background-color: $magenta;
+		color:$white;
+		transition: all 0.3s;
+	}
+
 }
 
 .og-fullimg {
