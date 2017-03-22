@@ -4385,12 +4385,20 @@ footer, .footer, .real-footer {
   display: none;
 }
 
+.about-p p {
+  line-height: 1.4;
+}
+
 .Om.GDK {
   background-color: #282973;
 }
 
 .Om.GDK h1 {
   color: #ed0f68;
+}
+
+.Om.GDK p {
+  line-height: 1.4;
 }
 
 .info-box {
