@@ -3662,6 +3662,25 @@ footer, .footer, .real-footer {
   padding-top: 12px;
 }
 
+.footer-icons {
+  float: right;
+}
+
+.footer-icons i {
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  margin-right: 5px;
+  border: #ed0f68 2px solid;
+  color: #ed0f68;
+  transition: all 0.3s;
+}
+
+.footer-icons i:hover {
+  background-color: #ed0f68;
+  color: #ffffff;
+  transition: all 0.3s;
+}
+
 .sponsors .tow:first-child {
   margin-left: 0;
 }
@@ -4021,16 +4040,28 @@ footer, .footer, .real-footer {
   margin-left: 3%;
 }
 
-.mptt-column:first-child .mptt-column-title, .mptt-column:first-child .mptt-list-event {
-  border-left: 2px solid #ffec00;
+.mptt-column:first-child .mptt-list-event {
+  border-left: 2px solid #fcd1c2;
 }
 
-.mptt-column:last-child .mptt-column-title, .mptt-column:last-child .mptt-list-event {
+.mptt-column:last-child .mptt-list-event {
   border-left: 2px solid #ed0f68;
 }
 
-.mptt-column:nth-child(even) .mptt-column-title, .mptt-column:nth-child(even) .mptt-list-event {
+.mptt-column:nth-child(even) .mptt-list-event {
   border-left: 2px solid #282973;
+}
+
+.mptt-column:first-child .mptt-column-title {
+  color: #fcd1c2;
+}
+
+.mptt-column:last-child .mptt-column-title {
+  color: #ed0f68;
+}
+
+.mptt-column:nth-child(even) .mptt-column-title {
+  color: #282973;
 }
 
 .mptt-list-event {
@@ -4046,7 +4077,7 @@ footer, .footer, .real-footer {
 
 .mptt-column-title {
   margin-left: 40px;
-  padding-left: 10px;
+  font-size: 24px;
 }
 
 .mptt-events-list {

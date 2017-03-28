@@ -15,16 +15,28 @@ h1 {
   margin-left: 3%;
 }
 
-.mptt-column:first-child .mptt-column-title, .mptt-column:first-child .mptt-list-event{
-  border-left: 2px solid $yellow;
+.mptt-column:first-child .mptt-list-event{
+  border-left: 2px solid $pink;
 }
 
-.mptt-column:last-child .mptt-column-title, .mptt-column:last-child .mptt-list-event{
+.mptt-column:last-child .mptt-list-event{
   border-left: 2px solid $magenta;
 }
 
-.mptt-column:nth-child(even) .mptt-column-title, .mptt-column:nth-child(even) .mptt-list-event{
+.mptt-column:nth-child(even) .mptt-list-event{
   border-left: 2px solid $blue;
+}
+
+.mptt-column:first-child .mptt-column-title {
+  color: $pink;
+}
+
+.mptt-column:last-child .mptt-column-title {
+  color: $magenta;
+}
+
+.mptt-column:nth-child(even) .mptt-column-title {
+  color: $blue;
 }
 
 .mptt-list-event{
@@ -34,15 +46,13 @@ h1 {
   padding-left: 7px;
 }
 
-
-
 .mptt-list-event p {
   line-height: 0.5;
 }
 
 .mptt-column-title{
   margin-left: 40px;
-  padding-left: 10px;
+  font-size: 24px;
 
 }
 .mptt-events-list{

@@ -171,6 +171,26 @@ footer, .footer, .real-footer{
 .real-footer h4{
   padding-top: 12px;
 }
+
+.footer-icons {
+  float: right;
+}
+
+.footer-icons i {
+  margin-top: 10px;
+  padding: 7px 10px 7px 10px;
+  margin-right: 5px;
+  border: $magenta 2px solid;
+  color: $magenta;
+  transition: all 0.3s;
+}
+
+.footer-icons i:hover{
+  background-color: $magenta;
+  color:$white;
+  transition: all 0.3s;
+}
+
 .sponsors .tow:first-child{
   margin-left: 0;
 }
