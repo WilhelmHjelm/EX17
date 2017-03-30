@@ -22,6 +22,12 @@
 
     $args=array('post_type'=>'forelasare', 'orderby'=>'rand', 'posts_per_page'=>'1');
     $forelasare=new WP_Query($args);
+      if(!$forelasare->have_posts() ) {?>
+        <div id="no-lecurer">
+          <h2>Föreläsare presenteras inom kort</h2>
+        </div>
+      <? }
+
       while ($forelasare->have_posts()) : $forelasare->the_post(); { ?>
 
         <style> .lecturer-content{background-image: url(<?php the_field('image')?>);} </style>
@@ -32,12 +38,6 @@
 
         </div>
 
-
-        <?php }
-
-        endwhile;
-        wp_reset_postdata(); ?>
-
         <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
           <button class="c-button c-button--black absolute" type="button">
             <div class="c-ripple js-ripple">
@@ -46,6 +46,12 @@
             Fler föreläsare
           </button>
         </a>
+        <?php }
+
+        endwhile;
+        wp_reset_postdata(); ?>
+
+
 
   </div>
   <div class="eight columns box pink" id="box3">

@@ -15,6 +15,14 @@
   margin-bottom: 50px;
 }
 
+#pattern{
+  position: absolute;
+  top:0;
+  right:0;
+  width:25%;
+  z-index: -1;
+}
+
 .header-box{
   /* that big box on the front-page */
   height: 400px !important;
@@ -83,7 +91,17 @@
 #box1{
 
 }
-
+#box2{
+  background-color: $magenta;
+  #no-lecurer{
+    position: absolute;
+    left:50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+    text-decoration: underline;
+    color:white;
+  }
+}
 #box3{
   margin-left: 0;
   a button{
@@ -97,7 +115,7 @@
 #box4{
   height:640px;
   position: relative;
-  background-position: bottom right;
+  background-position: top left;
   background-repeat: no-repeat;
   background-size: cover;
 }
