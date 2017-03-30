@@ -15,6 +15,21 @@
   background-size: cover !important;
 }
 
+#no-lecturer {
+  margin-bottom: 20px;
+  height: 300px;
+  position: relative;
+  background-color: $magenta;
+  h1 {
+    font-size: 50px;
+    letter-spacing: 2px;
+    line-height: 1;
+    font-weight: bolder;
+    padding:10%;
+    color: $white;
+  }
+}
+
 .lecturer-content{
   position: relative;
   height: 300px;

@@ -51,11 +51,11 @@ get_header(); ?>
       }
     }
     else { ?>
-      <div class="container">
-        <div class="twelve columns aligncenter">
-          <p>Föreläsare presenteras inom kort</p>
+
+        <div class="twelve columns aligncenter" id="no-lecturer">
+          <h1>Föreläsare presenteras inom kort</h1>
         </div>
-      </div>
+    
     <?php }
   ?>
 </div>

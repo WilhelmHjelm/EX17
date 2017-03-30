@@ -3977,6 +3977,22 @@ footer, .footer, .real-footer {
   background-size: cover !important;
 }
 
+#no-lecturer {
+  margin-bottom: 20px;
+  height: 300px;
+  position: relative;
+  background-color: #ed0f68;
+}
+
+#no-lecturer h1 {
+  font-size: 50px;
+  letter-spacing: 2px;
+  line-height: 1;
+  font-weight: bolder;
+  padding: 10%;
+  color: #ffffff;
+}
+
 .lecturer-content {
   position: relative;
   height: 300px;
