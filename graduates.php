@@ -55,7 +55,7 @@ get_header(); ?>
         echo '</ul>';
     }
     else {
-      echo 'Det finns inga från examensklassen att visa!';
+      echo 'Något är fel. Var god ansvariga för sidan.';
     }
   ?>
 </div> <!-- .container -->

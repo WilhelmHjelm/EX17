@@ -3620,6 +3620,10 @@ body {
 
 #box6 {
   position: relative;
+  background-image: url(img/pattern2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
 }
 
 #box6 .box-content {
@@ -3735,10 +3739,15 @@ footer, .footer, .real-footer {
   padding-left: 0;
 }
 
-#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a {
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event {
+  font-family: "effra", Helvetica, sans-serif;
   font-size: 45px;
   line-height: 1;
   font-weight: bolder;
+}
+
+.timeslot {
+  font-size: 20px;
 }
 
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event p {
@@ -4132,6 +4141,12 @@ footer, .footer, .real-footer {
   color: #ffffff;
   display: table;
   font-weight: bold;
+}
+
+.mptt-list-event {
+  font-family: "effra", Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .event-description {

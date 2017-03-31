@@ -143,6 +143,10 @@
     top:45%;
     transform: translate(-50%, -50%);
   }
+  background-image: url(img/pattern2.png);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: contain;
 }
 
 #box7{
@@ -237,10 +241,14 @@ footer, .footer, .real-footer{
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a, #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event p{
   padding-left: 0;
 }
-#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event a{
+#box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event{
+  font-family: "effra", Helvetica, sans-serif;
   font-size: 45px;
   line-height: 1;
   font-weight: bolder;
+}
+.timeslot{
+  font-size:20px;
 }
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event p{
   opacity: 0.8;
