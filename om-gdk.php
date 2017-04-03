@@ -26,10 +26,10 @@ get_header(); ?>
     <h2>GDK 180hp</h2>
     <h4>Campus Norrköping</h4>
   </div>
-</div>
-</div>
 
+  </div>
 
+</div>
 
 <div class="row">
   <div class="seven columns about-p">

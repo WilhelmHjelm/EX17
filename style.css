@@ -3637,6 +3637,10 @@ body {
 #box7 {
   margin-left: 0;
   position: relative;
+  background-image: url(img/pattern3.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top right;
 }
 
 #box7 .box-content {
@@ -4560,5 +4564,17 @@ footer, .footer, .real-footer {
   }
   #box5, #box6, #box7, #box8, footer {
     transform: translateY(0px);
+  }
+  .mobile-nav-logo {
+    width: 22%;
+  }
+  .mobile-nav {
+    width: 74.0%;
+  }
+  .mobile-nav ul {
+    -webkit-margin-before: 0;
+  }
+  .sponsors {
+    width: 30.6666666667%;
   }
 }

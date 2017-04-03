@@ -56,22 +56,25 @@
   </div>
   <div class="eight columns box pink" id="box3">
     <div class="next-event">
-      <h4>NÄSTA EVENT</h4>
+      <div id="no-lecurer">
+        <h1>Schemat presenteras inom kort</h1>
+      </div>
+      <!--<h4>NÄSTA EVENT</h4>-->
       <?php while ( have_posts() ) : the_post(); { ?>
 
-          <?php the_content(); ?>
+          <?php //the_content(); ?>
 
       <?php } endwhile; // end of the loop. ?>
 
 
 
     </div>
-    <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
+    <a href="javascript:delay('<?php // echo get_page_link(38); ?>')">
       <button class="c-button c-button--black absolute" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
         </div>
-        Se hela schemat
+        Kommer snart
       </button>
     </a>
   </div>
@@ -90,7 +93,10 @@
 
         <style> #box4{background-image: url(<?php echo $full_image[0]; ?>);} </style>
         <div class="graduate-info-front">
-          <h4>EN AV 60 EXAMINERADE</h4>
+          <h4>EN AV <?php
+$published_posts = wp_count_posts('examensklassen');
+echo $published_posts->publish;
+?> EXAMINERADE</h4>
           <h1><?php the_title(); ?></h1>
         </div>
 
@@ -101,7 +107,7 @@
         wp_reset_postdata(); ?>
 
         <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
-          <button class="c-button c-button--yellow absolute" type="button">
+          <button class="c-button c-button--pink absolute" type="button">
             <div class="c-ripple js-ripple">
               <span class="c-ripple__circle"></span>
             </div>
@@ -128,12 +134,12 @@
   <div class="four columns box yellow" id="box6">
     <div class="box-content">
     <h1>Läs katalogen</h1>
-    <a href="javascript:delay('<?php echo get_page_link(69); ?>')">
+    <a href="javascript:delay('<?php // echo get_page_link(69); ?>')">
       <button class="c-button c-button--black" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
         </div>
-        Läs mer
+        Kommer snart
       </button>
     </a>
   </div>
@@ -143,7 +149,7 @@
     <div class="box-content">
     <h1 class="yellow-text">Examensklassen</h1>
 
-    <a href="javascript:delay('<?php echo get_page_link(11); ?>')">
+    <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
       <button class="c-button c-button--yellow" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
@@ -156,7 +162,7 @@
 
     <div class="six columns box pink" id="box8">
       <div class="box-content">
-      <a href="javascript:delay('<?php echo get_page_link(64); ?>')'">
+      <a href="javascript:delay('<?php echo get_page_link(64); ?>')">
         <h1>Om GDK</h1>
         <button class="c-button c-button--black" type="button">
           <div class="c-ripple js-ripple">

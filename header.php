@@ -24,7 +24,7 @@
 <meta property="og:url" content="<?php echo $current_url; ?>">
 <meta property="og:title" content="<?php if ( is_front_page() && is_home() ) : ?>Startsida<?php else : echo the_title(); endif; ?>">
 <meta property="og:description" content="Examensdagarna för Grafisk design och kommunikation, 11-13 maj i Kåkenhus på Campus Norrköping.">
-<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/img/logo_social_1200x630.png">
+<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/Screenshot.png">
 
 <script src="https://use.typekit.net/ywc5eyw.js"></script>
 <script>try{Typekit.load({ async: false });}catch(e){}</script>
@@ -42,8 +42,8 @@
 			<nav class="main-nav twelve columns">
 				<?php
 				if ( is_front_page() ) : ?>
-						<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
-						<div class="six columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
+						<a href="<?php echo get_home_url(); ?>"><div class="one columns mobile-nav-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
+						<div class="six columns mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 					</nav>
 					<div class="twelve columns box header-box">
 						<div class="site-title">
@@ -52,8 +52,8 @@
 					</div>
 
 				<?php else : ?>
-					<a href="<?php echo get_home_url(); ?>"><div class="one columns"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
-					<div class="six columns"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
+					<a href="<?php echo get_home_url(); ?>"><div class="one columns mobile-nav-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
+					<div class="six columns mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 				</nav>
 				<div class="twelve columns header-box-small <?php echo get_the_title( $ID ); ?> ">
 					<h1 class="page-title white-text <?php echo get_the_ID(); ?>"><?php the_title(); ?></h1>

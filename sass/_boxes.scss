@@ -159,6 +159,10 @@
     top:45%;
     transform: translate(-50%, -50%);
   }
+  background-image: url(img/pattern3.svg);
+  background-repeat: no-repeat;
+  background-size: 50%;
+  background-position: top right;
 }
 
 #box8{
@@ -216,6 +220,7 @@ footer, .footer, .real-footer{
 .sponsors .tow:first-child{
   margin-left: 0;
 }
+
 
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-column-title{
   display:none;

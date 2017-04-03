@@ -36,7 +36,8 @@ get_header(); ?>
 
 <div class="row">
   <div class="twelve columns">
-    GOOGLE MAP
+    <iframe width="100%" height="300" frameborder="0" style="border:0"
+src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5kenhus%2C%20Norrk%C3%B6ping&key=AIzaSyDGfMk2OybMJp-Oy7v8QMgU-J1N2a9pBKM" allowfullscreen></iframe>
   </div>
 </div>
 
