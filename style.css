@@ -3571,17 +3571,17 @@ body {
   margin: 0;
 }
 
-#box2 {
-  background-color: #ed0f68;
-}
-
-#box2 #no-lecurer {
+#no-lecurer {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   text-decoration: underline;
   color: white;
+}
+
+#box2 {
+  background-color: #ed0f68;
 }
 
 #box3 {

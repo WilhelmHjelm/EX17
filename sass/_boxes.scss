@@ -88,19 +88,21 @@
   }
 }
 
+#no-lecurer{
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  color:white;
+}
+
 #box1{
 
 }
 #box2{
   background-color: $magenta;
-  #no-lecurer{
-    position: absolute;
-    left:50%;
-    top:50%;
-    transform: translate(-50%, -50%);
-    text-decoration: underline;
-    color:white;
-  }
+
 }
 #box3{
   margin-left: 0;
