@@ -4583,8 +4583,17 @@ footer, .footer, .real-footer {
   .mobile-nav ul {
     -webkit-margin-before: 0;
   }
-  .sponsors {
+  .sponsor {
     width: 30.6666666667%;
     float: left;
+  }
+  .real-footer {
+    text-align: center;
+  }
+  .real-footer .footer-icons {
+    float: none;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
   }
 }
