@@ -51,8 +51,6 @@
         endwhile;
         wp_reset_postdata(); ?>
 
-
-
   </div>
   <div class="eight columns box pink" id="box3">
     <div class="next-event">
@@ -105,9 +103,9 @@ echo $published_posts->publish;
 
         endwhile;
         wp_reset_postdata(); ?>
-
+<img src="<?php echo get_template_directory_uri();?>/img/shadow.png" alt="Skugga" id="examensklassen-shadow">
         <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
-          <button class="c-button c-button--pink absolute" type="button">
+          <button class="c-button c-button--white absolute" type="button">
             <div class="c-ripple js-ripple">
               <span class="c-ripple__circle"></span>
             </div>

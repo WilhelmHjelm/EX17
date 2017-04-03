@@ -3618,6 +3618,15 @@ body {
   color: white;
 }
 
+#examensklassen-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  opacity: 0.7;
+}
+
 #box6 {
   position: relative;
   background-image: url(img/pattern2.png);
