@@ -4569,7 +4569,7 @@ footer, .footer, .real-footer {
   }
   #box4 {
     height: 325px;
-    background-position: center center;
+    background-position: top center;
   }
   #box5, #box6, #box7, #box8, footer {
     transform: translateY(0px);
@@ -4585,5 +4585,6 @@ footer, .footer, .real-footer {
   }
   .sponsors {
     width: 30.6666666667%;
+    float: left;
   }
 }
