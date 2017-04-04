@@ -6,7 +6,6 @@
  */
 
 get_header(); ?>
-
 <style>
   .Om.GDK.EX {background-image: url(<?php echo the_post_thumbnail_url(); ?>);}
 </style>
@@ -40,13 +39,15 @@ get_header(); ?>
 src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5kenhus%2C%20Norrk%C3%B6ping&key=AIzaSyDGfMk2OybMJp-Oy7v8QMgU-J1N2a9pBKM" allowfullscreen></iframe>
   </div>
 </div>
-
+<div class="row"></div>
 <div class="row">
   <div class="seven columns about-p">
     <?php the_field('text-2'); ?>
   </div>
-  <div class="five columns photo">
-
+</div>
+<div class="row">
+  <div class="gruppen">
+    <img src="<?php echo get_template_directory_uri();?>/img/gruppen.jpg" id="dragable">
   </div>
 </div>
 
