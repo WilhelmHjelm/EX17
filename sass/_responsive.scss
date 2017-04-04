@@ -63,4 +63,11 @@
   }
   #val-text{transform: rotate(-90deg) translateY(-170px) translateX(-60px)!important; }
   #obli-text{transform: rotate(-90deg) translateY(-170px) translateX(-130px)!important; }
+  .category{
+    width: 48% !important;
+    margin-bottom: 4%;
+  }
+  .category:nth-child(even){
+    margin-left: 4% !important;
+  }
 }

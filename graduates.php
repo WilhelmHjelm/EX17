@@ -66,48 +66,57 @@ get_header(); ?>
   ?>
 </div> <!-- .container -->
 <div class="container">
-<div class="row">
-  <div class="six columns">
-    <h1>Engagemang</h1>
-    <p>Det är klart att vi har pluggat, men under våra tre korta år har vi hunnit med mycket annat också:</p>
+  <div class="engagemang twelve columns">
+  <div class="row">
+    <div class="six columns">
+      <h1>Engagemang</h1>
+      <p>Det är klart att vi har pluggat, men under våra tre korta år har vi hunnit med mycket annat också:</p>
+    </div>
   </div>
+  <div class="row">
+  <?php
+/*
+ * Loop through Categories and Display Posts within
+ */
+$post_type = 'examensklassen';
+
+// Get all the taxonomies for this post type
+$taxonomies = get_object_taxonomies( array( 'examensklassen' => $post_type ) );
+
+foreach( $taxonomies as $taxonomy ) :
+
+    // Gets every "category" (term) in this taxonomy to get the respective posts
+    $terms = get_terms( $taxonomy );
+
+    foreach( $terms as $term ) : ?>
+<div class="two columns category">
+
+  <h3><?php echo $term->name; ?></h3>
+        <?php
+        $args = array(
+                'post_type' => $post_type,
+                'posts_per_page' => -1,  //show all posts
+                'tax_query' => array(
+                    array(
+                        'taxonomy' => $taxonomy,
+                        'field' => 'slug',
+                        'terms' => $term->slug,
+                    )
+                )
+
+            );
+        $posts = new WP_Query($args);
+
+        if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
+
+                    <li><?php  echo get_the_title(); ?></li>
+
+        <?php endwhile; endif; ?>
 </div>
-<div class="row">
-  <?
-      $args = array(
-            'post_type' => 'examensklassen',
-            'orderby' => 'name',
-            'parent' => 0
-      );
-      $categories = get_categories( $args );
-      foreach ( $categories as $category ) { ?>
+    <?php endforeach;
 
-        <div class="two columns category">
-          <h3><?php echo $category->cat_name ?></h3>
-          <li><?php the_title(); ?></li>
-        </div>
-      <?php }
-    ?>
-  </ul>
-<?
-    // Our variables
-    $numPosts = (isset($_GET['numPosts'])) ? $_GET['numPosts'] : 0;
-    $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
-
-    query_posts(array(
-          'posts_per_page' => $numPosts,
-          'paged'          => $page,
-          'post_type'      => 'examensklassen'
-    ));
-
-    // our loop
-    if (have_posts()) {
-          while (have_posts()){
-                the_post();
-          }
-    }
-    wp_reset_query();
-  ?>
+endforeach; ?>
+</div>
 </div>
 </div>
 <?php
@@ -116,6 +125,7 @@ get_footer();
 
 <script src="<?php echo get_template_directory_uri()?>/js/graduates/expanding.js"></script>
 
+</script>
  <script>
  	$(function() {
  		Grid.init();

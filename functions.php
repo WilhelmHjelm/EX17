@@ -219,8 +219,36 @@ function custom_post_type() {
 		'has_archive'   => false
 	)
 	);
+	register_post_type( 'utstallning', array(
+		'labels'        => array(
+										'name' 					=> __( 'Utställning', 'ex17'  ),
+										'singular_name' => __( 'Utställningsalster', 'ex17'  ),
+										'add_new' => __( 'Nytt alster', 'ex16'  ),
+										'add_new_item' => __( 'Lägg till nytt utställningsalster', 'ex17'  )
+									),
+		'description'   => 'Holds the information about EX17 digital works.',
+		'public'        => true,
+		'menu_position' => 8,
+		'supports'      => array( 'title', 'editor',  'custom-fields' ),
+		'has_archive'   => true,
+		'taxonomies' 		=> array('utstallning_category')
+	)
+	);
 }
 add_action( 'init', 'custom_post_type');
+
+function taxonomies_utstallning() {
+  $labels = array(
+    'name'              => _x( 'Kategorier', 'taxonomy general name' ),
+    'singular_name'     => _x( 'Kategori', 'taxonomy singular name' ),
+  );
+  $args = array(
+    'labels' => $labels,
+    'hierarchical' => true,
+  );
+  register_taxonomy( 'utstallning_category', 'exhibition', $args );
+}
+add_action( 'init', 'taxonomies_utstallning', 0 );
 
 /**
  * Implement the Custom Header feature.

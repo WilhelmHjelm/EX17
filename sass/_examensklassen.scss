@@ -255,17 +255,26 @@ li.og-expanded{
 	padding: 10px;
 	color:white;
 	background-clip: padding-box;
+	background-color: $blue;
+	width: 13% !important;
+	margin-left: 2% !important;
+	margin-bottom: 2%;
 	li{
 		list-style-type: none;
 		font-family: "effra", sans-serif;
-		display: inline-block;
+		display: block;
 	}
 }
-.category:nth-child(odd){
-	background-color: $blue;
-}
-.category:nth-child(even){
+
+.engagemang{
+	display: table;
+	padding:30px;
 	background-color: $magenta;
+	background-clip: padding-box;
+	color:$white;
+	.row{
+		margin-top: 0;
+	}
 }
 
 @-webkit-keyframes loader {

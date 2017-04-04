@@ -8,22 +8,6 @@ $magenta: #ed0f68 ;
 $black: #000000 ;
 $white: #ffffff ;
 
-/* FONTS */
-h1, h2, h3, h4, h5, h6, a{
-  font-family: "effra", Helvetica, sans-serif;
-  font-weight: 700;
-  -webkit-margin-before:3px;
-  -webkit-margin-after:7px;
-}
-p{
-  font-family: "effra", Helvetica, sans-serif;
-  line-height: 1.2;
-}
-.long-text{
-  font-family: "adobe-caslon-pro", Times, serif !important;
-}
-
-
 // ### Break points ###
 
 $break-grid:		960px;
