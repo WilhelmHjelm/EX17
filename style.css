@@ -4456,6 +4456,10 @@ footer, .footer, .real-footer {
   max-width: 100%;
 }
 
+li.og-expanded {
+  height: 900px !important;
+}
+
 .og-loading {
   width: 20px;
   height: 20px;
@@ -4534,10 +4538,7 @@ footer, .footer, .real-footer {
     float: none;
     width: 100%;
   }
-  /*li.og-expanded{
-		height:900px !important;
-	}
-	.og-expander{
+  /*.og-expander{
 		height:900px !important;
 	}*/
 }

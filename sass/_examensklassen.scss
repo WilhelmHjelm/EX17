@@ -218,7 +218,9 @@
 	max-width: 100%;
 }
 
-
+li.og-expanded{
+	height:900px !important;
+}
 
 .og-loading {
 	width: 20px;
@@ -272,10 +274,7 @@
 
 	.og-fullimg { display: none; }
 	.og-details { float: none; width: 100%; }
-	/*li.og-expanded{
-		height:900px !important;
-	}
-	.og-expander{
+	/*.og-expander{
 		height:900px !important;
 	}*/
 }
