@@ -190,7 +190,7 @@ add_action( 'wp_enqueue_scripts', 'ex17_scripts' );
 
 function custom_post_type() {
 	register_post_type( 'sponsorer', array(
-		'labels'        => array('name' => __( 'Sponsors', 'ex17' ), 'singular_name' => __( 'Sponsor', 'ex17' ) ),
+		'labels'        => array('name' => __( 'Sponsorer', 'ex17' ), 'singular_name' => __( 'Sponsor', 'ex17' ) ),
 		'description'   => 'Holds the information about EX17s sponors.',
 		'public'        => true,
 		'menu_position' => 6,
@@ -200,7 +200,7 @@ function custom_post_type() {
 	);
 
 	register_post_type( 'examensklassen', array(
-		'labels'        => array('name' => __( 'Graduates', 'ex17'  ), 'singular_name' => __( 'Graduates', 'ex17'  ) ),
+		'labels'        => array('name' => __( 'Examensklassen', 'ex17'  ), 'singular_name' => __( 'Examensperson', 'ex17'  ) ),
 		'description'   => 'Holds the information about EX17s graduate students.',
 		'public'        => true,
 		'menu_position' => 4,
@@ -211,7 +211,7 @@ function custom_post_type() {
 	);
 
 	register_post_type( 'forelasare', array(
-		'labels'        => array('name' => __( 'Lecturers', 'ex17'  ), 'singular_name' => __( 'Lecturer', 'ex17'  ) ),
+		'labels'        => array('name' => __( 'Föreläsare', 'ex17'  ), 'singular_name' => __( 'Föreläsare', 'ex17'  ) ),
 		'description'   => 'Holds the information about EX17 lectures.',
 		'public'        => true,
 		'menu_position' => 7,
