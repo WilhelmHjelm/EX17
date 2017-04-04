@@ -235,6 +235,20 @@
 	animation: loader 0.5s infinite ease-in-out both;
 }
 
+#og-grid li:first-child{
+	.graduate-name{
+		top:0px;
+		left:0px;
+		right:0px;
+		bottom:0px;
+		height: auto;
+	}
+	a{
+  pointer-events: none;
+  cursor: default;
+	}
+}
+
 @-webkit-keyframes loader {
 	0% { background: #ddd; }
 	33% { background: #ccc; box-shadow: 0 0 1px #ccc, 15px 30px 1px #ccc, -15px 30px 1px #ddd; }
@@ -263,5 +277,5 @@
 	}
 	.og-expander{
 		height:900px !important;
-	}*/ 
+	}*/
 }

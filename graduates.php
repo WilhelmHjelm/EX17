@@ -13,8 +13,9 @@ get_header(); ?>
 
 <?php endwhile; // end of the loop. ?>
 
-
 <div class="container">
+
+
 <?php
 // Custom post type "Examensklassen" list
 
@@ -26,6 +27,11 @@ get_header(); ?>
       $examensklassen = new WP_Query( $args );
       if( $examensklassen->have_posts() ) {
         echo '<ul id="og-grid" class="og-grid twelve columns">';
+        echo '<li>
+          <a href="">
+            <div class="graduate-name magenta-bg"><span>Klicka på en person för att läsa mer</span></div>
+          </a>
+        </li>';
         $i = 1;
         while( $examensklassen->have_posts() ) {
           $examensklassen->the_post();
