@@ -3530,7 +3530,6 @@ body {
   position: relative;
   height: 200px;
   margin-bottom: 50px;
-  padding-top: 30px;
 }
 
 #pattern {
@@ -4487,6 +4486,26 @@ li.og-expanded {
 #og-grid li:first-child a {
   pointer-events: none;
   cursor: default;
+}
+
+.category {
+  display: table;
+  padding: 10px;
+  color: white;
+  background-clip: padding-box;
+}
+
+.category li {
+  list-style-type: none;
+  font-family: "effra", sans-serif;
+}
+
+.category:nth-child(odd) {
+  background-color: #282973;
+}
+
+.category:nth-child(even) {
+  background-color: #ed0f68;
 }
 
 @-webkit-keyframes loader {

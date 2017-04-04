@@ -205,16 +205,6 @@ function custom_post_type() {
 		'public'        => true,
 		'menu_position' => 4,
 		'supports'      => array( 'title', 'editor' ),
-		'has_archive'   => false
-	)
-	);
-
-	register_post_type( 'projektgruppen', array(
-		'labels'        => array('name' => __( 'Projectgroups', 'ex17'  ), 'singular_name' => __( 'Projectgroup', 'ex17'  ) ),
-		'description'   => 'Holds the information about EX17 project groups.',
-		'public'        => true,
-		'menu_position' => 5,
-		'supports'      => array( 'title', 'thumbnail' ),
 		'has_archive'   => false,
 		'taxonomies' 		=> array('category')
 	)

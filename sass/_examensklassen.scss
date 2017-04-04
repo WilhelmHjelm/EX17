@@ -250,6 +250,22 @@ li.og-expanded{
   cursor: default;
 	}
 }
+.category{
+	display: table;
+	padding: 10px;
+	color:white;
+	background-clip: padding-box;
+	li{
+		list-style-type: none;
+		font-family: "effra", sans-serif;
+	}
+}
+.category:nth-child(odd){
+	background-color: $blue;
+}
+.category:nth-child(even){
+	background-color: $magenta;
+}
 
 @-webkit-keyframes loader {
 	0% { background: #ddd; }

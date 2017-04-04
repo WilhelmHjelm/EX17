@@ -65,6 +65,51 @@ get_header(); ?>
     }
   ?>
 </div> <!-- .container -->
+<div class="container">
+<div class="row">
+  <div class="six columns">
+    <h1>Engagemang</h1>
+    <p>Det är klart att vi har pluggat, men under våra tre korta år har vi hunnit med mycket annat också:</p>
+  </div>
+</div>
+<div class="row">
+  <?
+      $args = array(
+            'post_type' => 'examensklassen',
+            'orderby' => 'name',
+            'parent' => 0
+      );
+      $categories = get_categories( $args );
+      foreach ( $categories as $category ) { ?>
+
+        <div class="two columns category">
+          <h3><?php echo $category->cat_name ?></h3>
+          <li><?php the_title(); ?></li>
+        </div>
+      <?php }
+    ?>
+  </ul>
+<?
+    // Our variables
+    $numPosts = (isset($_GET['numPosts'])) ? $_GET['numPosts'] : 0;
+    $page = (isset($_GET['pageNumber'])) ? $_GET['pageNumber'] : 0;
+
+    query_posts(array(
+          'posts_per_page' => $numPosts,
+          'paged'          => $page,
+          'post_type'      => 'examensklassen'
+    ));
+
+    // our loop
+    if (have_posts()) {
+          while (have_posts()){
+                the_post();
+          }
+    }
+    wp_reset_query();
+  ?>
+</div>
+</div>
 <?php
 get_footer();
  ?>
