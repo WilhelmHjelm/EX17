@@ -4613,6 +4613,9 @@ li.og-expanded {
     margin-left: 0;
     -webkit-margin-before: 4px;
   }
+  .main-nav {
+    padding-top: 30px;
+  }
   .header-box .site-title {
     text-align: center;
     bottom: inherit;
