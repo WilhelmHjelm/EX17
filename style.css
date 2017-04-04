@@ -4498,6 +4498,7 @@ li.og-expanded {
 .category li {
   list-style-type: none;
   font-family: "effra", sans-serif;
+  display: inline-block;
 }
 
 .category:nth-child(odd) {
