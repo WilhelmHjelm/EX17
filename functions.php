@@ -162,11 +162,11 @@ function ex17_scripts() {
 	wp_enqueue_style( 'ex17-style', get_stylesheet_uri() );
 	wp_enqueue_style( 'google-fonts', '', array() );
 
-	wp_enqueue_script( 'ex17-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215' );
-
-	wp_enqueue_script( 'ex17-jquery', get_template_directory_uri() . '/js/jquery.js', array(), '20170208' );
-	wp_enqueue_script( 'ex17-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215' );
+	wp_enqueue_script( 'ex17-jquery', get_template_directory_uri() . '/js/jquery-3.2.0.min.js', array(), '20170208' );
 	wp_enqueue_script( 'ex17-buttons', get_template_directory_uri() . '/js/button.js', array(), '20170208' );
+	wp_enqueue_script( 'ex17-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215' );
+	wp_enqueue_script( 'ex17-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215' );
+
 
 	if ( is_page( 'Examensklassen' ) ) {
 		wp_enqueue_script( 'ex17-modernizr-custom', get_template_directory_uri() . '/js/graduates/modernizr.custom.js', array(), '20160226' );
@@ -174,11 +174,11 @@ function ex17_scripts() {
 	 }
 
 	/* Jquery */
-	if( !is_admin()){
+	/*if( !is_admin()){
 		wp_deregister_script('jquery');
 		wp_register_script('jquery', ("https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"), false, '2.1.4', false);
 		wp_enqueue_script('jquery');
-	}
+	}*/
 
 
 }

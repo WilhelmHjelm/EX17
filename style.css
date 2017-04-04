@@ -3434,6 +3434,47 @@ p {
   }
 }
 
+/* Loading icon */
+@keyframes loadingFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 9999998;
+  background-color: #ffffff;
+  transform: translateY(-32px);
+}
+
+.loading:after {
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  z-index: 9999999;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: table-cell;
+  width: 175px;
+  height: 175px;
+  content: "Vänta, sidan laddar...";
+  text-align: center;
+  font-size: 12px;
+  color: #ed0f68;
+  opacity: 0;
+  background-position: center center;
+  background-size: 125px 125px;
+  background-repeat: no-repeat;
+  animation: loadingFadeIn 0.5s 0.6s linear forwards;
+}
+
 body {
   background-color: #f7f7f7;
 }
@@ -3488,7 +3529,6 @@ body {
 .main-nav {
   position: relative;
   height: 200px;
-  margin-top: 50px;
   margin-bottom: 50px;
 }
 
@@ -4481,6 +4521,12 @@ footer, .footer, .real-footer {
     float: none;
     width: 100%;
   }
+  /*li.og-expanded{
+		height:900px !important;
+	}
+	.og-expander{
+		height:900px !important;
+	}*/
 }
 
 .Om.GDK.EX {

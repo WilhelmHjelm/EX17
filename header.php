@@ -25,18 +25,30 @@
 <meta property="og:title" content="<?php if ( is_front_page() && is_home() ) : ?>Startsida<?php else : echo the_title(); endif; ?>">
 <meta property="og:description" content="Examensdagarna för Grafisk design och kommunikation, 11-13 maj i Kåkenhus på Campus Norrköping.">
 <meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/Screenshot.png">
-
+<script src="<?php echo get_template_directory_uri();?>/js/jquery-3.2.0.min.js"></script>
 <script src="https://use.typekit.net/ywc5eyw.js"></script>
 <script>try{Typekit.load({ async: false });}catch(e){}</script>
+
+<script>$(document).ready(function(){
+        window.setTimeout('fadeout();', 500);
+    });
+
+    function fadeout(){
+        $('.loading').fadeOut('fast', function() {
+           // Animation complete.
+        });
+    }
+		</script>
 
 <script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}</script>
 
 <?php wp_head(); ?>
+
 </head>
 
 <body <?php body_class(); ?> id="<?php echo get_the_ID(); ?>">
+	<div class="loading"></div>
 <div id="page" class="site">
-
 	<header id="masthead" class="site-header" role="banner">
 		<div class="container">
 			<nav class="main-nav twelve columns">
