@@ -3450,7 +3450,6 @@ p {
   height: 100vh;
   z-index: 9999998;
   background-color: #ffffff;
-  transform: translateY(-32px);
 }
 
 .loading:after {
@@ -3469,6 +3468,7 @@ p {
   font-size: 12px;
   color: #ed0f68;
   opacity: 0;
+  background-image: url(img/logo.svg);
   background-position: center center;
   background-size: 125px 125px;
   background-repeat: no-repeat;
@@ -4631,7 +4631,7 @@ li.og-expanded {
 
 .gruppen {
   height: 400px;
-  width: 1170px;
+  width: 100%;
   overflow-x: scroll;
   overflow-y: hidden;
   position: relative;
@@ -4709,7 +4709,10 @@ li.og-expanded {
     height: 100px;
     margin-bottom: 0;
   }
-  .courses h2 {
-    transform: none;
+  #val-text {
+    transform: rotate(-90deg) translateY(-170px) translateX(-60px) !important;
+  }
+  #obli-text {
+    transform: rotate(-90deg) translateY(-170px) translateX(-130px) !important;
   }
 }

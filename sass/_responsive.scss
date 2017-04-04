@@ -61,7 +61,6 @@
     height: 100px;
     margin-bottom: 0;
   }
-  .courses h2{
-    transform: none;
-  }
+  #val-text{transform: rotate(-90deg) translateY(-170px) translateX(-60px)!important; }
+  #obli-text{transform: rotate(-90deg) translateY(-170px) translateX(-130px)!important; }
 }
