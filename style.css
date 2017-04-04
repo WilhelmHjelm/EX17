@@ -4595,6 +4595,40 @@ li.og-expanded {
   margin-top: 0;
 }
 
+.courses {
+  background-color: #ffec00;
+  background-origin: border-box;
+  padding-left: 4%;
+}
+
+.courses h1 {
+  padding-top: 30px;
+  text-decoration: underline;
+  font-size: 70px;
+}
+
+.courses li {
+  font-family: "effra", sans-serif;
+  list-style-type: none;
+}
+
+.courses h2 {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.courses #val-text {
+  transform: rotate(-90deg) translateY(-210px) translateX(-20px);
+}
+
+.courses #obli-text {
+  transform: rotate(-90deg) translateY(-210px) translateX(-110px);
+}
+
+.courses #obli {
+  transform: translateY(-35px);
+}
+
 .Katalog {
   background-color: #fcd1c2;
 }
@@ -4660,5 +4694,8 @@ li.og-expanded {
   .EX {
     height: 100px;
     margin-bottom: 0;
+  }
+  .courses h2 {
+    transform: none;
   }
 }

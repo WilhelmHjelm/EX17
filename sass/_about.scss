@@ -41,3 +41,30 @@
 .about-p p:first-child{
   margin-top:0;
 }
+.courses{
+  background-color: $yellow;
+  background-origin: border-box;
+  padding-left: 4%;
+  h1{
+    padding-top: 30px;
+    text-decoration: underline;
+    font-size: 70px;
+  }
+  li{
+    font-family: "effra", sans-serif;
+    list-style-type: none;
+  }
+  h2{
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+  #val-text{
+    transform: rotate(-90deg) translateY(-210px) translateX(-20px);
+  }
+  #obli-text{
+    transform: rotate(-90deg) translateY(-210px) translateX(-110px);
+  }
+  #obli{
+    transform: translateY(-35px);
+  }
+}
