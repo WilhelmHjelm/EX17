@@ -29,16 +29,9 @@
 <script src="https://use.typekit.net/ywc5eyw.js"></script>
 <script>try{Typekit.load({ async: false });}catch(e){}</script>
 
-<script>$(document).ready(function(){
-        window.setTimeout('fadeout();', 500);
-    });
-
-    function fadeout(){
-        $('.loading').fadeOut('fast', function() {
-           // Animation complete.
-        });
-    }
-		</script>
+		<script>$(window).load(function(){
+   $('.loading').fadeOut('fast');
+});</script>
 
 <script>function delay (URL) {setTimeout( function() { window.location = URL }, 500 );}</script>
 
