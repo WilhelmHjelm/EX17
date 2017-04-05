@@ -10,8 +10,9 @@
 <div class="container">
   <div class="four columns box blue" id="box1">
     <div class="site-info yellow-text">
-      <h1>11-13 maj</h1>
-      <h2>Färgeriet, Kåkenhus</h2>
+      <h1>11-13 MAJ</h1>
+      <h2>Campus Norrköping</h2>
+      <h2>Färgeriet</h2>
     </div>
   </div>
 

@@ -29,15 +29,13 @@ get_header(); ?>
         echo '<ul id="og-grid" class="og-grid twelve columns">';
         echo '<li>
           <a href="">
-            <div class="graduate-name magenta-bg"><span>Klicka på en person för att läsa mer</span></div>
+            <div class="graduate-name magenta-bg"><span id="forklaring">Klicka på en person för att läsa mer</span></div>
           </a>
         </li>';
         $i = 1;
         while( $examensklassen->have_posts() ) {
           $examensklassen->the_post();
-          if($i == 1) {$graduateColor = "blue";}
-          if($i == 2) {$graduateColor = "magenta"; $i = 0;}
-          $i++;
+
 
           $attachment_id = get_field('image');
           $thumb = "medium"; // (thumbnail, medium, large, full or custom size)
@@ -53,7 +51,7 @@ get_header(); ?>
             <a href="" data-largesrc="<?php echo $full_image[0]; ?>" data-title="<?php the_title() ?>" data-description='<?php the_content() ?>'>
               <img src="<?php echo $thumb_image[0]; ?>" class="static" alt="<?php the_title() ?>">
               <img src="<?php echo $hover_thumb_image[0]; ?>" class="hover" alt="<?php the_title() ?>">
-              <div class="graduate-name <?php echo $graduateColor; ?>-bg"><span><?php the_title() ?></span></div>
+              <div class="graduate-name blue-bg"><span><?php the_title() ?></span></div>
             </a>
           </li>
         <?php
@@ -67,13 +65,7 @@ get_header(); ?>
 </div> <!-- .container -->
 <div class="container">
   <div class="engagemang twelve columns">
-  <div class="row">
-    <div class="six columns">
-      <h1>Engagemang</h1>
-      <p>Det är klart att vi har pluggat, men under våra tre korta år har vi hunnit med mycket annat också:</p>
-    </div>
-  </div>
-  <div class="row">
+      <p id="explenation">Det är klart att vi har pluggat, men under våra tre korta år har vi hunnit med mycket annat också:</p>
   <?php
 /*
  * Loop through Categories and Display Posts within
@@ -89,9 +81,8 @@ foreach( $taxonomies as $taxonomy ) :
     $terms = get_terms( $taxonomy );
 
     foreach( $terms as $term ) : ?>
-<div class="two columns category">
 
-  <h3><?php echo $term->name; ?></h3>
+  <h3 class="one-engagemang"><?php echo $term->name; ?></h3>
         <?php
         $args = array(
                 'post_type' => $post_type,
@@ -109,13 +100,14 @@ foreach( $taxonomies as $taxonomy ) :
 
         if( $posts->have_posts() ): while( $posts->have_posts() ) : $posts->the_post(); ?>
 
-                    <li><?php  echo get_the_title(); ?></li>
+                    <li class="person"><?php  echo get_the_title(); ?></li>
 
         <?php endwhile; endif; ?>
-</div>
+
     <?php endforeach;
 
 endforeach; ?>
+</div>
 </div>
 </div>
 </div>

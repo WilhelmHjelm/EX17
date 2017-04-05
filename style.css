@@ -3561,7 +3561,7 @@ body {
 
 .header-box-small {
   /* like that big box on the front-page but on other pages and smaller */
-  height: 200px;
+  display: table;
   position: relative;
   margin-bottom: 40px;
   margin-top: 50px;
@@ -3569,10 +3569,11 @@ body {
 
 .page-title {
   text-align: center;
-  padding-top: 70px;
+  padding: 30px 25px 30px 25px;
   line-height: 1;
   text-transform: uppercase;
   text-decoration: underline;
+  font-size: 90px;
 }
 
 .site-title {
@@ -3593,6 +3594,7 @@ body {
   line-height: 1;
   margin: 0;
   margin-bottom: 7px;
+  text-decoration: underline;
 }
 
 .site-info h2 {
@@ -3657,10 +3659,9 @@ body {
 
 #box6 {
   position: relative;
-  background-image: url(img/pattern2.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: contain;
+  background-image: url(img/pattern2.svg);
+  background-repeat: bottom left;
+  background-size: cover;
 }
 
 #box6 .box-content {
@@ -3669,6 +3670,7 @@ body {
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
+  background-color: #ffec00;
 }
 
 #box7 {
@@ -3676,8 +3678,8 @@ body {
   position: relative;
   background-image: url(img/pattern3.svg);
   background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: top right;
+  background-size: cover;
+  background-position: center center;
 }
 
 #box7 .box-content {
@@ -3686,6 +3688,7 @@ body {
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
+  background-color: #282973;
 }
 
 #box8 {
@@ -3749,6 +3752,11 @@ footer, .footer, .real-footer {
 
 .sponsors .tow:first-child {
   margin-left: 0;
+}
+
+.box-content {
+  background-clip: padding-box;
+  padding: 20px 30px 20px 30px;
 }
 
 #box3 #startpage .mptt-shortcode-list .mptt-column .mptt-column-title {
@@ -4332,7 +4340,8 @@ footer, .footer, .real-footer {
   transform: translate(-50%, -50%);
   width: 100%;
   color: white;
-  font-size: 12px;
+  font-size: 14px;
+  letter-spacing: 1px;
   font-weight: bold;
   text-align: center;
   padding: 0 10px;
@@ -4493,16 +4502,52 @@ li.og-expanded {
   display: block;
 }
 
+#forklaring {
+  font-size: 35px;
+  line-height: 1.05;
+  text-align: left;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
 .engagemang {
+  position: relative;
   display: table;
   padding: 30px;
   background-color: #ed0f68;
   background-clip: padding-box;
   color: #ffffff;
+  content: "ENGAGEMANG";
 }
 
 .engagemang .row {
   margin-top: 0;
+}
+
+.engagemang .one-engagemang, .engagemang .person {
+  color: #fcd1c2;
+  display: inline;
+  list-style-type: none;
+  font-size: 17px;
+  z-index: 10;
+}
+
+.engagemang #explenation {
+  display: inline;
+  color: #282973;
+  z-index: 10;
+}
+
+.engagemang .one-engagemang {
+  padding: 0px 5px 0px 5px;
+}
+
+.engagemang .one-engagemang:before {
+  content: "//";
 }
 
 @-webkit-keyframes loader {
@@ -5034,6 +5079,10 @@ body {
     text-align: center;
     bottom: inherit;
     top: 35px;
+  }
+  .page-title {
+    font-size: 70px;
+    word-break: break-all;
   }
   .lecturer-info-front h4, .lecturer-info-front h1, .lecturer-info-front h5 {
     -webkit-margin-before: 0;

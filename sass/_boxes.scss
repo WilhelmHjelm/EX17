@@ -13,6 +13,7 @@
   height: 200px;
   margin-bottom: 50px;
   padding-top: 30px;
+
 }
 
 #pattern{
@@ -54,17 +55,18 @@
 }
 .header-box-small{
   /* like that big box on the front-page but on other pages and smaller */
-  height:200px;
+  display: table;
   position: relative;
   margin-bottom: 40px;
   margin-top: 50px;
 }
 .page-title{
   text-align: center;
-  padding-top:70px;
+  padding:30px 25px 30px 25px;
   line-height: 1;
   text-transform: uppercase;
   text-decoration: underline;
+  font-size: 90px;
 }
 
 .site-title{
@@ -82,6 +84,7 @@
     line-height: 1;
     margin:0;
     margin-bottom: 7px;
+    text-decoration: underline;
   }
   h2{
     margin:0;
@@ -153,11 +156,11 @@
     left:50%;
     top:45%;
     transform: translate(-50%, -50%);
+    background-color: $yellow;
   }
-  background-image: url(img/pattern2.png);
-  background-repeat: no-repeat;
-  background-position: left bottom;
-  background-size: contain;
+  background-image: url(img/pattern2.svg);
+  background-repeat: bottom left;
+  background-size: cover;
 }
 
 #box7{
@@ -169,11 +172,12 @@
     left:50%;
     top:45%;
     transform: translate(-50%, -50%);
+    background-color: $blue;
   }
   background-image: url(img/pattern3.svg);
   background-repeat: no-repeat;
-  background-size: 50%;
-  background-position: top right;
+  background-size: cover;
+  background-position: center center;
 }
 
 #box8{
@@ -230,6 +234,10 @@ footer, .footer, .real-footer{
 
 .sponsors .tow:first-child{
   margin-left: 0;
+}
+.box-content{
+  background-clip: padding-box;
+  padding:20px 30px 20px 30px;
 }
 
 

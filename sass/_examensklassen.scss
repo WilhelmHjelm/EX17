@@ -108,7 +108,8 @@
     @include vertical-align(absolute, 50%, 50%);
     width: 100%;
     color: white;
-    font-size: 12px;
+    font-size: 14px;
+		letter-spacing: 1px;
     font-weight: bold;
     text-align: center;
     padding: 0 10px;
@@ -265,15 +266,41 @@ li.og-expanded{
 		display: block;
 	}
 }
+#forklaring{
+	font-size: 35px;
+	line-height: 1.05;
+	text-align: left;
+	@include vertical-align(absolute, 40%, 50%);
+}
 
 .engagemang{
+	position: relative;
 	display: table;
 	padding:30px;
 	background-color: $magenta;
 	background-clip: padding-box;
 	color:$white;
+	content:"ENGAGEMANG";
 	.row{
 		margin-top: 0;
+	}
+	.one-engagemang, .person{
+		color:$pink;
+		display: inline;
+		list-style-type: none;
+		font-size: 17px;
+		z-index: 10;
+	}
+	#explenation{
+		display: inline;
+		color:$blue;
+		z-index: 10;
+	}
+	.one-engagemang{
+		padding: 0px 5px 0px 5px;
+	}
+	.one-engagemang:before{
+		content:"//";
 	}
 }
 
