@@ -55,7 +55,7 @@ get_header(); ?>
     <div class="five columns offset-by-one">
       <h2 id="obli-text">Obligatoriska kurser</h2>
       <ul id="obli">
-        <li>On-line produktion</li>
+        <li>Onlineproduktion</li>
         <li>Interaktionsdesign</li>
         <li>Företagsekonomi</li>
         <li>Immaterialrätt</li>
