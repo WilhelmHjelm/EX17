@@ -22,7 +22,7 @@ get_header(); ?>
 </div>
 
 <div class="five columns info-box blue">
-  <div class="info-box-content magenta-text aligncenter">
+  <div class="info-box-content magenta-text aligncenter" id="about-box">
     <h1>GDK 180hp</h1>
     <h2>Campus Norrköping</h2>
   </div>

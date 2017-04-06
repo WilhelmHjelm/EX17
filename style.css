@@ -4655,6 +4655,10 @@ li.og-expanded {
   line-height: 1.4;
 }
 
+#about-box h1 {
+  margin-top: 65px;
+}
+
 .info-box {
   height: 240px;
 }
