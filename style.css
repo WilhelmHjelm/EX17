@@ -3462,6 +3462,10 @@ iframe {
   animation: loadingFadeIn 0.5s 0.6s linear forwards;
 }
 
+.aligncenter {
+  text-align: center;
+}
+
 body {
   background-color: #f7f7f7;
 }
@@ -3584,7 +3588,7 @@ body {
 
 .site-info {
   position: absolute;
-  left: 30px;
+  left: 20px;
   top: 70px;
 }
 
@@ -3599,6 +3603,11 @@ body {
 
 .site-info h2 {
   margin: 0;
+  margin-top: 15px;
+}
+
+.site-info i {
+  margin-right: 5px;
 }
 
 #no-lecurer {
@@ -4607,7 +4616,7 @@ li.og-expanded {
 }
 
 .Om.GDK.EX {
-  background-color: #ffec00;
+  background-color: #f7f7f7;
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -4642,15 +4651,22 @@ li.og-expanded {
   margin: 45px 15px 40px 30px;
 }
 
-.info-box .info-box-content h2 {
+.info-box .info-box-content h1 {
   font-size: 60px;
-  margin: 5px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  margin-bottom: 7px;
+  text-decoration: underline;
 }
 
-.info-box .info-box-content h4 {
-  text-transform: uppercase;
-  font-size: 30px;
-  margin: 5px;
+.info-box .info-box-content h2 {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.info-box .info-box-content i {
+  margin-right: 5px;
 }
 
 .about-p p:first-child {

@@ -1,5 +1,5 @@
 .Om.GDK.EX {
-  background-color: $yellow;
+  background-color: #f7f7f7;
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -27,15 +27,21 @@
   height: 240px;
   .info-box-content{
     margin:45px 15px 40px 30px;
-  h2{
-    font-size: 60px;
-    margin:5px;
-  }
-  h4{
-    text-transform: uppercase;
-    font-size: 30px;
-    margin:5px;
-  }
+    h1{
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 1;
+      margin:0;
+      margin-bottom: 7px;
+      text-decoration: underline;
+    }
+    h2{
+      margin:0;
+      margin-top: 10px;
+    }
+    i {
+      margin-right: 5px;
+    }
 }
 }
 .about-p p:first-child{

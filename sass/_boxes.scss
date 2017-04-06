@@ -76,7 +76,7 @@
 }
 .site-info{
   position: absolute;
-  left:30px;
+  left:20px;
   top:70px;
   h1{
     font-size: 60px;
@@ -88,6 +88,10 @@
   }
   h2{
     margin:0;
+    margin-top: 15px;
+  }
+  i {
+    margin-right: 5px;
   }
 }
 

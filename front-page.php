@@ -11,8 +11,8 @@
   <div class="four columns box blue" id="box1">
     <div class="site-info yellow-text">
       <h1>11-13 MAJ</h1>
-      <h2>Campus Norrköping</h2>
-      <h2>Färgeriet</h2>
+      <h2><i class="fa fa-map-marker"></i>Campus Norrköping</h2>
+      <h3>Färgeriet, Kåkenhus</h3>
     </div>
   </div>
 

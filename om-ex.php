@@ -27,8 +27,9 @@ get_header(); ?>
 
 <div class="five columns info-box blue">
   <div class="info-box-content yellow-text">
-    <h2>11 - 13 maj</h2>
-    <h4><i class="fa fa-map-marker" aria-hidden="true"></i>  Färgeriet</h4>
+    <h1>11-13 MAJ</h1>
+    <h2><i class="fa fa-map-marker"></i>Campus Norrköping</h2>
+    <h3>Färgeriet, Kåkenhus</h3>
   </div>
 </div>
 </div>

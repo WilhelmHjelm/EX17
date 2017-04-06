@@ -22,9 +22,9 @@ get_header(); ?>
 </div>
 
 <div class="five columns info-box blue">
-  <div class="info-box-content magenta-text">
-    <h2>GDK 180hp</h2>
-    <h4>Campus Norrköping</h4>
+  <div class="info-box-content magenta-text aligncenter">
+    <h1>GDK 180hp</h1>
+    <h2>Campus Norrköping</h2>
   </div>
 
   </div>
