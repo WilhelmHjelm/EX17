@@ -18,7 +18,6 @@ get_header(); ?>
 
   <?php while ( have_posts() ) : the_post(); ?>
 
-    <h1><?php the_title(); ?></h1>
     <?php the_content(); ?>
 
   <?php endwhile; // end of the loop. ?>
@@ -36,7 +35,7 @@ get_header(); ?>
 
 <div class="row">
   <div class="twelve columns">
-    <iframe width="100%" height="300" frameborder="0" style="border:0"
+    <iframe class="map" width="100%" height="300" frameborder="0" style="border:0"
 src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5kenhus%2C%20Norrk%C3%B6ping&key=AIzaSyDGfMk2OybMJp-Oy7v8QMgU-J1N2a9pBKM" allowfullscreen></iframe>
   </div>
 </div>

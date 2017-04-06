@@ -266,11 +266,14 @@ li.og-expanded{
 		display: block;
 	}
 }
+
 #forklaring{
-	font-size: 35px;
+	font-size: 33px;
 	line-height: 1.05;
 	text-align: left;
 	@include vertical-align(absolute, 40%, 50%);
+	box-sizing: border-box;
+
 }
 
 .engagemang{
@@ -291,7 +294,11 @@ li.og-expanded{
 		font-size: 17px;
 		z-index: 10;
 	}
+	.person{
+		padding-left: 3px;
+	}
 	#explenation{
+		font-size:24px;
 		display: inline;
 		color:$blue;
 		z-index: 10;

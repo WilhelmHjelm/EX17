@@ -4513,7 +4513,7 @@ li.og-expanded {
 }
 
 #forklaring {
-  font-size: 35px;
+  font-size: 33px;
   line-height: 1.05;
   text-align: left;
   position: absolute;
@@ -4522,6 +4522,7 @@ li.og-expanded {
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+  box-sizing: border-box;
 }
 
 .engagemang {
@@ -4546,7 +4547,12 @@ li.og-expanded {
   z-index: 10;
 }
 
+.engagemang .person {
+  padding-left: 3px;
+}
+
 .engagemang #explenation {
+  font-size: 24px;
   display: inline;
   color: #282973;
   z-index: 10;
@@ -4620,11 +4626,17 @@ li.og-expanded {
   background-position: bottom center;
   background-size: contain;
   background-repeat: no-repeat;
+  height: 314px !important;
 }
 
 .Om.GDK.EX h1 {
   color: #282973;
-  display: none;
+}
+
+.map {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
 }
 
 .about-p p {
@@ -5152,5 +5164,11 @@ body {
   }
   .category:nth-child(even) {
     margin-left: 4% !important;
+  }
+}
+
+@media (max-width: 1200px) {
+  #forklaring {
+    font-size: 25px;
   }
 }

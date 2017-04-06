@@ -1,12 +1,17 @@
 .Om.GDK.EX {
   background-color: #f7f7f7;
   background-position: bottom center;
-  background-size: contain;
+  background-size:contain;
   background-repeat: no-repeat;
+  height:314px !important;
   h1 {
     color: $blue;
-    display: none;
   }
+}
+.map {
+  -webkit-filter: grayscale(100%);
+  filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
 }
 
 .about-p p {
