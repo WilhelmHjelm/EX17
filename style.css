@@ -4563,7 +4563,7 @@ li.og-expanded {
 }
 
 .engagemang .one-engagemang:before {
-  content: "//";
+  content: "// ";
 }
 
 @-webkit-keyframes loader {
@@ -4717,6 +4717,38 @@ li.og-expanded {
 
 .courses #obli {
   transform: translateY(-35px);
+}
+
+.one-project-group {
+  height: 275px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+  margin-bottom: 4%;
+}
+
+.one-project-group:nth-child(4) {
+  margin-left: 0;
+}
+
+.project-group-info {
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+  right: 20px;
+  color: #ffec00;
+  background-color: #282973;
+  padding: 1px 12px 7px 12px;
+}
+
+.project-group-info p {
+  -webkit-margin-before: 0px;
+  -webkit-margin-after: 0px;
+}
+
+.project-group-info h2 {
+  margin-bottom: 0px;
 }
 
 .Katalog {

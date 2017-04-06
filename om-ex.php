@@ -46,7 +46,31 @@ src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5kenhus%2C%20Norrk%C3%B6
   </div>
 </div>
 <div class="row">
+  <?php
+  // Custom post type "projectgroups" list
 
+        $args = array(
+          'post_type' => 'projektgruppen',
+        );
+        $projectgroups = new WP_Query( $args );
+        if( $projectgroups->have_posts() ) {
+          echo '<div class="twelve columns all-project-groups">';
+          while( $projectgroups->have_posts() ) {
+            $projectgroups->the_post();
+            ?>
+            <div class="four columns one-project-group" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+              <div class="project-group-info">
+                <h2><?php the_title(); ?></h2>
+                <?php the_content(); ?>
+              </div>
+            </div>
+  <?php  }
+  echo '</div>';
+    }
+  else {
+   echo 'Något är fel. Var god ansvariga för sidan.';
+      }
+  ?>
 </div>
 
 </div>

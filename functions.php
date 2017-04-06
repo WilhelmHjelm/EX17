@@ -209,6 +209,16 @@ function custom_post_type() {
 		'taxonomies' 		=> array('category')
 	)
 	);
+	register_post_type( 'projektgruppen', array(
+		'labels'        => array('name' => __( 'Projektgruppen', 'ex17'  ), 'singular_name' => __( 'Projektgrupp', 'ex17'  ) ),
+		'description'   => 'Holds the information about EX17s project groups.',
+		'public'        => true,
+		'menu_position' => 5,
+		'supports'      => array( 'title', 'editor', 'thumbnail' ),
+		'has_archive'   => false,
+		'taxonomies' 		=> array('group_category')
+	)
+	);
 
 	register_post_type( 'forelasare', array(
 		'labels'        => array('name' => __( 'Föreläsare', 'ex17'  ), 'singular_name' => __( 'Föreläsare', 'ex17'  ) ),
