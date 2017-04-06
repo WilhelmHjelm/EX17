@@ -46,9 +46,7 @@ src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5kenhus%2C%20Norrk%C3%B6
   </div>
 </div>
 <div class="row">
-  <div class="gruppen">
-    <img src="<?php echo get_template_directory_uri();?>/img/gruppen.jpg" id="dragable">
-  </div>
+
 </div>
 
 </div>

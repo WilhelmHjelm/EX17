@@ -4719,20 +4719,6 @@ li.og-expanded {
   transform: translateY(-35px);
 }
 
-.gruppen {
-  height: 400px;
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  position: relative;
-  background-color: #282973;
-}
-
-#dragable {
-  height: inherit;
-  width: auto;
-}
-
 .Katalog {
   background-color: #fcd1c2;
 }
