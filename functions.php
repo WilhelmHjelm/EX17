@@ -214,7 +214,7 @@ function custom_post_type() {
 		'description'   => 'Holds the information about EX17s project groups.',
 		'public'        => true,
 		'menu_position' => 5,
-		'supports'      => array( 'title', 'editor', 'thumbnail' ),
+		'supports'      => array( 'title', 'editor' ),
 		'has_archive'   => false,
 		'taxonomies' 		=> array('group_category')
 	)

@@ -58,7 +58,7 @@ src="https://www.google.com/maps/embed/v1/place?q=K%C3%A5kenhus%2C%20Norrk%C3%B6
           while( $projectgroups->have_posts() ) {
             $projectgroups->the_post();
             ?>
-            <div class="four columns one-project-group" style="background-image: url(<?php the_post_thumbnail_url(); ?>);">
+            <div class="four columns one-project-group" style="background-image: url(<?php the_field('project-img'); ?>);">
               <div class="project-group-info">
                 <h2><?php the_title(); ?></h2>
                 <?php the_content(); ?>
