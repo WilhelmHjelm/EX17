@@ -95,7 +95,7 @@
           <h4>EN AV <?php
 $published_posts = wp_count_posts('examensklassen');
 echo $published_posts->publish;
-?> EXAMINERADE</h4>
+?> <span style="display:block;">EXAMINERADE</span></h4>
 
         </div>
         <div class="graduate-name-front"><h1><?php the_title(); ?></h1></div>

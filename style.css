@@ -3691,7 +3691,8 @@ body {
 #box6 {
   position: relative;
   background-image: url(img/pattern2.svg);
-  background-repeat: bottom left;
+  background-position: top -10px center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
@@ -5229,7 +5230,7 @@ body {
   }
 }
 
-@media screen and (orientation: landscape) {
+@media (max-width: 740px) and (orientation: landscape) {
   #box4 {
     background-position: top -100px center;
   }
@@ -5241,5 +5242,11 @@ body {
   }
   .site-info {
     left: 22%;
+  }
+  #val-text {
+    transform: rotate(-90deg) translateY(-280px) translateX(60px) !important;
+  }
+  #obli-text {
+    transform: rotate(-90deg) translateY(-280px) translateX(-10px) !important;
   }
 }

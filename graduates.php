@@ -107,6 +107,8 @@ foreach( $taxonomies as $taxonomy ) :
     <?php endforeach;
 
 endforeach; ?>
+
+
 </div>
 </div>
 </div>

@@ -92,7 +92,7 @@
     font-size: 25px;
   }
 }
-@media screen and (orientation:landscape) {
+@media (max-width:740px) and (orientation:landscape) {
   #box4{
     background-position: top -100px center;
   }
@@ -105,4 +105,6 @@
   .site-info{
     left:22%;
   }
+  #val-text{transform: rotate(-90deg) translateY(-280px) translateX(60px) !important; }
+  #obli-text{transform: rotate(-90deg) translateY(-280px) translateX(-10px) !important;}
 }

@@ -184,7 +184,8 @@
     background-color: $yellow;
   }
   background-image: url(img/pattern2.svg);
-  background-repeat: bottom left;
+  background-position: top -10px center;
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
