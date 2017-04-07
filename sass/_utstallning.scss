@@ -28,7 +28,7 @@
       border-radius: 0;
       opacity: 0.5;
       border: 0;
-      color: #444;
+      color: $magenta;
       font-size: 18px;
       &.active {
         opacity: 1;
@@ -36,8 +36,9 @@
 
       &.webb      { color: $blue; }
       &.film      { color: $magenta; }
-      &.tred      { color: $pink; }
-      &.animering { color: $yellow; }
+      &.tred      { color: $blue; }
+      &.animering { color: $magenta; }
+      &.ovrigt    { color: $blue}
     }
 
   }
@@ -92,7 +93,7 @@
 
         span {
           display: inline-block;
-          background: #444;
+          background: $magenta;
           margin: 0 5px 5px 0;
           padding: 5px 10px;
           font-size: 12px;
@@ -102,8 +103,9 @@
           text-transform: uppercase;
           &.webb      { background: $blue; }
           &.film      { background: $magenta; }
-          &.tred      { background: $pink; }
-          &.animering { background: $yellow; }
+          &.tred      { background: $blue; }
+          &.animering { background: $magenta; }
+          &.ovrigt    { background: $blue}
         }
         h5 {
           display: inline-block;

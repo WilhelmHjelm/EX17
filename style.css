@@ -4825,7 +4825,7 @@ li.og-expanded {
   border-radius: 0;
   opacity: 0.5;
   border: 0;
-  color: #444;
+  color: #ed0f68;
   font-size: 18px;
 }
 
@@ -4842,11 +4842,15 @@ li.og-expanded {
 }
 
 #utstallning .utstallning-filter button.filter.tred {
-  color: #fcd1c2;
+  color: #282973;
 }
 
 #utstallning .utstallning-filter button.filter.animering {
-  color: #ffec00;
+  color: #ed0f68;
+}
+
+#utstallning .utstallning-filter button.filter.ovrigt {
+  color: #282973;
 }
 
 #utstallning .mix {
@@ -4915,7 +4919,7 @@ li.og-expanded {
 
 #utstallning .grid-item a .project-title span {
   display: inline-block;
-  background: #444;
+  background: #ed0f68;
   margin: 0 5px 5px 0;
   padding: 5px 10px;
   font-size: 12px;
@@ -4934,11 +4938,15 @@ li.og-expanded {
 }
 
 #utstallning .grid-item a .project-title span.tred {
-  background: #fcd1c2;
+  background: #282973;
 }
 
 #utstallning .grid-item a .project-title span.animering {
-  background: #ffec00;
+  background: #ed0f68;
+}
+
+#utstallning .grid-item a .project-title span.ovrigt {
+  background: #282973;
 }
 
 #utstallning .grid-item a .project-title h5 {
