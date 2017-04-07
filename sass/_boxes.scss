@@ -134,8 +134,9 @@
   .box-content{
     text-align: center;
     position: absolute;
-    left:50%;
-    top:45%;
+    display: table;
+    left: 50%;
+    top: 45%;
     transform: translate(-50%, -50%);
   }
   h1{
@@ -176,8 +177,9 @@
   .box-content{
     text-align: center;
     position: absolute;
-    left:50%;
-    top:45%;
+    display: table;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     background-color: $yellow;
   }
@@ -192,8 +194,9 @@
   .box-content{
     text-align: center;
     position: absolute;
-    left:50%;
-    top:45%;
+    display: table;
+    left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
     background-color: $blue;
   }
@@ -209,8 +212,9 @@
 .box-content{
   text-align: center;
   position: absolute;
-  left:50%;
-  top:45%;
+  display: table;
+  left: 50%;
+  top: 50%;
   transform: translate(-50%, -50%);
  }
 }

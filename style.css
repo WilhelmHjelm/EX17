@@ -3648,6 +3648,7 @@ body {
 #box5 .box-content {
   text-align: center;
   position: absolute;
+  display: table;
   left: 50%;
   top: 45%;
   transform: translate(-50%, -50%);
@@ -3697,8 +3698,9 @@ body {
 #box6 .box-content {
   text-align: center;
   position: absolute;
+  display: table;
   left: 50%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
   background-color: #ffec00;
 }
@@ -3715,8 +3717,9 @@ body {
 #box7 .box-content {
   text-align: center;
   position: absolute;
+  display: table;
   left: 50%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
   background-color: #282973;
 }
@@ -3729,8 +3732,9 @@ body {
 #box8 .box-content {
   text-align: center;
   position: absolute;
+  display: table;
   left: 50%;
-  top: 45%;
+  top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -4769,6 +4773,7 @@ li.og-expanded {
 .project-group-info p {
   -webkit-margin-before: 0px;
   -webkit-margin-after: 0px;
+  font-size: 13px;
 }
 
 .project-group-info h2 {
