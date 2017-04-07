@@ -57,7 +57,7 @@
 
 	<style>.entry-footer{display: none;}</style>
 	<div class="twelve columns  real-footer" id="footer-utstallning">
-		<a href="<?php echo get_home_url(); ?>"><div class=" aligncenter "><img src="<?php echo get_template_directory_uri();?>/img/logo-text.svg" alt="Logo" height="70px"></div></a>
+		<a href="<?php echo get_home_url();?>/utstallning"><div class=" aligncenter "><img src="<?php echo get_template_directory_uri();?>/img/logo-text.svg" alt="Logo" height="70px"></div></a>
 
 	</div><!-- .site-info -->
 	</footer><!-- #colophon -->

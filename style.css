@@ -4790,6 +4790,7 @@ li.og-expanded {
 #footer-utstallning {
   width: 1300px !important;
   transform: translateX(-53px);
+  border-top: none;
 }
 
 .aligncenter {
@@ -4957,6 +4958,11 @@ li.og-expanded {
   clear: both;
   font-weight: bold;
   margin: 0;
+}
+
+#utstallning .entry-title {
+  font-size: 75px;
+  text-decoration: underline;
 }
 
 #utstallning .entry-content {

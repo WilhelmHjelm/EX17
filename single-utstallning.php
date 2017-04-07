@@ -36,6 +36,7 @@ get_header(); ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 					<header class="entry-header ten columns offset-by-one">
 						<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+						
 							<?php
 							$post_objects = get_field('deltagare');
 

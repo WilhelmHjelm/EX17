@@ -1,6 +1,7 @@
   #footer-utstallning{
     width: 1300px !important;
     transform: translateX(-53px);
+    border-top: none;
   }
   .aligncenter{
     text-align: center;
@@ -125,7 +126,10 @@
 
 /* SHOW PROJECT
 ----------------- */
-
+.entry-title{
+  font-size:75px;
+  text-decoration: underline;
+}
 .entry-content {
   margin: 90px 0 0 0;
   img {
