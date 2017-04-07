@@ -4,6 +4,13 @@
 }
 
 @media (max-width: $break-grid) {
+  li.og-expanded{
+  	height:1000px !important;
+  }
+  .og-expander {
+    height: 1000px !important;
+  }
+
   .main-nav .one{
     width: 20%;
   }
