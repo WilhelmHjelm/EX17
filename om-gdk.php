@@ -19,6 +19,15 @@ get_header(); ?>
 
   <?php endwhile; // end of the loop. ?>
 
+  <a href="javascript:delay('http://gdk.nu')">
+    <button class="c-button c-button--magenta" type="button">
+      <div class="c-ripple js-ripple">
+        <span class="c-ripple__circle"></span>
+      </div>
+      Till sektionen <i class="fa fa-arrow-right"></i>
+    </button>
+  </a>
+
 </div>
 
 <div class="five columns info-box blue">
@@ -71,7 +80,7 @@ get_header(); ?>
         <li>Tryckta medier</li>
         <li>Grafisk designprojekt med internationell inriktning</li>
         <li>Grafisk teknik och processer</li>
-        <li>Omvärldsorientering 1</li>
+        <li>Omvärldsorientering 1, 2 &amp; 3</li>
         <li>Retorik</li>
         <li>Visuell retorik</li>
         <li>Medierad kommunikation</li>

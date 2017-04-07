@@ -4154,84 +4154,57 @@ footer, .footer, .real-footer {
   color: black;
 }
 
-.mptt-column {
-  width: 30%;
-  float: left;
-}
-
-.mptt-column:first-child {
-  margin-left: 3%;
-}
-
-.mptt-column:first-child .mptt-list-event {
-  border-left: 2px solid #fcd1c2;
-}
-
-.mptt-column:last-child .mptt-list-event {
-  border-left: 2px solid #ed0f68;
-}
-
-.mptt-column:nth-child(even) .mptt-list-event {
-  border-left: 2px solid #282973;
-}
-
-.mptt-column:first-child .mptt-column-title {
-  color: #fcd1c2;
-}
-
-.mptt-column:last-child .mptt-column-title {
-  color: #ed0f68;
-}
-
-.mptt-column:nth-child(even) .mptt-column-title {
-  color: #282973;
-}
-
-.mptt-list-event {
-  width: 100%;
-  height: 90px;
-  margin-bottom: 20px;
-  padding-left: 7px;
-}
-
-.mptt-list-event p {
-  line-height: 0.5;
-}
-
-.mptt-column-title {
-  margin-left: 40px;
-  font-size: 24px;
-}
-
-.mptt-events-list {
+.schema-item {
   list-style-type: none;
+  margin-bottom: 20px;
 }
 
-.mptt-event-title {
-  font-size: 17px;
-  text-decoration: none;
+.day ul {
+  -webkit-padding-start: 0px;
 }
 
-#startpage .mptt-shortcode-list .mptt-column .mptt-events-list .mptt-list-event .timeslot {
+.day {
+  margin-bottom: 30px;
+}
+
+.schema-item h5 {
   padding: 3px 5px 3px 5px;
   background-color: #000000;
   color: #ffffff;
   display: table;
-  font-weight: bold;
 }
 
-.mptt-list-event {
-  font-family: "effra", Helvetica, sans-serif;
-  font-weight: bold;
-  font-size: 30px;
+.schema-item p, .schema-item h3 {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
 }
 
-.event-description {
-  font-size: 12px;
-}
-
-.mptt-event-title, .timeslot, .event-description {
+.thurs .schema-day, .thurs .schema-item {
   padding-left: 5px;
+  border-left: 2px #000000 solid;
+}
+
+.fri .schema-day, .fri .schema-item {
+  padding-left: 5px;
+  border-left: 2px #000000 solid;
+}
+
+.satur .schema-day, .satur .schema-item {
+  padding-left: 5px;
+  border-left: 2px #000000 solid;
+}
+
+#schema-item-front h3 {
+  font-size: 50px;
+}
+
+.thisday .schema-day, .thisday .schema-item {
+  border-color: #ed0f68;
+  color: #ed0f68;
+}
+
+.thisday .schema-day h3, .thisday .schema-item h3 {
+  color: #ed0f68;
 }
 
 .graduate-info-front a {

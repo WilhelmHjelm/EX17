@@ -55,27 +55,20 @@
   </div>
   <div class="eight columns box pink" id="box3">
     <div class="next-event">
-      <div id="no-lecurer">
-        <h2>Schemat presenteras inom kort</h2>
-      </div>
-      <!--<h4>NÄSTA EVENT</h4>-->
-      <?php while ( have_posts() ) : the_post(); { ?>
-
-          <?php //the_content(); ?>
-
-      <?php } endwhile; // end of the loop. ?>
-
-
-
+      <h4>NÄSTA EVENT</h4>
+      <li class="schema-item" id="schema-item-front">
+        <h3>Utställningen är öppen</h3>
+        <h5>9:00 - 17:00 i Färgeriet</h5>
+      </li>
     </div>
-  <!--  <a href="javascript:delay('<?php // echo get_page_link(38); ?>')">
+   <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
       <button class="c-button c-button--black absolute" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
         </div>
-        Kommer snart
+        Se hela schemat
       </button>
-    </a> -->
+    </a>
   </div>
   <div class="four columns box" id="box4">
 
