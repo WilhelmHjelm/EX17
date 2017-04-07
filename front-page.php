@@ -96,21 +96,21 @@
 $published_posts = wp_count_posts('examensklassen');
 echo $published_posts->publish;
 ?> EXAMINERADE</h4>
-          <h1><?php the_title(); ?></h1>
-        </div>
 
+        </div>
+        <div class="graduate-name-front"><h1><?php the_title(); ?></h1></div>
 
         <?php }
 
         endwhile;
         wp_reset_postdata(); ?>
-<img src="<?php echo get_template_directory_uri();?>/img/shadow.png" alt="Skugga" id="examensklassen-shadow">
+
         <a href="javascript:delay('<?php echo get_page_link(52); ?>')">
-          <button class="c-button c-button--white absolute" type="button">
+          <button id="graduate-btn" class="c-button c-button--magenta absolute" type="button">
             <div class="c-ripple js-ripple">
               <span class="c-ripple__circle"></span>
             </div>
-            Se hela examensklassen
+            <i class="fa fa-arrow-right"></i>
           </button>
         </a>
 

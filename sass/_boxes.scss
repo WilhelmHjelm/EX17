@@ -142,6 +142,25 @@
     color: white;
   }
 }
+.graduate-name-front{
+  position:absolute;
+  bottom:20px;
+  left:30px;
+  background-color: $magenta;
+  color:$white;
+  width:60%;
+  h1{
+    padding:0 10px;
+    line-height: 1;
+  }
+}
+
+#graduate-btn{
+  position: absolute;
+  bottom:20px;
+  left:inherit;
+  right:30px;
+}
 
 #examensklassen-shadow{
   position: absolute;
