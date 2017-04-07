@@ -3755,7 +3755,7 @@ footer {
 footer, .footer, .real-footer {
   padding-top: 10px;
   border-top: #343333 1px solid;
-  margin-top: 20px;
+  margin: 20px 0px 30px 0px;
 }
 
 .real-footer h4, .real-footer h6 {
@@ -5187,8 +5187,10 @@ body {
   }
   .header-box .site-title {
     text-align: center;
-    bottom: inherit;
-    top: 35px;
+    left: 25%;
+    top: 25%;
+    bottom: auto;
+    transform: translate(-15%, -15%);
   }
   .page-title {
     font-size: 70px;
@@ -5224,6 +5226,13 @@ body {
   .sponsor {
     width: 30.6666666667%;
     float: left;
+    margin-left: 2%;
+  }
+  .sponsor:first-child {
+    margin-left: 0;
+  }
+  .sponsor:nth-child(4) {
+    margin-left: 0;
   }
   .real-footer {
     text-align: center;
