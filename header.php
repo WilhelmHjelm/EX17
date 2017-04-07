@@ -49,7 +49,7 @@ if ( is_front_page() ) : ?>
 			<nav class="main-nav twelve columns">
 
 						<a href="<?php echo get_home_url(); ?>"><div class="one columns mobile-nav-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
-						<div class="six columns mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
+						<div class="five columns mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 					</nav>
 					<div class="twelve columns box header-box">
 						<div class="site-title">
@@ -59,9 +59,9 @@ if ( is_front_page() ) : ?>
 
 					<?php
 elseif ( is_post_type_archive('utstallning') || is_singular('utstallning')) : ?>
-
+<body <?php body_class(); ?> id="<?php echo get_the_ID(); ?>">
 <header id="masthead" class="site-header utstallning">
-		<a href="<?php echo get_home_url(); ?>/utstallning" class="logotype"></a>
+		<a href="<?php echo get_home_url();?>/utstallning" class="logotype"></a>
 </header><!-- #masthead -->
 
 				<?php else : ?>
@@ -72,7 +72,7 @@ elseif ( is_post_type_archive('utstallning') || is_singular('utstallning')) : ?>
 							<div class="container">
 								<nav class="main-nav twelve columns">
 					<a href="<?php echo get_home_url(); ?>"><div class="one columns mobile-nav-logo"><img src="<?php echo get_template_directory_uri();?>/img/logo.svg" alt="Logo" height="70px"></div></a>
-					<div class="six columns mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
+					<div class="five columns mobile-nav"><?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'menu-1' ) ); ?> </div>
 				</nav>
 				<div class="twelve columns header-box-small <?php echo get_the_title( $ID ); ?> ">
 					<h1 class="page-title white-text <?php echo get_the_ID(); ?>"><?php the_title(); ?></h1>
