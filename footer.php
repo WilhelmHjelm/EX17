@@ -53,6 +53,18 @@
 </div><!-- #content -->
 </div><!-- #page -->
 
+<?php elseif ( is_post_type_archive('utstallning') || is_singular('utstallning')) : ?>
+
+	<style>.entry-footer{display: none;}</style>
+	<div class="twelve columns  real-footer" id="footer-utstallning">
+		<a href="<?php echo get_home_url(); ?>"><div class=" aligncenter "><img src="<?php echo get_template_directory_uri();?>/img/logo-text.svg" alt="Logo" height="70px"></div></a>
+
+	</div><!-- .site-info -->
+	</footer><!-- #colophon -->
+	</div><!-- container -->
+	</div><!-- #content -->
+	</div><!-- #page -->
+
 <?php else : ?>
 
 	<div class="footer">

@@ -1,3 +1,10 @@
+  #footer-utstallning{
+    width: 1300px !important;
+    transform: translateX(-53px);
+  }
+  .aligncenter{
+    text-align: center;
+  }
 #utstallning {
   position: relative;
   max-width: 1300px !important;
@@ -14,6 +21,7 @@
     button.filter {
       background: transparent;
       padding: 0;
+      font-weight: bold;
       margin: 0 0 0 25px;
       line-height: 1;
       height: auto;
@@ -97,7 +105,7 @@
           &.tred      { background: $pink; }
           &.animering { background: $yellow; }
         }
-        h6 {
+        h5 {
           display: inline-block;
           background: #444;
           padding: 5px 10px;
@@ -134,7 +142,7 @@
 .entry-meta {
   list-style: none;
   margin-top: 10px;
-
+  -webkit-padding-start:0px;
   li {
     position: relative;
     display: inline-block;
@@ -188,7 +196,9 @@
   }
   .container { max-width: 1300px; }
   .six { height: 60px; }
-
+  .alignright{
+    text-align: right;
+  }
   a {
     display: inline-block;
     height: 60px;

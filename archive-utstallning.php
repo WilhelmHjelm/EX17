@@ -52,7 +52,7 @@ get_header(); ?>
 									</span><?php
 								}
 							} ?>
-							<h6><?php echo the_title(); ?></h6>
+							<h5><?php echo the_title(); ?></h5>
 						</div>
 					</a>
 				</div>
