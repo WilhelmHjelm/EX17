@@ -4679,6 +4679,11 @@ li.og-expanded {
   line-height: 1.4;
 }
 
+#about-box {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 #about-box h1 {
   margin-top: 65px;
 }
@@ -4688,7 +4693,7 @@ li.og-expanded {
 }
 
 .info-box .info-box-content {
-  margin: 45px 15px 40px 30px;
+  margin: 45px 15px 40px 45px;
 }
 
 .info-box .info-box-content h1 {

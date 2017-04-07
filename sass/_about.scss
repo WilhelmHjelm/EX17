@@ -28,6 +28,11 @@
   }
 }
 
+#about-box {
+  margin-left: 0;
+  margin-right: 0;
+}
+
 #about-box h1 {
   margin-top: 65px;
 }
@@ -35,7 +40,7 @@
 .info-box{
   height: 240px;
   .info-box-content{
-    margin:45px 15px 40px 30px;
+    margin:45px 15px 40px 45px;
     h1{
       font-size: 60px;
       font-weight: 700;
