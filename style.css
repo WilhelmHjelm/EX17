@@ -4096,6 +4096,7 @@ footer, .footer, .real-footer {
 
 .lecturer-info {
   padding-top: 50px;
+  color: #fcd1c2;
 }
 
 .lecturer-info-front {
@@ -4110,7 +4111,7 @@ footer, .footer, .real-footer {
   font-weight: bolder;
 }
 
-.lecturer-info-front h5 {
+.lecturer-info h5, .lecturer-info-front h5 {
   padding: 3px 5px 3px 5px;
   background-color: #000000;
   color: #ffffff;
@@ -4118,19 +4119,11 @@ footer, .footer, .real-footer {
 }
 
 .forelasare-color1 {
-  background: #282973;
+  background: #ed0f68;
 }
 
 .forelasare-color2 {
-  background: #ffec00;
-}
-
-.forelasare-color3 {
-  background: #fcd1c2;
-}
-
-.forelasare-color4 {
-  background: #000000;
+  background: #282973;
 }
 
 .menu li {
@@ -5233,5 +5226,20 @@ body {
 @media (max-width: 1200px) {
   #forklaring {
     font-size: 25px;
+  }
+}
+
+@media screen and (orientation: landscape) {
+  #box4 {
+    background-position: top -100px center;
+  }
+  .graduate-name-front {
+    width: 33%;
+  }
+  .header-box .site-title {
+    top: 100px;
+  }
+  .site-info {
+    left: 22%;
   }
 }

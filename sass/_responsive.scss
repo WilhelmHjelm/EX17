@@ -92,3 +92,17 @@
     font-size: 25px;
   }
 }
+@media screen and (orientation:landscape) {
+  #box4{
+    background-position: top -100px center;
+  }
+  .graduate-name-front{
+    width:33%;
+  }
+  .header-box .site-title{
+    top:100px;
+  }
+  .site-info{
+    left:22%;
+  }
+}

@@ -27,9 +27,7 @@ get_header(); ?>
       while( $forelasare->have_posts() ) {
         $forelasare->the_post();
         if($i == 1) {$graduateColor = "forelasare-color1";}
-        if($i == 2) {$graduateColor = "forelasare-color2";}
-        if($i == 3) {$graduateColor = "forelasare-color3";}
-        if($i == 4) {$graduateColor = "forelasare-color4"; $i = 0;}
+        if($i == 2) {$graduateColor = "forelasare-color2"; $i = 0;}
         $i++;
         ?>
 

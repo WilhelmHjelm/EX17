@@ -42,6 +42,7 @@
 
 .lecturer-info{
   padding-top: 50px;
+  color:$pink;
 }
 .lecturer-info-front{
   padding:10%;
@@ -52,30 +53,20 @@
     line-height: 1;
     font-weight: bolder;
   }
-  h5{
+}
+.lecturer-info h5, .lecturer-info-front h5{
     padding:3px 5px 3px 5px;
     background-color:$black;
     color: $white;
     display: table;
-  }
 }
 
 
 .forelasare-color1{
-  background: $blue;
+  background: $magenta;
 
 }
 
 .forelasare-color2{
-  background: $yellow;
-
-}
-
-.forelasare-color3{
-  background: $pink;
-
-}
-.forelasare-color4{
-  background: $black;
-
+  background: $blue;
 }
