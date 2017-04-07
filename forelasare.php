@@ -36,7 +36,7 @@ get_header(); ?>
 
 
         <div class="twelve columns box lecturer-box <?php echo $graduateColor;?>" id="<?php echo $post->post_name;?>">
-          <div class="eight columns offset-by-two lecturer-content">
+          <div class="five columns offset-by-two lecturer-content">
             <div class="lecturer-info">
               <h1><?php the_title(); ?></h1>
               <p><?php the_content(); ?></p>
@@ -55,7 +55,7 @@ get_header(); ?>
         <div class="twelve columns aligncenter" id="no-lecturer">
           <h1>Föreläsare presenteras inom kort</h1>
         </div>
-    
+
     <?php }
   ?>
 </div>
