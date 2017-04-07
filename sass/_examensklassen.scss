@@ -283,13 +283,14 @@ li.og-expanded{
 	background-color: $magenta;
 	background-clip: padding-box;
 	color:$white;
-	content:"ENGAGEMANG";
+	background-image: url(img/e.svg);
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+	text-align: justify;
 	.row{
 		margin-top: 0;
 	}
-
-
-
 	.one-engagemang, .person{
 		color:$pink;
 		display: inline;
@@ -298,7 +299,7 @@ li.og-expanded{
 		z-index: 10;
 	}
 	.person{
-		padding-left: 3px;
+		padding-left: 10px;
 	}
 	#explenation{
 		font-size:24px;
@@ -307,10 +308,11 @@ li.og-expanded{
 		z-index: 10;
 		display: block;
 		-webkit-margin-after:0px;
+		-webkit-margin-before:0px;
 	}
 
 	.one-engagemang{
-		padding: 0px 5px 0px 5px;
+		padding: 0px 5px 0px 7px;
 	}
 	.one-engagemang:before{
 		content:"// ";

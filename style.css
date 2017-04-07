@@ -4550,7 +4550,11 @@ li.og-expanded {
   background-color: #ed0f68;
   background-clip: padding-box;
   color: #ffffff;
-  content: "ENGAGEMANG";
+  background-image: url(img/e.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  text-align: justify;
 }
 
 .engagemang .row {
@@ -4566,7 +4570,7 @@ li.og-expanded {
 }
 
 .engagemang .person {
-  padding-left: 3px;
+  padding-left: 10px;
 }
 
 .engagemang #explenation {
@@ -4576,10 +4580,11 @@ li.og-expanded {
   z-index: 10;
   display: block;
   -webkit-margin-after: 0px;
+  -webkit-margin-before: 0px;
 }
 
 .engagemang .one-engagemang {
-  padding: 0px 5px 0px 5px;
+  padding: 0px 5px 0px 7px;
 }
 
 .engagemang .one-engagemang:before {
@@ -5261,6 +5266,9 @@ body {
   }
   .category:nth-child(even) {
     margin-left: 4% !important;
+  }
+  .engagemang {
+    text-align: left;
   }
 }
 
