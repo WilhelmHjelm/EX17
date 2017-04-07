@@ -4574,6 +4574,8 @@ li.og-expanded {
   display: inline;
   color: #282973;
   z-index: 10;
+  display: block;
+  -webkit-margin-after: 0px;
 }
 
 .engagemang .one-engagemang {

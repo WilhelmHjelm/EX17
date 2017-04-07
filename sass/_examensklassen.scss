@@ -287,6 +287,9 @@ li.og-expanded{
 	.row{
 		margin-top: 0;
 	}
+
+
+
 	.one-engagemang, .person{
 		color:$pink;
 		display: inline;
@@ -302,7 +305,10 @@ li.og-expanded{
 		display: inline;
 		color:$blue;
 		z-index: 10;
+		display: block;
+		-webkit-margin-after:0px;
 	}
+
 	.one-engagemang{
 		padding: 0px 5px 0px 5px;
 	}
