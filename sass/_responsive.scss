@@ -41,10 +41,16 @@
   .lecturer-info-front h1{
     -webkit-margin-after:0;
   }
+  .lecturer-info{
+    color:$white;
+  }
   .lecturer-box {
     background-image: none !important;
     color:$pink;
     padding:20px;
+  }
+  .lecturer-content{
+    background-position: bottom right -90px !important;
   }
   #box4{
     height:325px;

@@ -4062,6 +4062,7 @@ footer, .footer, .real-footer {
 }
 
 .lecturer-box {
+  display: table;
   margin-bottom: 20px;
   height: 300px;
   position: relative;
@@ -4088,16 +4089,21 @@ footer, .footer, .real-footer {
 }
 
 .lecturer-content {
+  display: table;
+  padding-bottom: 30px;
   position: relative;
   height: 300px;
   background-repeat: no-repeat;
-  background-position: bottom center;
   background-size: cover;
+}
+
+#joakim-hedstrom {
+  background-position: center center;
 }
 
 .lecturer-info {
   padding-top: 50px;
-  color: #ffffff;
+  color: #000000;
 }
 
 .lecturer-info-front {
@@ -5202,10 +5208,16 @@ body {
   .lecturer-info-front h1 {
     -webkit-margin-after: 0;
   }
+  .lecturer-info {
+    color: #ffffff;
+  }
   .lecturer-box {
     background-image: none !important;
     color: #fcd1c2;
     padding: 20px;
+  }
+  .lecturer-content {
+    background-position: bottom right -90px !important;
   }
   #box4 {
     height: 325px;

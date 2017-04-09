@@ -24,7 +24,8 @@
 <meta property="og:url" content="<?php echo $current_url; ?>">
 <meta property="og:title" content="<?php if ( is_front_page() && is_home() ) : ?>Startsida<?php else : echo the_title(); endif; ?>">
 <meta property="og:description" content="Examensdagarna för Grafisk design och kommunikation, 11-13 maj i Kåkenhus på Campus Norrköping.">
-<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/Screenshot.png">
+<meta property="og:image" content="<?php echo get_stylesheet_directory_uri(); ?>/screenshot.png">
+
 <script src="<?php echo get_template_directory_uri();?>/js/jquery-3.2.0.min.js"></script>
 <script src="https://use.typekit.net/ywc5eyw.js"></script>
 <script>try{Typekit.load({ async: false });}catch(e){}</script>

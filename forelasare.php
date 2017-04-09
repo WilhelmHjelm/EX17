@@ -7,12 +7,6 @@
 
 get_header(); ?>
 
-<?php while ( have_posts() ) : the_post(); ?>
-
-  <?php get_template_part( 'content', 'page' ); ?>
-
-<?php endwhile; // end of the loop. ?>
-
 <div class="container">
 
 <?php
@@ -34,7 +28,7 @@ get_header(); ?>
 
 
         <div class="twelve columns box lecturer-box <?php echo $graduateColor;?>" id="<?php echo $post->post_name;?>">
-          <div class="five columns offset-by-two lecturer-content">
+          <div class="five columns offset-by-one lecturer-content">
             <div class="lecturer-info">
               <h1><?php the_title(); ?></h1>
               <p><?php the_content(); ?></p>
@@ -56,6 +50,11 @@ get_header(); ?>
 
     <?php }
   ?>
+  <?php while ( have_posts() ) : the_post(); ?>
+
+    <?php the_content(); ?>
+
+  <?php endwhile; // end of the loop. ?>
 </div>
 <?php
  get_footer();
