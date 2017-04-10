@@ -32,7 +32,7 @@ get_header(); ?>
             <div class="lecturer-info">
               <h1><?php the_title(); ?></h1>
               <p><?php the_content(); ?></p>
-              <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
+              <h5><?php the_field('dag'); ?> <?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
               <style> #<?php echo $post->post_name;?>{background-image: url(<?php echo the_post_thumbnail_url();?>);} </style>
             </div>
           </div>

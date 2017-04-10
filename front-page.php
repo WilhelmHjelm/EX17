@@ -35,7 +35,7 @@
         <div class="lecturer-info-front">
           <h4>EN AV ALLA FÖRELÄSARE</h4>
           <h1><?php the_title(); ?></h1>
-          <h5><?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
+          <h5><?php the_field('dag'); ?> <?php the_field('time'); ?> i <?php the_field('place'); ?></h5>
 
         </div>
 
@@ -55,20 +55,20 @@
   </div>
   <div class="eight columns box pink" id="box3">
     <div class="next-event">
-      <h4>NÄSTA EVENT</h4>
+      <!--<h4>NÄSTA EVENT</h4>-->
       <li class="schema-item" id="schema-item-front">
-        <h3>Utställningen är öppen</h3>
-        <h5>9:00 - 17:00 i Färgeriet</h5>
+        <h3>Schemat kommer snart</h3>
+      <!--  <h5>9:00 - 17:00 i Färgeriet</h5>-->
       </li>
     </div>
-   <a href="javascript:delay('<?php echo get_page_link(38); ?>')">
+   <!--<a href="javascript:delay('<?php // echo get_page_link(38); ?>')">
       <button class="c-button c-button--black absolute" type="button">
         <div class="c-ripple js-ripple">
           <span class="c-ripple__circle"></span>
         </div>
         Se hela schemat
       </button>
-    </a>
+    </a>-->
   </div>
   <div class="four columns box" id="box4">
 
