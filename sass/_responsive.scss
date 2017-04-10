@@ -15,7 +15,7 @@
     width: 20%;
   }
   .main-nav .five{
-    width: 70%;
+    width: 80%;
     ul{
       margin-left: 0;
       -webkit-margin-before:4px;
@@ -32,8 +32,14 @@
     transform: translate(-15%, -15%);
   }
   .page-title{
-    font-size: 70px;
+    font-size: 40px;
     word-break: break-all;
+  }
+  .Examensklassen .page-title{
+    font-size: 30px;
+  }
+  .Om.GDK.EX{
+    height: 140px !important;
   }
   .lecturer-info-front h4, .lecturer-info-front h1, .lecturer-info-front h5{
     -webkit-margin-before:0;

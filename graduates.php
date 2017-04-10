@@ -47,7 +47,7 @@ get_header(); ?>
           $hover_thumb = "medium";
           $hover_thumb_image = wp_get_attachment_image_src( $hover_attachment_id, $hover_thumb );
           ?>
-          <li>
+          <li id="<?php echo $post->post_name;?>">
             <a href="" data-largesrc="<?php echo $full_image[0]; ?>" data-title="<?php the_title() ?>" data-description='<?php the_content() ?>'>
               <img src="<?php echo $thumb_image[0]; ?>" class="static" alt="<?php the_title() ?>">
               <img src="<?php echo $hover_thumb_image[0]; ?>" class="hover" alt="<?php the_title() ?>">
