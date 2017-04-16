@@ -20,7 +20,7 @@ get_header(); ?>
   <?php endwhile; // end of the loop. ?>
 
   <a href="javascript:delay('http://gdk.nu')">
-    <button class="c-button c-button--magenta" type="button">
+    <button class="c-button c-button--magenta" id="om-gdk-btn" type="button">
       <div class="c-ripple js-ripple">
         <span class="c-ripple__circle"></span>
       </div>
