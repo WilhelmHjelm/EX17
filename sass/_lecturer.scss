@@ -44,7 +44,23 @@
   background-position: center right -50px;
   background-repeat: no-repeat;
 }
+#crazy-pictures{
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+#linnea-olsen-anckers{
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
+#robin-blomberg{
+  background-position: bottom right;
+  background-repeat: no-repeat;
+}
 
+.lecturer-img-front{
+  background-size: cover;
+  background-repeat: no-repeat;
+}
 
 .lecturer-info{
   padding-top: 50px;
@@ -69,6 +85,9 @@
     background-color:$black;
     color: $white;
     display: table;
+}
+.lecturer-info h5{
+  margin-top: 30px;
 }
 
 

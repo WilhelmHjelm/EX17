@@ -112,11 +112,13 @@
   background-position: bottom right;
 }
 #box3{
-  margin-left: 0;
-  a button{
-
+  margin-left: 0px !important;
+  h1{
+    font-size: 50px;
+    line-height: 1;
   }
 }
+
 .next-event{
   padding:10%;
   padding-left: 40px;
@@ -260,8 +262,8 @@ footer, .footer, .real-footer{
   transition: all 0.3s;
 }
 
-.sponsors .tow:first-child{
-  margin-left: 0;
+.sponsor:nth-child(6n+1) {
+    margin-left: 0px;
 }
 .box-content{
   background-clip: padding-box;

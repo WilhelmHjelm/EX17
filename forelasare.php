@@ -13,7 +13,9 @@ get_header(); ?>
 // Custom post type "Föreläsare" list
 
     $args = array(
-      'post_type' => 'forelasare'
+      'post_type'			=> 'forelasare',
+      'orderby' => 'title',
+      'order'   => 'ASC'
     );
     $forelasare = new WP_Query( $args );
     if( $forelasare->have_posts() ) {
