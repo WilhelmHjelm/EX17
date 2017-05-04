@@ -58,7 +58,7 @@
       <h4>NÄSTA EVENT</h4>
       <li class="schema-item" id="schema-item-front">
       <h1>Utställningen öppnar</h1>
-      <h5>Torsdag 9:00 - 17:00 i Färgeriet</h5>
+      <h5>Torsdag</h5><h5>9:00 - 17:00</h5><h5>Färgeriet</h5>
       </li>
     </div>
    <a href="javascript:delay('<?php echo get_page_link('38') ?>')">

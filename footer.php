@@ -43,8 +43,6 @@
 		<div class="twelve columns real-footer">
 			<a href="<?php echo get_home_url(); ?>"><div class="one columns sponsors"><img src="<?php echo get_template_directory_uri();?>/img/logo-text.svg" alt="Logo" height="70px"></div></a>
 			<div class="footer-icons">
-				<a href="mailto:ex@gdk.nu"><i class="fa fa-envelope" aria-hidden="true"></i></a>
-				<a href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a>
 				<a href="https://www.facebook.com/gdk.ex/?fref=ts"><i class="fa fa-facebook" aria-hidden="true"></i></a>
 			</div>
 		</div><!-- .site-info -->

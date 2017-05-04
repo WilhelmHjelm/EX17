@@ -23,7 +23,7 @@ get_header(); ?>
       <li class="schema-item">
         <a href="<?php echo get_home_url();?>/forelasare#robin-blomberg"><h3>Föreläsning: Robin Blomberg</h3>
         <p>5 tips om hur du överlever som egenföretagare</p>
-        <h5>14:15 - 15:00 i K4</h5></a>
+        <h5>14:15 - 14:45 i K4</h5></a>
       </li>
     </ul>
   </div>
@@ -32,7 +32,7 @@ get_header(); ?>
     <ul>
       <li class="schema-item">
         <h3>Utställningen är öppen</h3>
-        <h5>10:00 - 17:00 i Färgeriet</h5>
+        <h5>09:00 - 17:00 i Färgeriet</h5>
       </li>
       <li class="schema-item">
         <a href="<?php echo get_home_url();?>/forelasare/#crazy-pictures"><h3>Föreläsning: Rasmus Råsmark</h3>

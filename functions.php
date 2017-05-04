@@ -159,7 +159,7 @@ add_action( 'widgets_init', 'ex17_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ex17_scripts() {
-	wp_enqueue_style( 'ex17-style', get_stylesheet_uri(), array(), '20170502' );
+	wp_enqueue_style( 'ex17-style', get_stylesheet_uri(), array(), '20170503' );
 
 	wp_enqueue_script( 'ex17-jquery', get_template_directory_uri() . '/js/jquery-3.2.0.min.js', array(), '20170208' );
 	wp_enqueue_script( 'ex17-buttons', get_template_directory_uri() . '/js/button.js', array(), '20170208' );
